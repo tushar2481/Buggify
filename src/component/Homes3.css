@@ -1,0 +1,30 @@
+.section-three {
+    background-color: #0b0b0b;
+}
+
+.section-three-h1 {
+    padding-top: 5rem;
+    color: #04FF69;
+    text-align: center;
+}
+
+.section-three-h2 {
+    margin-top: 1.5rem;
+}
+
+.section-three-p {
+    margin-top: 1rem;
+    font-size: 12px;
+    text-align: center;
+    color: #8D8C8C;
+    width: calc(40%);
+    margin-left: calc(30%);
+}
+
+.section-three-div {
+    width: calc(50%);
+    height: 50rem;
+    background-color: #272727;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 55%, 65% 0);
+}

@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: #D2D2D2;
+}
+
+li {
+    list-style: none;
+}
+
+.footer {
+    display: block;
+    background-color: #141414;
+    padding-top: 10px;
+}
+
+.footer .logo {
+    margin-left: 10rem;
+}
+
+.footer-link {
+    margin-top: 5rem;
+}
+
+.footer-link ul {
+    display: grid;
+    grid-template-columns: 30rem 1fr 1fr 1fr 1fr;
+    justify-content: start;
+    line-height: 1.8;
+}
+
+.footer-link h4 {
+    color: #D2D2D2;
+}
+
+.footer-link ul li:first-child {
+    grid-column: 2/3;
+
+}
+
+.footer-link ul li:last-child {
+    grid-column: 5/6;
+}
+
+.inner-list {
+    display: block;
+}
+
+.footer-policy {
+    display: grid;
+    grid-template-columns: 8rem 4fr 1fr 5rem;
+    justify-content: start;
+}
+
+.policy-list {
+    grid-column: 2/3;
+    content: " ";
+    font-size: 1.1rem;
+}
+
+.policy-list ul {
+    float: left;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1fr;
+    line-height: 2.9;
+    justify-content: start;
+    align-items: center;
+}
+
+
+
+.social-list {
+    grid-column: 3/4;
+}
+
+.social-list ul {
+    float: left;
+    display: grid;
+    grid-template-columns: 1rem 1fr 1fr 1fr 1rem;
+    line-height: 1.7;
+}
+
+.social-list ul li:first-child {
+    grid-column: 2/3;
+}
+
+.social-list ul li {
+    padding: 0rem 2rem;
+    font-size: 2rem;
+}
+
+.twitter {
+    color: #00acee;
+}
+
+.instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    border-radius: 5px;
+}
+
+.linkedin {
+    color: #0A66C2;
+}
+
+@media (max-width: 1080px) {
+    .footer .logo {
+        margin-left: 5rem;
+    }
+
+}
+
+@media (max-width: 998px) {
+    .footer-link ul {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-left: calc(20%);
+    }
+
+    .footer-link,
+    .l1 {
+        padding-top: 3rem;
+        /* display: grid; */
+    }
+
+    /* .footer-link {
+        display: none;
+    } */
+}
