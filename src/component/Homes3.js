@@ -8,8 +8,12 @@ const homes3 = () => {
                 <h3 className="section-three-h1">For companies</h3>
                 <h1 className="h section-three-h2">Pentesting as a Service (PaaS)</h1>
                 <p className="section-three-p">Buggify Provides Pentesting as a Service (PaaS) in a 2 Different ways as Red Team Assessment & Bug Bounty Platform as Open Source Security Mechanism</p>
+                <div>
+                    <div className="section-three-div">
+                    </div>
+                    <div className="section-three-div-2">
+                    </div>
 
-                <div className="section-three-div">
                 </div>
 
             </div>

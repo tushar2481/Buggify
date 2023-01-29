@@ -28,3 +28,11 @@
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
     clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 55%, 65% 0);
 }
+
+.section-three-div-2 {
+    width: calc(50%);
+    height: 50rem;
+    background-color: #272727;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 55%, 65% 0);
+}
