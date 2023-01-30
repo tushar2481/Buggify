@@ -1,0 +1,29 @@
+.section-seven {
+    background-color: #0b0b0b;
+    height: auto;
+    position: relative;
+}
+
+.section-seven-h {
+    padding-top: 20rem;
+}
+
+.section-seven-hr {
+    position: absolute;
+    top: 10rem;
+    background-color: #4ff069;
+    border: none;
+    height: 1px;
+    width: 80%;
+    margin-left: calc(10%);
+}
+
+.section-seven-yt {
+    margin-top: calc(2%);
+    margin-left: calc(30%);
+    padding-bottom: calc(5%);
+}
+
+.iframe {
+    box-shadow: 0 0 10px #343232, 0 0 10px #343232, 0 0 10px #343232, 0 0 10px #343232;
+}

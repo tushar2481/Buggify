@@ -1,0 +1,88 @@
+.section-six {
+    background-color: #0b0b0b;
+    padding-top: 5rem;
+}
+
+.button-div {
+    display: grid;
+    grid-template-columns: 10rem 1fr 1fr;
+}
+
+.buss-btn {
+    border: none;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    margin-left: calc(30%);
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.toggled-div {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 10rem 1fr 1fr 1fr 10rem;
+    width: 90%;
+    margin-top: 5rem;
+}
+
+.div1 {
+    grid-column: 2/3;
+    border: 1px solid #4ff069;
+}
+
+.div-p {
+    color: #D2D2D2;
+    justify-content: center;
+    width: 70%;
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: calc(15%);
+}
+
+.div2 {
+    grid-column: 3/4;
+    border: 1px solid #4ff069;
+    margin-left: 2rem;
+}
+
+.div3 {
+    grid-column: 4/5;
+    border: 1px solid #4ff069;
+}
+
+.business-label {
+    font-size: 16px;
+    color: #9C9C9C;
+    margin-left: 55rem;
+
+}
+
+.reseacher-label {
+    color: #9C9C9C;
+    font-size: 16px;
+    margin-left: 5rem;
+}
+
+.div-icon-name {
+    display: flex;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+.div-icon {
+    grid-column: 2/3;
+    margin-left: 8rem;
+    font-size: 30px;
+}
+
+.t-d {
+    margin-left: 3rem;
+}
+
+.div-h1 {
+    color: #D2D2D2;
+}
+
+.div-h2 {
+    color: #9C9C9C;
+}

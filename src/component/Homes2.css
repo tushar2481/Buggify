@@ -34,6 +34,7 @@
     bottom: 0;
 } */
 .section-second-square {
+    margin-top: 5rem;
     width: 100%;
     display: grid;
     grid-template-columns: 5rem auto auto auto auto 5rem;
@@ -44,11 +45,14 @@
 }
 
 .sq {
-    border-radius: 20px 20px 120px 120px;
+    position: relative;
+    clip-path: polygon(50% 100%, 100% 75%, 100% 0%, 0% 0%, 0% 75%);
     background: #1C1C1C;
     margin: 0 2rem;
     height: 32rem;
-    /* width: 10%; */
+    border-radius: 20px;
+    border: 1px solid #04FF69;
+    /* z-index: 99; */
 }
 
 .sq-h1 {
@@ -76,8 +80,9 @@
 }
 
 .sq-span {
-    margin: auto;
-    margin-top: 7rem;
+    position: absolute;
+    top: 25rem;
+    right: 10rem;
     padding: 2rem;
     background-color: #04FF69;
     width: 25%;
@@ -86,6 +91,5 @@
 
 .sq-icon {
     font-size: 30px;
-    /* margin: 2rem; */
     color: #000;
 }

@@ -22,9 +22,11 @@ li {
     display: block;
     background-color: #141414;
     padding-top: 10px;
+    border-top: 1px solid #4ff069;
 }
 
 .footer .logo {
+    margin-top: 4rem;
     margin-left: 10rem;
 }
 
