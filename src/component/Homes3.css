@@ -19,20 +19,102 @@
     color: #8D8C8C;
     width: calc(40%);
     margin-left: calc(30%);
+    margin-bottom: 5rem;
 }
 
 .section-three-div {
-    width: calc(50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-three-div-1 {
+    width: calc(100%);
     height: 50rem;
     background-color: #272727;
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
-    clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 55%, 65% 0);
+    clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 50%, 65% 0);
+    border: 1px solid #04FF69;
 }
 
 .section-three-div-2 {
-    width: calc(50%);
+    width: calc(100%);
     height: 50rem;
     background-color: #272727;
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
-    clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 55%, 65% 0);
+    clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 50%, 65% 0);
+    transform: rotate(180deg);
+    border: 1px solid #04FF69;
+
+}
+
+.section-three-div-h {
+    color: #04FF69;
+    margin-top: 5rem;
+    margin-left: calc(20%);
+}
+
+.invert-h {
+    transform: rotate(180deg);
+    color: #04FF69;
+    margin-top: calc(65%);
+    margin-right: calc(50%);
+}
+
+.section-three-div-p {
+    margin-top: 3rem;
+    width: 60%;
+    margin-left: calc(5%);
+    font-size: 12px;
+    color: #e6e4e4;
+    word-spacing: 1px;
+}
+
+.section-three-div-span {
+    color: #aba4ab;
+}
+
+.invert-p {
+    transform: rotate(180deg);
+    margin-top: -20%;
+    width: 60%;
+    word-spacing: 2px;
+    margin-left: 5%;
+}
+
+.section-three-div-p2 {
+    color: #e6e4e4;
+    margin-top: 4rem;
+    width: 40%;
+    margin-left: calc(8%);
+    font-size: 12px;
+    word-spacing: 1px;
+    text-align: center;
+}
+
+.section-three-div-span2 {
+    padding-left: 1rem;
+    color: #aba4ab;
+}
+
+.invert-p2 {
+    transform: rotate(180deg);
+    margin-top: -30%;
+    margin-left: 12%;
+    text-align: center;
+}
+
+.section-three-div-button {
+    background-color: #04FF69;
+    padding: 10px 20px;
+    border: none;
+    margin-top: calc(10%);
+    margin-left: calc(58%);
+}
+
+.button-invert {
+    transform: rotate(180deg);
+    background-color: #04FF69;
+    padding: 10px 20px;
+    border: none;
+    margin-left: calc(69%);
 }
