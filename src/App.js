@@ -1,28 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Navbar from './component/Navbar.js';
-import Homes1 from './component/Homes1';
-import Homes2 from './component/Homes2';
-import Homes3 from './component/Homes3';
-import Homes6 from './component/Homes6';
 
-import Homes from './component/Homes';
-import Homes7 from './component/Homes7';
-import Homes8 from './component/Homes8';
-import Homes9 from './component/Homes9';
+
+import Navbar from './component/Navbar.js';
+import Home from './component/Home';
+import Company from './component/Company';
+import Researcher from './component/Researcher';
+import Program from './component/Program';
+import Academy from './component/Academy';
 import Footer from './component/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
+
       <Navbar />
-      <Homes1 />
-      <Homes2 />
-      <Homes3 />
-      <Homes />
-      <Homes7 />
-      <Homes8 />
-      <Homes9 />
+      <BrowserRouter >
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/company' element={<Company />} />
+          <Route path='/researcher' element={<Researcher />} />
+          <Route path='/program' element={<Program />} />
+          <Route path='/academy' element={<Academy />} />
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </>
   );

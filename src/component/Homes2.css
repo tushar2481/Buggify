@@ -19,20 +19,6 @@
     margin: 2rem 25rem;
 }
 
-/* 
-.bg-div {
-    border-bottom: 50rem solid rgba(88, 189, 128, 0.3);
-
-    border-right: 160rem solid transparent;
-    height: 0;
-    width: 100%;
-} */
-
-/* .div-color {
-    background-color: rgba(4, 255, 105, 0.1);
-    height: 200px;
-    bottom: 0;
-} */
 .section-second-square {
     margin-top: 5rem;
     width: 100%;
@@ -47,7 +33,7 @@
 .sq {
     position: relative;
     clip-path: polygon(50% 100%, 100% 75%, 100% 0%, 0% 0%, 0% 75%);
-    background: #1C1C1C;
+    background: #141414;
     margin: 0 2rem;
     height: 32rem;
     border-radius: 20px;
@@ -74,7 +60,7 @@
     font-size: 10px;
     color: #FFFFFF;
     padding-top: 3rem;
-    text-align: center;
+    text-align: justify;
     width: 85%;
     margin-left: calc(5%);
 }
@@ -92,4 +78,91 @@
 .sq-icon {
     font-size: 30px;
     color: #000;
+}
+
+
+
+@media (max-width: 1080px) {}
+
+@media (max-width: 998px) {
+    .section-second-square {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 5rem repeat(2, 1fr) 5rem;
+        grid-template-rows: repeat(2, auto);
+        grid-row-gap: 20px;
+    }
+
+    .sq {
+        clip-path: polygon(50% 100%, 100% 75%, 100% 0%, 0% 0%, 0% 75%);
+        background: #141414;
+        height: 30rem;
+        width: 60%;
+    }
+
+    .sq-h1 {
+        font-size: 20px;
+        color: #FFFFFF;
+        padding-top: 5rem;
+        text-align: center;
+    }
+
+    .sq-h2 {
+        font-size: 10px;
+    }
+
+    .sq-p {
+        font-size: 8px;
+        width: 80%;
+        margin-left: calc(10%);
+    }
+
+    .sq-span {
+        right: 9rem;
+        padding: 1rem;
+        width: 20%;
+    }
+
+    .sq-icon {
+        font-size: 25px;
+    }
+
+    .sq1 {
+        grid-column: 2/3;
+    }
+
+    .sq3 {
+        grid-column: 2/3;
+    }
+}
+
+@media (max-width: 798px) {
+
+    .section-second-square {
+        width: 70%;
+        display: block;
+        margin-left: calc(26%);
+
+    }
+
+    .sq2 {
+        margin-top: 4rem;
+    }
+
+    .sq3 {
+        margin-top: 4rem;
+    }
+
+    .sq4 {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .section-second-square {
+        margin-top: 5rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 5rem auto auto auto auto 5rem;
+    }
 }

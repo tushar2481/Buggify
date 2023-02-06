@@ -59,3 +59,53 @@
     margin-top: 2rem;
     margin-left: calc(45%);
 }
+
+
+@media (max-width: 1080px) {
+    /* Change */
+}
+
+@media (max-width: 998px) {
+    /* chnged */
+
+}
+
+@media (max-width: 798px) {
+    .section-eight-form-label {
+        font-weight: 700;
+        margin-left: calc(20%);
+        font-size: 12px;
+    }
+
+    .section-eight-form-input {
+        margin-left: calc(20%);
+        width: 400px;
+        height: 25px;
+    }
+
+    .section-eight-form-p {
+        font-size: 12px;
+        width: 80%;
+        margin-left: calc(5%);
+    }
+
+    .section-eight-form-button {
+        width: 100px;
+        height: 30px;
+        margin-left: calc(45%);
+    }
+}
+
+@media (max-width: 520px) {
+    .section-eight-form-p {
+        font-size: 12px;
+        width: 90%;
+        margin-left: calc(5%);
+    }
+
+    .section-eight-form-button {
+        width: 100px;
+        height: 30px;
+        margin-left: calc(45%);
+    }
+}

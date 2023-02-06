@@ -1,0 +1,18 @@
+.section-five {
+    background-color: #0b0b0b;
+}
+
+@media (max-width: 900px) {
+    .div {
+        width: 200px;
+    }
+
+    .divHeading {
+        font-size: 10px;
+    }
+
+    .imgStyle {
+        width: 100px;
+        height: 100px;
+    }
+}

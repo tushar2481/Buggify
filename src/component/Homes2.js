@@ -19,7 +19,7 @@ const homes2 = () => {
                             <p className="sq-p">Our Pentesters follows International Information Security Compliances for Maintaining Standards to Save Data and Information Systems against Malicious Attacks.
                                 <br /><br />
                                 We help Organizations to implement an ISMS that meets the requirements of the standard</p>
-                            <div className="sq-span"><BsInfoLg className="sq-icon sq1-icon" /></div>
+                            {/* <div className="sq-span"><BsInfoLg className="sq-icon sq1-icon" /></div> */}
 
                             <br />
                         </div>
@@ -30,7 +30,7 @@ const homes2 = () => {
                                 <br /><br />
                                 Public Program uses knowledge of Researchers around the world to make systems more secure
                             </p>
-                            <div className="sq-span"><IoBugOutline className="sq-icon sq1-icon" /></div>
+                            {/* <div className="sq-span"><IoBugOutline className="sq-icon sq1-icon" /></div> */}
                             <br />
                         </div>
                         <div className=" sq sq3">
@@ -39,7 +39,7 @@ const homes2 = () => {
                             <p className="sq-p">Researchers submit Reports about their Pentest on Infrastructure and it’s kept secret between organization and researchers by mutual agreements
                                 <br /><br />
                                 Safe Harbour Policy Allows hackers to pentest in-scope infrastructures and NDA helps Organizations to allow disclosure of bug based on their policy</p>
-                            <div className="sq-span"><BsInfoLg className="sq-icon sq1-icon" /></div>
+                            {/* <div className="sq-span"><BsInfoLg className="sq-icon sq1-icon" /></div> */}
                             <br />
                         </div>
                         <div className=" sq sq4">
@@ -48,17 +48,16 @@ const homes2 = () => {
                             <p className="sq-p">MiTRE Att&ck Frameworks are made to help organizations aware of Risk Tactics and Techniques by Threat Actors to keep them safe & Recover against Cyber Attacks
                                 <br /><br />
                                 During Consulting Our Security Consultant and CISO, they aware organizations about Security Policies that must be enforces to maintain standards</p>
-                            <div className="sq-span"><BsInfoLg className="sq-icon sq1-icon" /></div>
+                            {/* <div className="sq-span"><BsInfoLg className="sq-icon sq1-icon" /></div> */}
                             <br />
                         </div>
                     </div>
                     <br /><vr /><br />
                 </div>
-                <div className="div-color"></div>
+
             </div>
 
         </>
     )
 }
-
 export default homes2;
