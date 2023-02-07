@@ -83,7 +83,7 @@ li {
     grid-column: 4/5;
 }
 
-.try-btn button {
+.button {
     color: #141414;
     cursor: pointer;
     background-color: #04FF69;

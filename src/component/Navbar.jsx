@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { BsList } from "react-icons/bs";
-import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
+
     const [showMediaIcons, setShowMediaIcons] = useState(false);
     return (
         <>
@@ -16,14 +17,14 @@ const Navbar = () => {
                         showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
                     }>
                     <ul>
-                        <li><NavLink to='/'>Home</NavLink></li>
-                        <li><NavLink to='/company'>Company</NavLink></li>
-                        <li><NavLink to='/researchers'>Researchers</NavLink></li>
-                        <li><NavLink to='/program'>Programs</NavLink></li>
-                        <li><NavLink to='/academy'>Academy</NavLink></li>
+                        <li><a href="/" >Home</a></li>
+                        <li><a href="/company">Company</a></li>
+                        <li><a href="/researcher">Researchers</a></li>
+                        <li><a href="/program">Programs</a></li>
+                        <li><a href="/academy">Academy</a></li>
                     </ul>
                     <div className="try-btn">
-                        <button >Try-Buggify</button>
+                        <button className="button">Try-Buggify</button>
 
                     </div>
 

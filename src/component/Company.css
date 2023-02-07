@@ -1,0 +1,250 @@
+.company {
+    background-color: #0B0B0B;
+}
+
+.section-1 {
+    padding-top: 5rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10rem 1fr 1fr 10rem;
+}
+
+.part-1 {
+    position: absolute;
+    grid-column: 2/3;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.section-1-part-1-h {
+    text-align: center;
+    color: #ffffff;
+}
+
+.section-1-part-1-p {
+    width: 70%;
+    margin-left: 10rem;
+    margin-right: 5rem;
+    margin-top: 3rem;
+    text-align: justify;
+    color: #ffffff;
+}
+
+.section-1-part-1-btn {
+    margin: 3rem 10rem 0rem 13rem;
+}
+
+.button2 {
+    color: #04FF69;
+    cursor: pointer;
+    background-color: #1C1C1C;
+    padding: 13px 18px;
+    font-weight: 500;
+    border: none;
+    text-align: center;
+}
+
+.part-2 {
+    grid-column: 3/4;
+}
+
+.section-1-part-2-img {
+    width: 500px;
+    border-radius: 10px;
+}
+
+/* Second section */
+
+.section-2-h {
+    margin-top: 7rem;
+    text-align: center;
+    color: #878787;
+}
+
+.section-2-div {
+    display: grid;
+    grid-template-columns: 15rem 1fr 1fr 1fr 15rem;
+    grid-gap: 2rem;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.section-2-div1 {
+    grid-column: 2/3;
+    border: 1px solid #04FF69;
+    width: 30rem;
+    height: 25rem;
+}
+
+.section-2-div2 {
+    grid-column: 3/4;
+    border: 1px solid #04FF69;
+    width: 30rem;
+    height: 25rem;
+}
+
+.section-2-div3 {
+    grid-column: 4/5;
+    border: 1px solid #04FF69;
+    width: 30rem;
+    height: 25rem;
+}
+
+.section-2-div-h {
+    margin-top: 3rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.section-2-div-p {
+    margin-top: 3rem;
+    text-align: justify;
+    width: 80%;
+    margin-left: calc(10%);
+    line-height: 1.9rem;
+    font-size: 12px;
+    color: #7F7F7F;
+}
+
+
+/* Section-3 */
+
+.section-3-div1 {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 10rem 1.2fr 1fr 5rem;
+    grid-column-gap: 30px;
+}
+
+.img-1 {
+    border: 1px solid #04FF69;
+    background-color: rgba(119, 248, 165, 0.2);
+    border-radius: 10px;
+    padding: 0rem 10rem;
+    /* width: 72%; */
+    grid-column: 2/3;
+}
+
+.section-3-div-img {
+    width: 400px;
+    height: 350px;
+}
+
+.section-3-div-content {
+    grid-column: 3/4;
+}
+
+.section-3-div-h1 {
+    color: #ffffff;
+    margin: 2rem 3rem;
+    font-size: 14px;
+
+}
+
+.section-3-div-h2 {
+    color: #ffffff;
+    margin: 0rem 3rem;
+    font-size: 20px;
+}
+
+.section-3-div-p {
+    color: #878787;
+    margin: 5rem 3rem;
+    font-size: 12px;
+    line-height: 1.5rem;
+}
+
+.section-3-div2 {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 10rem 1fr 1.2fr 5rem;
+    grid-column-gap: 30px;
+}
+
+.img-2 {
+    border: 1px solid #04FF69;
+    background-color: rgba(119, 248, 165, 0.2);
+    border-radius: 10px;
+    padding: 0rem 10rem;
+    /* width: 72%; */
+    grid-column: 3/4;
+    /* margin-left: ; */
+}
+
+.content-2 {
+    grid-column: 2/3;
+}
+
+.section-3-div3 {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 10rem 1.2fr 1fr 5rem;
+    grid-column-gap: 30px;
+}
+
+.section-3-div4 {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 10rem 1.2fr 1fr 5rem;
+    grid-column-gap: 30px;
+}
+
+
+/* Section-4 */
+
+.section-4-h {
+    margin-top: 7rem;
+    text-align: center;
+    color: #878787;
+}
+
+.section-4-h2 {
+    margin-top: 7rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.section-4-div {
+    display: grid;
+    grid-template-rows: 10rem 1fr 1fr 1fr 1fr 10rem;
+
+}
+
+.section-4-div-leftArrow {
+    grid-column: 2/3;
+}
+
+.section-4-div1 {
+    margin-top: 5rem;
+    grid-column: 3/4;
+    width: 200px;
+    height: 150px;
+    border: 1px solid #04ff69;
+    border-top-right-radius: 20% 20%;
+    border-bottom-left-radius: 20% 20%;
+    /* overflow: hidden; */
+
+}
+
+.section-4-div2 {
+    margin-top: 5rem;
+    grid-column: 4/5;
+    width: 200px;
+    height: 150px;
+    border: 1px solid #04ff69;
+    border-top-right-radius: 20% 20%;
+    border-bottom-left-radius: 20% 20%;
+}
+
+.section-4-div-rightArrow {
+    grid-column: 5/6;
+}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 998px) {}
+
+@media (max-width: 798px) {}
+
+@media (max-width: 520px) {}

@@ -99,12 +99,6 @@ li {
 }
 
 .home-button {
-    color: #0B0B0B;
-    background-color: #04FF69;
-    padding: 10px 15px;
-    font-weight: 700;
-    border: none;
-    border-radius: 0;
     margin-left: calc(40%);
 }
 

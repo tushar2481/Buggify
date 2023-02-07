@@ -33,7 +33,7 @@ const homes1 = () => {
                                 </div>
                             </div>
                             <br /><br /><br /><br />
-                            <Button className="home-button mt-2">Why Buggify</Button>
+                            <Button className="button home-button" >Why Buggify</Button>
                         </Card.Text>
                         <Card.Img src={Image} className="card-img" />
                     </Card.Body>

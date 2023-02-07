@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 
-import Navbar from './component/Navbar.js';
+import Navbar from './component/Navbar.jsx';
 import Home from './component/Home';
 import Company from './component/Company';
 import Researcher from './component/Researcher';
