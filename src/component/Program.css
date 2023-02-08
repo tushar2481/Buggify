@@ -1,0 +1,10 @@
+@media (max-width: 998px) {
+    footer ul li ul {
+      display: none;
+    }
+  
+    footer button {
+      display: block;
+    }
+  }
+  

@@ -23,8 +23,6 @@ li {
     height: 10rem;
     display: grid;
     grid-template-columns: 10rem 1fr 3fr 10rem;
-    /* box-shadow: rgba(22, 49, 38, 0.25) 0px 50px 100px -20px, */
-    /* rgba(15, 31, 17, 0.3) 0px 30px 60px -30px; */
     background-color: #0B0B0B;
 }
 
