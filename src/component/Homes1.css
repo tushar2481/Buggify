@@ -23,12 +23,13 @@ li {
 .card {
     background-color: #0B0B0B;
     padding: 2rem 10rem;
-    grid-template-columns: 10rem 1fr 1fr 5rem;
+    
 }
 
 .card-body {
     width: 100%;
     display: grid;
+    grid-template-columns: 10rem 1fr 1fr 5rem;
 }
 
 .hr-div {
@@ -142,9 +143,13 @@ li {
     .hr-div {
         margin-left: -3rem;
     }
+    
 }
 
 @media (max-width: 998px) {
+    .card {
+        padding: 2rem 5rem;
+    }
     .second-hr-div {
         display: none;
         /* margin-left: 70rem; */
@@ -158,7 +163,11 @@ li {
         display: block;
         padding: 0rem 5rem;
     }
-
+    .card-img {
+        grid-column: 3/4;
+        margin-left: 6rem;
+        width: 90%;
+    }
     .second-hr-div {
         left: 0%;
     }
