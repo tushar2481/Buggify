@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Company.css";
 import CompanyImg1 from "./image/Company-section-1.png";
 import CompanyImg2 from "./image/Company-section-3-1.png";
 import CompanyImg3 from "./image/Company-section-3-2.png";
 import CompanyImg4 from "./image/Company-section-3-3.png";
 import CompanyImg5 from "./image/Company-section-3-4.png";
+import { BsFillArrowLeftCircleFill } from "react-icons/bs";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
+
+const Data = [
+	{ image: "image1", heading: "Heading 1", anchor: "Learn More" },
+	{ image: "image2", heading: "Web Application Pentest", anchor: "Learn More" },
+	{
+		image: "image3",
+		heading: "Active Directory Pentest",
+		anchor: "Learn More",
+	},
+	{ image: "image4", heading: "Heading 4", anchor: "Learn More" },
+];
 
 function Company() {
+	const [div2Index, setDiv2Index] = useState(1);
+	const [div3Index, setDiv3Index] = useState(2);
+
+	const handleLeftIconClick = () => {
+		setDiv2Index(div2Index === 0 ? Data.length - 1 : div2Index - 1);
+		setDiv3Index(div3Index);
+	};
+
+	const handleRightIconClick = () => {
+		setDiv2Index(div2Index);
+		setDiv3Index(div3Index === Data.length - 1 ? 0 : div3Index + 1);
+	};
 	return (
 		<>
 			<div className="company">
@@ -21,11 +46,17 @@ function Company() {
 							Penetration Testing as a Service from Buggify Covers Various Aspects of
 							Data Protection, Regulation & Governance.
 						</p>
-						<div>
-							<button className="button section-1-part-1-btn ">Private Program</button>
-							<button className="button2 section-1-part-1-btn2 ">
-								Public Program
-							</button>
+						<div className="section-1-part-1-button">
+							<div className="button_ani section-1-part-1-btn1 ">
+								<button className="button">
+									Private Program
+								</button>
+							</div>
+							<div className="button_ani section-1-part-1-btn2  ">
+								<button className="button2 ">
+									Public Program
+								</button>
+							</div>
 						</div>
 					</div>
 					<div className="part-2">
@@ -135,7 +166,7 @@ function Company() {
 									Organization Can <span style={{ color: "#04ff69" }}>Monitor</span>For
 									Security Reports & Submissions.
 								</h2>
-								<p className="section-3-div-p">
+								<p className="section-3-div-p p-4">
 									Bug Report Submissions can be tracked and continuously monitored for
 									How many Bugs Found Over Periods. Re-Testing Like Policies can be
 									Applied through Sustainable Programs. It Can be Used to Reduce Risks.
@@ -156,15 +187,38 @@ function Company() {
 						<span style={{ color: "#04ff69" }}>Race of Technology</span>
 					</h1>
 					<div className="section-4-div">
-						<div className="section-4-div-leftArrow"> </div>
-						<div className="section-4-div1"></div>
-						<div className="section-4-div2"></div>
-						<div className="section-4-div-rightArrow"></div>
+						<span className="section-4-div-leftArrow">
+							{" "}
+							<BsFillArrowLeftCircleFill
+								className="arrow-left-icon"
+								onClick={handleLeftIconClick}
+							/>
+						</span>
+						<div className="section-4-div1">
+							<img src={div2Index.image} className="section-4-div-img" />
+							<h3 className="section-4-div-h">{div2Index.heading}</h3>
+							<a href={div2Index.anchor} className="section-4-div-a">
+								{div2Index.anchor}
+							</a>
+						</div>
+						<div className="section-4-div2">
+							<img src={div3Index.image} className="section-4-div-img" />
+							<h3 className="section-4-div-h">{div3Index.heading}</h3>
+							<a href={div3Index.anchor} className="section-4-div-a">
+								{div3Index.anchor}
+							</a>
+						</div>
+						<div className="section-4-div-rightArrow">
+							<BsFillArrowRightCircleFill
+								className="arrow-right-icon"
+								onClick={handleRightIconClick}
+							/>
+						</div>
 					</div>
 				</div>
 
 				{/* Section-5 */}
-
+				
 				{/* Section-6 */}
 			</div>
 		</>

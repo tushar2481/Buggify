@@ -20,7 +20,7 @@ const Footer = () => {
 				<div className={isOpen ? "footer-link footer-mobile-link" : "footer-link"}>
 					<ul>
 						<li className="l1">
-							<h4>Bussiness</h4>
+							<h3>Bussiness</h3>
 							<button
 								className="listopen"
 								onClick={() => setIsBussinessOpen(!isBussinessOpen)}
@@ -34,7 +34,7 @@ const Footer = () => {
 							<li
 								className={isBussinessOpen ? "mobile-list" : "list"}
 								style={{
-									textIndent: " 10px",
+									textIndent: " 18px",
 								}}
 							>
 								<a href="#">Private red teaming</a>
@@ -42,7 +42,7 @@ const Footer = () => {
 							<li
 								className={isBussinessOpen ? "mobile-list" : "list"}
 								style={{
-									textIndent: " 10px",
+									textIndent: " 18px",
 								}}
 							>
 								<a href="#">Web application pentesting</a>
@@ -50,7 +50,7 @@ const Footer = () => {
 							<li
 								className={isBussinessOpen ? "mobile-list" : "list"}
 								style={{
-									textIndent: " 10px",
+									textIndent: " 18px",
 									display: isBussinessOpen ? "block" : "none",
 								}}
 							>
@@ -59,7 +59,7 @@ const Footer = () => {
 							<li
 								className={isBussinessOpen ? "mobile-list" : "list"}
 								style={{
-									textIndent: " 10px",
+									textIndent: " 18px",
 									display: isBussinessOpen ? "block" : "none",
 								}}
 							>
@@ -68,7 +68,7 @@ const Footer = () => {
 							<li
 								className={isBussinessOpen ? "mobile-list" : "list"}
 								style={{
-									textIndent: " 10px",
+									textIndent: " 18px",
 								}}
 							>
 								<a href="#">Network Pentesting</a>
@@ -76,7 +76,7 @@ const Footer = () => {
 							<li
 								className={isBussinessOpen ? "mobile-list" : "list"}
 								style={{
-									textIndent: " 10px",
+									textIndent: " 18px",
 								}}
 							>
 								<a href="#">Cloud Pentesting</a>
@@ -84,7 +84,7 @@ const Footer = () => {
 							<li
 								className={isBussinessOpen ? "mobile-list" : "list"}
 								style={{
-									textIndent: " 10px",
+									textIndent: " 18px",
 								}}
 							>
 								<a href="#">IoT Pentesting</a>
@@ -92,7 +92,7 @@ const Footer = () => {
 							<li
 								className={isBussinessOpen ? "mobile-list" : "list"}
 								style={{
-									textIndent: " 10px",
+									textIndent: " 18px",
 								}}
 							>
 								<a href="#">Hardware Pentesting</a>
@@ -108,7 +108,7 @@ const Footer = () => {
 							</li>
 						</li>
 						<li className="l1">
-							<h4>Researchers</h4>
+							<h3>Researchers</h3>
 							<button
 								className="listopen"
 								onClick={() => setIsResearcherOpen(!isResearcherOpen)}
@@ -139,7 +139,7 @@ const Footer = () => {
 							</li>
 						</li>
 						<li className="l1">
-							<h4>Academy</h4>
+							<h3>Academy</h3>
 							<button
 								className="listopen"
 								onClick={() => setIsAcademeyOpen(!isAcademyOpen)}
@@ -167,7 +167,7 @@ const Footer = () => {
 							</li>
 						</li>
 						<li className="l1">
-							<h4>About</h4>
+							<h3>About</h3>
 							<button
 								className="listopen"
 								onClick={() => setIsAboutOpen(!isAboutOpen)}
@@ -223,13 +223,13 @@ const Footer = () => {
 								<a href="#">Security</a>
 							</li>
 							<li>
-								<a href="#">Private Policy</a>
+								<a href="#">Privacy Policy</a>
 							</li>
 							<li>
 								<a href="#">Terms & conditions</a>
 							</li>
 							<li>
-								<a href="#">Data Protection Regukation</a>
+								<a href="#">Data Protection Regulation</a>
 							</li>
 						</ul>
 					</div>

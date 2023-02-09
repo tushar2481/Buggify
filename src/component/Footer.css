@@ -8,7 +8,6 @@
 
 a {
     text-decoration: none;
-    color: #D2D2D2;
 }
 
 li {
@@ -37,18 +36,22 @@ li {
 .footer-link {
     margin-top: 5rem;
 }
-
+.footer-link a{
+    color: #d2d2d2;
+}
 .footer-link ul {
     display: grid;
     grid-template-columns: 30rem 1fr 1fr 1fr 1fr;
     justify-content: start;
-    line-height: 1.8;
+    line-height: 2;
+    font-size: 14px;
 }
 
-.footer-link h4 {
+.footer-link h3 {
     text-align: center;
     display: inline;
     color: #D2D2D2;
+    font-size: 18px;
 }
 
 .footer-link ul li:first-child {
@@ -69,23 +72,30 @@ li {
     grid-template-columns: 8rem 4fr 1fr 5rem;
     justify-content: start;
 }
-
+.footer-policy a{
+    color: #d2d2d2;
+}
 .policy-list {
     grid-column: 2/3;
     content: " ";
-    font-size: 1.1rem;
+    font-size: 14px;
+    /* margin-top: 2rem; */
+    margin-bottom:  2rem;
 }
 
 .policy-list ul {
     float: left;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1fr;
+    display: flex;
+    /* grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr 1fr 1fr ; */
     line-height: 2.9;
-    justify-content: start;
+    /* justify-content: start; */
     align-items: center;
+    
 }
 
-
+.policy-list li {
+    padding: 15px;
+}
 
 .social-list {
     grid-column: 3/4;
@@ -96,6 +106,7 @@ li {
     display: grid;
     grid-template-columns: 1rem 1fr 1fr 1fr 1rem;
     line-height: 1.7;
+    margin-top: 2rem;
 }
 
 .social-list ul li:first-child {
@@ -104,7 +115,7 @@ li {
 
 .social-list ul li {
     padding: 0rem 2rem;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .twitter {
