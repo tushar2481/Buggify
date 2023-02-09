@@ -160,7 +160,7 @@ function Company() {
 									Organization Can <span style={{ color: "#04ff69" }}>Monitor</span>For
 									Security Reports & Submissions.
 								</h2>
-								<p className="section-3-div-p">
+								<p className="section-3-div-p p-4">
 									Bug Report Submissions can be tracked and continuously monitored for
 									How many Bugs Found Over Periods. Re-Testing Like Policies can be
 									Applied through Sustainable Programs. It Can be Used to Reduce Risks.

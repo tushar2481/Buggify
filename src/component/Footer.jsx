@@ -221,7 +221,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a href="#">Security</a>
-							</li>document.querySelector(x)
+							</li>
 							<li>
 								<a href="#">Privacy Policy</a>
 							</li>

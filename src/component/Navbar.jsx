@@ -4,6 +4,18 @@ import { BsList } from "react-icons/bs";
 
 const Navbar = () => {
 	const [showMediaIcons, setShowMediaIcons] = useState(false);
+	// const [activeIndex, setActiveIndex] = useState(0);
+
+	// const handleClick = (index) => {
+	// 	setActiveIndex(index);
+	// };
+
+	const [isHomeLinkOpen, setIsHomeLinkOpen] = useState(false);
+	const [isCompanyLinkOpen, setIsCompanyLinkOpen] = useState(false);
+	const [isResearcherLinkOpen, setIsResearcherLinkOpen] = useState(false);
+	const [isProgramLinkOpen, setIsProgramLinkOpen] = useState(false);
+	const [isAcademyLinkOpen, setIsAcademyLinkOpen] = useState(false);
+
 	return (
 		<>
 			<nav className="main-nav">
@@ -14,20 +26,43 @@ const Navbar = () => {
 					className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}
 				>
 					<ul>
-						<li>
+						<li
+							className={isHomeLinkOpen ? "active" : "menu-link-a"}
+							onClick={() => setIsHomeLinkOpen(!isHomeLinkOpen)}
+						>
 							<a href="/">Home</a>
 						</li>
-						<li>
+						<li
+							className={isCompanyLinkOpen ? "menu-link-a" : "menu-link-active"}
+							onClick={() => setIsCompanyLinkOpen(!isCompanyLinkOpen)}
+						>
 							<a href="/company">Company</a>
 						</li>
 						<li>
-							<a href="/researcher">Researchers</a>
+							<a
+								href="/researcher"
+								className={isResearcherLinkOpen ? "menu-link-a" : "menu-link-active"}
+								onClick={() => setIsResearcherLinkOpen(!isResearcherLinkOpen)}
+							>
+								Researchers
+							</a>
 						</li>
 						<li>
-							<a href="/program">Programs</a>
+							<a
+								href="/program"
+								className={setIsProgramLinkOpen ? "menu-link-a" : "menu-link-active"}
+								onClick={() => setIsProgramLinkOpen(!isProgramLinkOpen)}
+							>
+								Programs
+							</a>
 						</li>
-						<li>
-							<a href="/academy">Academy</a>
+						<li onClick={() => setIsAcademyLinkOpen(!isAcademyLinkOpen)}>
+							<a
+								href="/academy"
+								className={isAcademyLinkOpen ? "active" : "menu-link-a"}
+							>
+								Academy
+							</a>
 						</li>
 					</ul>
 					<div className="try-btn">
