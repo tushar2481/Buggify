@@ -46,11 +46,17 @@ function Company() {
 							Penetration Testing as a Service from Buggify Covers Various Aspects of
 							Data Protection, Regulation & Governance.
 						</p>
-						<div>
-							<button className="button section-1-part-1-btn ">Private Program</button>
-							<button className="button2 section-1-part-1-btn2 ">
-								Public Program
-							</button>
+						<div className="section-1-part-1-button">
+							<div className="button_ani section-1-part-1-btn1 ">
+								<button className="button">
+									Private Program
+								</button>
+							</div>
+							<div className="button_ani section-1-part-1-btn2  ">
+								<button className="button2 ">
+									Public Program
+								</button>
+							</div>
 						</div>
 					</div>
 					<div className="part-2">
@@ -212,7 +218,7 @@ function Company() {
 				</div>
 
 				{/* Section-5 */}
-
+				
 				{/* Section-6 */}
 			</div>
 		</>

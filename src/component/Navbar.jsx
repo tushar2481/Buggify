@@ -27,7 +27,7 @@ const Navbar = () => {
 				>
 					<ul>
 						<li
-							className={isHomeLinkOpen ? "active" : "menu-link-a"}
+							className={isHomeLinkOpen ? "active" : "menu-linnk"}
 							onClick={() => setIsHomeLinkOpen(!isHomeLinkOpen)}
 						>
 							<a href="/">Home</a>
@@ -65,9 +65,11 @@ const Navbar = () => {
 							</a>
 						</li>
 					</ul>
-					<div className="try-btn">
-						<button className="button">Try-Buggify</button>
-					</div>
+					
+
+					<div class="button_ani try-btn">
+					<button type="button" className="btn">Try Buggify</button>
+				</div>
 				</div>
 
 				<div className="social-media">

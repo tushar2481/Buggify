@@ -99,7 +99,7 @@ li {
 }
 
 .home-button {
-    margin-left: calc(40%);
+    width: fit-content;
 }
 
 .button:hover {

@@ -36,7 +36,9 @@ const homes3 = () => {
 							Preparedness Improved Risk Management Enhanced Reputation Better Decision
 							Making Capabilities Greater Efficiency of Systems And many more....
 						</p>
-						<button className="section-three-div-button">Explore Futher</button>
+						<div className="button_ani section-three-div-button">
+							<button className="btn">Explore Futher</button>
+						</div>
 					</div>
 					<div className="section-three-div-2">
 						<h2 className="section-three-div-h div2-h">Public Bug Bounty Program</h2>
@@ -63,9 +65,9 @@ const homes3 = () => {
 							Improved Innovation Great Transparency Improved Reputation Fast
 							Mitigation Enhanced Brand Reputation And Much More...
 						</p>
-						<button className=" section-three-div-button button-invert">
-							Explore Futher
-						</button>
+						<div className="button_ani button-invert">
+							<button className="btn">Explore Futher</button>
+						</div>
 					</div>
 				</div>
 			</div>

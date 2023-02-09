@@ -97,15 +97,15 @@
 }
 
 .section-three-div-button {
-    background-color: #04FF69;
-    padding: 10px 20px;
-    border: none;
-    margin-top: calc(10%);
+    width: fit-content;
     margin-left: calc(15%);
+    margin-top: 70px;
 }
 
 .button-invert {
-    margin-left: calc(59%);
+   width: fit-content; 
+   margin-left: calc(55%);
+   margin-top: 70px;
 }
 
 @media (max-width: 1080px) {
