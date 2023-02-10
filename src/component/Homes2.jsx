@@ -15,7 +15,7 @@ const homes2 = () => {
 						{" "}
 						Buggify has fast triage & Less Response time for Security Researchers
 						Enhanced Security Solutions for Companies High Quality Study Resources for
-						students willing to make future in Cyber Security
+						students willing to make future in Cyber Security.
 					</p>
 				</div>
 				<div className="bg-div">
@@ -30,7 +30,7 @@ const homes2 = () => {
 								<br />
 								<br />
 								We help Organizations to implement an ISMS that meets the requirements
-								of the standard
+								of the standard.
 							</p>
 							{/* <div className="sq-span"><BsInfoLg className="sq-icon sq1-icon" /></div> */}
 
@@ -42,11 +42,11 @@ const homes2 = () => {
 							<p className="sq-p">
 								Bug Bounty Platform is Open Source Research Program for Security
 								Researchers who finds Loopholes and legally Vulnerability Report to
-								Organization
+								Organization.
 								<br />
 								<br />
 								Public Program uses knowledge of Researchers around the world to make
-								systems more secure
+								systems more secure.
 							</p>
 							{/* <div className="sq-span"><IoBugOutline className="sq-icon sq1-icon" /></div> */}
 							<br />
@@ -57,12 +57,12 @@ const homes2 = () => {
 							<p className="sq-p">
 								Researchers submit Reports about their Pentest on Infrastructure and
 								it’s kept secret between organization and researchers by mutual
-								agreements
+								agreements.
 								<br />
 								<br />
 								Safe Harbour Policy Allows hackers to pentest in-scope infrastructures
 								and NDA helps Organizations to allow disclosure of bug based on their
-								policy
+								policy.
 							</p>
 							{/* <div className="sq-span"><BsInfoLg className="sq-icon sq1-icon" /></div> */}
 							<br />
@@ -73,12 +73,12 @@ const homes2 = () => {
 							<p className="sq-p">
 								MiTRE Att&ck Frameworks are made to help organizations aware of Risk
 								Tactics and Techniques by Threat Actors to keep them safe & Recover
-								against Cyber Attacks
+								against Cyber Attacks.
 								<br />
 								<br />
 								During Consulting Our Security Consultant and CISO, they aware
 								organizations about Security Policies that must be enforces to maintain
-								standards
+								standards.
 							</p>
 							{/* <div className="sq-span"><BsInfoLg className="sq-icon sq1-icon" /></div> */}
 							<br />

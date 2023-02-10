@@ -13,36 +13,36 @@ const homes9 = () => {
                         <div className="section-nine-div-body-p" >
                             <p className="section-nine-div-p"> Twitter’s 400M Users Data on Sale in Darknet</p>
                         </div>
-                        <button className="section-nine-div-button">
+                        <div className="button_ani section-nine-div-button"><button className="btn">
                             Read More
-                        </button>
+                        </button></div>
                     </div>
-                    <div className="section-nine-div2-body div-2">
+                    <div className="section-nine-div-body div2">
                         <img src="https://via.placeholder.com/190" alt="card image" className="section-nine-div-img" />
                         <div className="section-nine-div-body-p" >
                             <p className="section-nine-div-p"> Ukrainian Govt. Infrastructure Targeted by Chinese Hackers</p>
                         </div>
-                        <button className="section-nine-div-button">
+                        <div className="button_ani section-nine-div-button"><button className="btn">
                             Read More
-                        </button>
+                        </button></div>
                     </div>
                     <div className="section-nine-div-body div3">
                         <img src="https://via.placeholder.com/180" alt="card image" className="section-nine-div-img" />
                         <div className="section-nine-div-body-p" >
                             <p className="section-nine-div-p">ReconJET - Reconnaisance Tool Released by Buggify</p>
                         </div>
-                        <button className="section-nine-div-button">
+                        <div className="button_ani section-nine-div-button"><button className="btn">
                             Read More
-                        </button>
+                        </button></div>
                     </div>
                     <div className="section-nine-div-body div4">
                         <img src="https://via.placeholder.com/180" alt="card image" className="section-nine-div-img" />
                         <div className="section-nine-div-body-p" >
                             <p className="section-nine-div-p">Fire Rescue Victoria Confirms Cyber Attack</p>
                         </div>
-                        <button className="section-nine-div-button">
+                        <div className="button_ani section-nine-div-button"><button className="btn">
                             Read More
-                        </button>
+                        </button></div>
                     </div>
                 </div>
 

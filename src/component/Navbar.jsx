@@ -4,6 +4,8 @@ import { BsList } from "react-icons/bs";
 
 const Navbar = () => {
 	const [showMediaIcons, setShowMediaIcons] = useState(false);
+
+
 	// const [activeIndex, setActiveIndex] = useState(0);
 
 	// const handleClick = (index) => {
@@ -65,11 +67,11 @@ const Navbar = () => {
 							</a>
 						</li>
 					</ul>
-					
+
 
 					<div class="button_ani try-btn">
-					<button type="button" className="btn">Try Buggify</button>
-				</div>
+						<button type="button" className="btn">Try Buggify</button>
+					</div>
 				</div>
 
 				<div className="social-media">

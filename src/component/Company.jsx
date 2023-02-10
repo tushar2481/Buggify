@@ -25,11 +25,11 @@ function Company() {
 
 	const handleLeftIconClick = () => {
 		setDiv2Index(div2Index === 0 ? Data.length - 1 : div2Index - 1);
-		setDiv3Index(div3Index);
+		setDiv3Index(div3Index === 0 ? Data.length - 1 : div2Index - 1);
 	};
 
 	const handleRightIconClick = () => {
-		setDiv2Index(div2Index);
+		setDiv2Index(div2Index === Data.length - 1 ? 0 : div3Index + 1);
 		setDiv3Index(div3Index === Data.length - 1 ? 0 : div3Index + 1);
 	};
 	return (
@@ -39,7 +39,7 @@ function Company() {
 					<div className="part-1">
 						<h1 className="section-1-part-1-h">
 							<span style={{ color: "#04FF69" }}>Penetration Testing</span> for an{" "}
-							<br />
+
 							Organization.
 						</h1>
 						<p className="section-1-part-1-p">
@@ -48,12 +48,12 @@ function Company() {
 						</p>
 						<div className="section-1-part-1-button">
 							<div className="button_ani section-1-part-1-btn1 ">
-								<button className="button">
+								<button className="btn">
 									Private Program
 								</button>
 							</div>
 							<div className="button_ani section-1-part-1-btn2  ">
-								<button className="button2 ">
+								<button className="button2">
 									Public Program
 								</button>
 							</div>
@@ -115,7 +115,7 @@ function Company() {
 									Every Submitted Bugs can be Prioritize according to their severity.
 									Personal Pentest Reports can be easily tracked. It is Specifically
 									Designed to Monitor Pentest 24/7. After Completion of Pentest, You can
-									download Pentest Report directly from Dashboard. (See Sample Report)
+									download Pentest Report directly from Dashboard. (<a href="#" style={{ color: "#878787", textDecoration: "underline" }}>See Sample Report</a>)
 								</p>
 							</div>
 						</div>
@@ -163,7 +163,7 @@ function Company() {
 							<div className="section-3-div-content content-2">
 								<h3 className="section-3-div-h1">Continuous Analysis</h3>
 								<h2 className="section-3-div-h2">
-									Organization Can <span style={{ color: "#04ff69" }}>Monitor</span>For
+									Organization Can <span style={{ color: "#04ff69" }}>Monitor </span>For
 									Security Reports & Submissions.
 								</h2>
 								<p className="section-3-div-p p-4">
@@ -218,7 +218,7 @@ function Company() {
 				</div>
 
 				{/* Section-5 */}
-				
+
 				{/* Section-6 */}
 			</div>
 		</>

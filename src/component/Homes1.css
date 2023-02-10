@@ -21,8 +21,8 @@ li {
 
 .card {
     background-color: #0B0B0B;
-    padding: 2rem 10rem;
-    
+    padding: 10rem 10rem 5rem;
+
 }
 
 .card-body {
@@ -42,6 +42,7 @@ li {
     width: 8%;
     transform: rotate(135deg);
     margin-bottom: 0.5rem;
+    margin-left: -20px;
 }
 
 .hr-2 {
@@ -50,7 +51,7 @@ li {
     height: 1px;
     width: 5%;
     transform: rotate(135deg);
-    margin-left: 1.5rem;
+    margin-left: -0.5rem;
 }
 
 .second-hr-div {
@@ -85,32 +86,33 @@ li {
 }
 
 .card-text-h {
-    font-size: 25px;
-    font-weight: 900;
+    font-size: 26px;
+    font-family: "Nunito";
     color: #F6F6F6;
     text-align: center;
-    text-shadow: 2px 2px 5px #8D8C8C;
+    text-shadow: 0 0 15px #04FF69;
+    letter-spacing: 2px;
+    line-height: 2.8rem;
 }
 
 .card-text-p {
+    margin-top: 3rem;
     font-size: 14px;
     color: #8D8C8C;
     text-align: justify;
+    line-height: 2rem;
+    letter-spacing: 1px;
 }
 
 .home-button {
     width: fit-content;
 }
 
-.button:hover {
-    background-color: #04FF69;
-    color: #0B0B0B;
-}
-
 .card-img {
     grid-column: 3/4;
     margin-left: 10rem;
     width: 80%;
+    filter: brightness(900%);
 }
 
 @media (max-width: 1200px) {
@@ -142,13 +144,14 @@ li {
     .hr-div {
         margin-left: -3rem;
     }
-    
+
 }
 
 @media (max-width: 998px) {
     .card {
         padding: 2rem 5rem;
     }
+
     .second-hr-div {
         display: none;
         /* margin-left: 70rem; */
@@ -162,11 +165,13 @@ li {
         display: block;
         padding: 0rem 5rem;
     }
+
     .card-img {
         grid-column: 3/4;
         margin-left: 6rem;
         width: 90%;
     }
+
     .second-hr-div {
         left: 0%;
     }

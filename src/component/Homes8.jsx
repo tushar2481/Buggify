@@ -71,10 +71,11 @@ function Form() {
 
 
                 <p className="section-eight-form-p">We will handle all information Safe according to Our Privacy Policy. If you don’t want to receive marketing mail, you can manually Turn it off from here.</p>
-                <button className="section-eight-form-button" >
-                    Get in Touch!
-                </button>
-
+                <div className="button_ani  section-eight-form-button">
+                    <button className="btn" >
+                        Get in Touch!
+                    </button>
+                </div>
             </form >
 
         </div >
