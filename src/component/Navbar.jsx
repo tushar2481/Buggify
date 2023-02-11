@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { BsList } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
 	const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -38,20 +40,17 @@ const Navbar = () => {
 							className={isCompanyLinkOpen ? "menu-link-a" : "menu-link-active"}
 							onClick={() => setIsCompanyLinkOpen(!isCompanyLinkOpen)}
 						>
-							<a href="/company">Company</a>
+							<a href="/company" >Company</a>
 						</li>
 						<li>
-							<a
-								href="/researcher"
+							<a href="/researcher"
 								className={isResearcherLinkOpen ? "menu-link-a" : "menu-link-active"}
-								onClick={() => setIsResearcherLinkOpen(!isResearcherLinkOpen)}
-							>
+								onClick={() => setIsResearcherLinkOpen(!isResearcherLinkOpen)}>
 								Researchers
 							</a>
 						</li>
 						<li>
-							<a
-								href="/program"
+							<a href="/program"
 								className={setIsProgramLinkOpen ? "menu-link-a" : "menu-link-active"}
 								onClick={() => setIsProgramLinkOpen(!isProgramLinkOpen)}
 							>
@@ -59,8 +58,7 @@ const Navbar = () => {
 							</a>
 						</li>
 						<li onClick={() => setIsAcademyLinkOpen(!isAcademyLinkOpen)}>
-							<a
-								href="/academy"
+							<a href="/academy"
 								className={isAcademyLinkOpen ? "active" : "menu-link-a"}
 							>
 								Academy

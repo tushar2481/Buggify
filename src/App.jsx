@@ -9,14 +9,18 @@ import Researcher from './component/Researcher';
 import Program from './component/Program';
 import Academy from './component/Academy';
 import Footer from './component/Footer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 function App() {
   return (
     <>
 
       <Navbar />
-      <BrowserRouter >
+      <Router >
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/company' element={<Company />} />
@@ -24,7 +28,8 @@ function App() {
           <Route path='/program' element={<Program />} />
           <Route path='/academy' element={<Academy />} />
         </Routes>
-      </BrowserRouter>
+        {/* <Redirect to="/" /> */}
+      </Router>
       <Footer />
     </>
   );

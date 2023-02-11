@@ -199,6 +199,7 @@
     margin: 5rem 3rem;
     font-size: 16px;
     line-height: 2.5rem;
+    letter-spacing: 1px;
 }
 
 .section-3-div2 {
@@ -336,7 +337,53 @@
 }
 
 
+.section-6 {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
 
+.section-6-div1 {
+    /* height: 20rem; */
+    box-shadow: inset 10px 10px 100px rgba(4, 255, 105, 0.2);
+}
+
+.section-6-div1-h {
+    padding-top: 10rem;
+    margin-left: calc(10rem);
+    color: #ffffff;
+    font-size: 26px;
+    text-shadow: 0 0 15px #04FF69;
+}
+
+.section-6-display-flex {
+    display: flex;
+}
+
+.section-6-div1-p {
+    color: #ffffff;
+    margin-top: 5rem;
+    margin-left: calc(8rem);
+    font-size: 16px;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    padding-bottom: 10rem;
+}
+
+.section-6-button {
+    display: flex;
+    padding-bottom: 10rem;
+}
+
+.section-6-button1 {
+    width: fit-content;
+    margin-left: 20rem;
+}
+
+.section-6-button2 {
+    width: fit-content;
+    margin-left: 10rem;
+
+}
 
 @media (max-width: 1200px) {}
 

@@ -219,7 +219,29 @@ function Company() {
 
 				{/* Section-5 */}
 
-				{/* Section-6 */}
+				<div className="section-6">
+					<div className="section-6-div1">
+						<h1 className="section-6-div1-h">Get started with <span style={{
+							color: "#04ff69"
+						}}>Buggify</span></h1>
+						<div className="section-6-display-flex">
+							<p className="section-6-div1-p">Be Quick to Secure Your Assets, Before Hacker Attacks.</p>
+
+							<div className="section-6-button">
+								<div className="button_ani  section-6-button1 ">
+									<button className="btn">
+										Private Program
+									</button>
+								</div>
+								<div className="button_ani section-6-button2  ">
+									<button className="button2">
+										Public Program
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</>
 	);
