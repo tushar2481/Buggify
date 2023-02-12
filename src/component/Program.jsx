@@ -1,55 +1,117 @@
-import React, { useState } from "react";
-import './Program.css';
+import React from 'react'
 
-const Footer = () => {
-  const [showAbout, setShowAbout] = useState(false);
-
+const Program = () => {
   return (
-    <footer style={{ backgroundColor: "#141414", display: "flex" }}>
-      <img
-        src="logo.png"
-        alt="Buggify logo"
-        style={{ marginLeft: "10rem" }}
-      />
-      <ul style={{ marginLeft: "15rem", listStyleType: "none" }}>
-        <li>
-          <h3>Business</h3>
-          <ul style={{ display: showAbout ? "block" : "none" }}>
-            <li>Services</li>
-            <li>Pricing</li>
-            <li>Case Studies</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Researcher</h3>
-          <ul style={{ display: showAbout ? "block" : "none" }}>
-            <li>Methods</li>
-            <li>Findings</li>
-            <li>Publications</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Academy</h3>
-          <ul style={{display: showAbout ? "block" : "none" }}>
-            <li>Courses</li>
-            <li>Instructors</li>
-            <li>Enrollment</li>
-          </ul>
-        </li>
-        <li>
-          <h3>About</h3>
-          <ul style={{ display: showAbout ? "block" : "none" }}>
-            <li>Company</li>
-            <li>Careers</li>
-            <li>Contact</li>
-          </ul>
-          <button onClick={() => setShowAbout(!showAbout)}>
-            {showAbout ? "Close" : "Open"}
-          </button>
-        </li>
-      </ul>
-    </footer>
-  );
-};
+    <></>
+  )
+}
 
-export default Footer;
+export default Program;
+
+  // const Programs = [
+  //   {
+  //     id: "1",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "2",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "3",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "4",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "5",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "6",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "7",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "9",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "10",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "11",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "12",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "13",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "14",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+  //   {
+  //     id: "15",
+  //     company: "Google VDP",
+  //     resolved: "432",
+  //     avg: "$750",
+  //     launch: "2/2019",
+  //   },
+
+  // ]
+
+
+
+
+
+

@@ -9,12 +9,121 @@ import Researcher from './component/Researcher';
 import Program from './component/Program';
 import Academy from './component/Academy';
 import Footer from './component/Footer';
+import Login from './component/Login';
+import Forgot from './component/Forgot';
+import Signup from './component/Signup';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
+
+
+
+const Programs = [
+  {
+    id: "1",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "2",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "3",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "4",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "5",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "6",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "7",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "9",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "10",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "11",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "12",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "13",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "14",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+  {
+    id: "15",
+    company: "Google VDP",
+    resolved: "432",
+    avg: "$750",
+    launch: "2/2019",
+  },
+
+]
+
+
 function App() {
   return (
     <>
@@ -27,8 +136,11 @@ function App() {
           <Route path='/researcher' element={<Researcher />} />
           <Route path='/program' element={<Program />} />
           <Route path='/academy' element={<Academy />} />
+          <Route path='/Login' element={<Login />} />
+          <Route path='/Forgot' element={<Forgot />} />
+          <Route path='/Signup' element={<Signup />} />
         </Routes>
-        {/* <Redirect to="/" /> */}
+
       </Router>
       <Footer />
     </>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { BsList } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -14,11 +13,17 @@ const Navbar = () => {
 	// 	setActiveIndex(index);
 	// };
 
-	const [isHomeLinkOpen, setIsHomeLinkOpen] = useState(false);
-	const [isCompanyLinkOpen, setIsCompanyLinkOpen] = useState(false);
-	const [isResearcherLinkOpen, setIsResearcherLinkOpen] = useState(false);
-	const [isProgramLinkOpen, setIsProgramLinkOpen] = useState(false);
-	const [isAcademyLinkOpen, setIsAcademyLinkOpen] = useState(false);
+	// const [isHomeLinkOpen, setIsHomeLinkOpen] = useState(false);
+	// const [isCompanyLinkOpen, setIsCompanyLinkOpen] = useState(false);
+	// const [isResearcherLinkOpen, setIsResearcherLinkOpen] = useState(false);
+	// const [isProgramLinkOpen, setIsProgramLinkOpen] = useState(false);
+	// const [isAcademyLinkOpen, setIsAcademyLinkOpen] = useState(false);
+
+	// const navigateTo = useNavigate();
+
+	// const handleClick = () => {
+	// 	navigateTo("/login");
+	// };
 
 	return (
 		<>
@@ -30,45 +35,28 @@ const Navbar = () => {
 					className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}
 				>
 					<ul>
-						<li
-							className={isHomeLinkOpen ? "active" : "menu-linnk"}
-							onClick={() => setIsHomeLinkOpen(!isHomeLinkOpen)}
-						>
+						<li>
 							<a href="/">Home</a>
 						</li>
-						<li
-							className={isCompanyLinkOpen ? "menu-link-a" : "menu-link-active"}
-							onClick={() => setIsCompanyLinkOpen(!isCompanyLinkOpen)}
-						>
+						<li>
 							<a href="/company" >Company</a>
 						</li>
 						<li>
-							<a href="/researcher"
-								className={isResearcherLinkOpen ? "menu-link-a" : "menu-link-active"}
-								onClick={() => setIsResearcherLinkOpen(!isResearcherLinkOpen)}>
-								Researchers
-							</a>
+							<a href="/researcher">Researchers</a>
 						</li>
 						<li>
-							<a href="/program"
-								className={setIsProgramLinkOpen ? "menu-link-a" : "menu-link-active"}
-								onClick={() => setIsProgramLinkOpen(!isProgramLinkOpen)}
-							>
-								Programs
-							</a>
+							<a href="/program">Programs</a>
 						</li>
-						<li onClick={() => setIsAcademyLinkOpen(!isAcademyLinkOpen)}>
-							<a href="/academy"
-								className={isAcademyLinkOpen ? "active" : "menu-link-a"}
-							>
-								Academy
-							</a>
+						<li>
+							<a href="/academy">Academy</a>
 						</li>
 					</ul>
 
 
 					<div class="button_ani try-btn">
-						<button type="button" className="btn">Try Buggify</button>
+
+						<button type="button" className="btn"><a href="/Login" style={{ color: "#000000" }}>Try Buggify </a></button>
+
 					</div>
 				</div>
 
@@ -80,6 +68,9 @@ const Navbar = () => {
 					</div>
 				</div>
 			</nav>
+
+
+
 		</>
 	);
 };

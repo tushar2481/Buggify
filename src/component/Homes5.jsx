@@ -3,20 +3,34 @@ import './Homes5.css'
 import web from './image/web.png';
 import malware from './image/malware.png';
 import netsec from './image/netsec.png';
+import academy1 from './image/academy1.png';
+import academy2 from './image/academy2.png';
+import academy3 from './image/academy3.png';
+import academy4 from './image/academy4.png';
+import academy5 from './image/academy5.png';
+import academy6 from './image/academy6.png';
+import academy7 from './image/academy7.png';
+import academy8 from './image/academy8.png';
+
+
+
 import right from './image/right.png';
+
 import left from './image/left.png';
 
-function MyComponent() {
-    const [divs, setDivs] = useState([{ heading: 'Network Security', image: './image/netsec.png' }, { heading: 'Web Application Security', image: './image/web.png' }, { heading: 'Malware Analysis & R.E.', image: './image/malware.png' },]);
+const Homes5 = () => {
+
+    const [allImages, setAllImages] = useState([academy1, academy2, academy3, academy4, academy5, academy6, academy7, academy8])
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const maxIndex = allImages.length - 3;
 
     const handleLeftArrowClick = () => {
-        setDivs([divs[1], divs[2], divs[0]]);
+        setCurrentIndex(currentIndex - 1 < 0 ? 0 : currentIndex - 1);
     };
 
     const handleRightArrowClick = () => {
-        setDivs([divs[2], divs[0], divs[1]]);
+        setCurrentIndex(currentIndex + 1 > maxIndex ? maxIndex : currentIndex + 1);
     };
-
     const styles = {
         div: {
             backgroundColor: '#141414',
@@ -29,13 +43,7 @@ function MyComponent() {
             border: '1px solid #0ff069',
             borderRadius: '10px',
         },
-        imgStyle: {
-            height: '200px',
-            width: '200px',
-            marginLeft: 'calc(20%)',
-            marginTop: '5rem',
-            // marginDown: '5rem',
-        },
+
         divHeading: {
             color: '#FFFFFF',
             fontSize: '16px',
@@ -48,9 +56,9 @@ function MyComponent() {
 
         <div className='section-five' >
 
-            <h3 className="section-three-h1 h1">For Academy</h3>
-            <h1 className="h section-three-h2">Learn by breaking things</h1>
-            <p className="section-three-p">Buggify is willing for Students to master their career into Cyber Security Profession by providing different Security Courses from Various Area of Technologies from Web Application to Network Pentesting, Hardware & IoT Pentesting, Cloud Security Assessment to Malware Analysis and many more.</p>
+            <h3 className="section-five-h1 h1">For Academy</h3>
+            <h1 className="h section-five-h2">Learn by breaking things</h1>
+            <p className="section-five-p ">Buggify is willing for Students to master their career into Cyber Security Profession by providing different Security Courses from Various Area of Technologies from Web Application to Network Pentesting, Hardware & IoT Pentesting, Cloud Security Assessment to Malware Analysis and many more.</p>
 
 
 
@@ -67,15 +75,14 @@ function MyComponent() {
                         height: '50px',
                         justifyContent: 'center',
                         verticalAlign: 'middle',
-                        marginTop: '20rem',
+                        marginTop: '12rem',
                     }}
                 />
-                {divs.map((div, index) => (
-                    <div key={index} style={styles.div}>
-                        <h3 style={styles.divHeading}>{div.heading}</h3>
-                        <img src={div.image} alt={div.heading} style={styles.imgStyle} />
-                    </div>
-                ))}
+                <div className="slider-container">
+                    {allImages.slice(currentIndex, currentIndex + 3).map((allImages, index) => (
+                        <img key={index} src={allImages} className="section-five-img" />
+                    ))}
+                </div>
                 <img
                     src={right}
                     alt="Right Arrow"
@@ -87,7 +94,7 @@ function MyComponent() {
                         gridColumn: '2/3',
                         justifyContent: 'center',
                         verticalAlign: 'middle',
-                        marginTop: '20rem',
+                        marginTop: '12rem',
                     }}
                 />
             </div>
@@ -95,4 +102,4 @@ function MyComponent() {
     );
 }
 
-export default MyComponent;
+export default Homes5;

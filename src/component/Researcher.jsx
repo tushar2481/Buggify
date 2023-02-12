@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Researcher = () => {
     return (
@@ -7,4 +7,5 @@ const Researcher = () => {
     )
 }
 
-export default Researcher; 
+export default Researcher;
+
