@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { BsList } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
 	const [showMediaIcons, setShowMediaIcons] = useState(false);
+	// const [showPage, setShowPage] = useState(false);
 
 
+	const toLogin = () => {
+		let url = window.location.href;
+		alert(url);
+		let toRed = url + '/Login';
+		window.location.href = toRed;
+	}
+
+
+	// var Link = require('react-router').Link
 	// const [activeIndex, setActiveIndex] = useState(0);
 
 	// const handleClick = (index) => {
@@ -55,7 +66,7 @@ const Navbar = () => {
 
 					<div class="button_ani try-btn">
 
-						<button type="button" className="btn"><a href="/Login" style={{ color: "#000000" }}>Try Buggify </a></button>
+						<button type="button" className="btn" onClick={toLogin}><a href="/Login" style={{ color: "#000000" }}>Try Buggify </a></button>
 
 					</div>
 				</div>

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Company.css";
+
+
 import CompanyImg1 from "./image/Company-section-1.png";
 import CompanyImg2 from "./image/Company-section-3-1.png";
 import CompanyImg3 from "./image/Company-section-3-2.png";
@@ -34,6 +36,8 @@ function Company() {
 	};
 	return (
 		<>
+
+
 			<div className="company">
 				<div className="section-1">
 					<div className="part-1">
@@ -48,15 +52,12 @@ function Company() {
 						</p>
 						<div className="section-1-part-1-button">
 							<div className="button_ani section-1-part-1-btn1 ">
-								<button className="btn">
-									Private Program
-								</button>
+								<a href="/C1"><button className="button2">
+									Enroll in Program
+								</button>\
+								</a>
 							</div>
-							<div className="button_ani section-1-part-1-btn2  ">
-								<button className="button2">
-									Public Program
-								</button>
-							</div>
+
 						</div>
 					</div>
 					<div className="part-2">

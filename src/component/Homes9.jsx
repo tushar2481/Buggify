@@ -1,5 +1,9 @@
 import React from "react";
 import './Homes9.css'
+import HomeBlogTwitter from './image/HomeBlogTwitter.png';
+import HomeBlogUkrainian from './image/HomeBlogUkrainian.png';
+import HomeBlogRecon from './image/HomeBlogRecon.png';
+import HomeBlogFire from './image/HomeBlogFire.png';
 
 const homes9 = () => {
     return (
@@ -9,7 +13,7 @@ const homes9 = () => {
                 <h1 className="h">Read Latest Blogs About Current Trends in Security Industry</h1>
                 <div className="section-nine-div">
                     <div className="section-nine-div-body">
-                        <img src="https://via.placeholder.com/180" alt="card image" className="section-nine-div-img" />
+                        <img src={HomeBlogTwitter} alt="card image" className="section-nine-div-img" />
                         <div className="section-nine-div-body-p" >
                             <p className="section-nine-div-p"> Twitter’s 400M Users Data on Sale in Darknet</p>
                         </div>
@@ -18,7 +22,7 @@ const homes9 = () => {
                         </button></div>
                     </div>
                     <div className="section-nine-div-body div2">
-                        <img src="https://via.placeholder.com/190" alt="card image" className="section-nine-div-img" />
+                        <img src={HomeBlogUkrainian} alt="card image" className="section-nine-div-img" />
                         <div className="section-nine-div-body-p" >
                             <p className="section-nine-div-p"> Ukrainian Govt. Infrastructure Targeted by Chinese Hackers</p>
                         </div>
@@ -27,7 +31,7 @@ const homes9 = () => {
                         </button></div>
                     </div>
                     <div className="section-nine-div-body div3">
-                        <img src="https://via.placeholder.com/180" alt="card image" className="section-nine-div-img" />
+                        <img src={HomeBlogRecon} alt="card image" className="section-nine-div-img" />
                         <div className="section-nine-div-body-p" >
                             <p className="section-nine-div-p">ReconJET - Reconnaisance Tool Released by Buggify</p>
                         </div>
@@ -36,7 +40,7 @@ const homes9 = () => {
                         </button></div>
                     </div>
                     <div className="section-nine-div-body div4">
-                        <img src="https://via.placeholder.com/180" alt="card image" className="section-nine-div-img" />
+                        <img src={HomeBlogFire} alt="card image" className="section-nine-div-img" />
                         <div className="section-nine-div-body-p" >
                             <p className="section-nine-div-p">Fire Rescue Victoria Confirms Cyber Attack</p>
                         </div>

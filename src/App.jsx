@@ -12,6 +12,7 @@ import Footer from './component/Footer';
 import Login from './component/Login';
 import Forgot from './component/Forgot';
 import Signup from './component/Signup';
+import C1 from './component/C1';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   BrowserRouter as Router,
@@ -139,6 +140,8 @@ function App() {
           <Route path='/Login' element={<Login />} />
           <Route path='/Forgot' element={<Forgot />} />
           <Route path='/Signup' element={<Signup />} />
+          <Route path='/C1' element={<C1 />} />
+
         </Routes>
 
       </Router>
