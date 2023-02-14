@@ -11,7 +11,7 @@
     letter-spacing: 2px;
     font-family: "Nunito";
     text-shadow: 0 0 15px #04ff69;
-    color: #04ff69;
+    color: #ffffff;
 }
 
 .c1-h2 {
@@ -72,11 +72,11 @@
     border: none;
     text-align: center;
     box-shadow: 0 0 1px #141414, 0 0 1px #141414, 0 0 1px #141414, 0 0 5px #141414;
-    animation: neon 1s ease-in-out infinite alternate;
+    animation: neon3 1s ease-in-out infinite alternate;
 
 }
 
-@keyframes neon {
+@keyframes neon3 {
     to {
         box-shadow: 0 0 5px #fd2b2b, 0 0 0px #fd2b2b, 0 0 5px #fd2b2b, 0 0 5px #fd2b2b;
     }
@@ -87,7 +87,7 @@
 }
 
 .c1-section2-h {
-    color: #04ff69;
+    color: #ffffff;
     padding-top: 8rem;
     text-align: center;
     font-family: "Nunito";

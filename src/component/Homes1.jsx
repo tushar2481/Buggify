@@ -28,7 +28,7 @@ const homes1 = () => {
 								</h3>
 								<br />
 								<p className="fs-5 card-text-p">
-								
+
 									Buggify has fast triage & Less Response time for Security Researchers
 									Enhanced Security Solutions for Companies High Quality Study Resources
 									for students willing to make future in Cyber Security
@@ -39,7 +39,7 @@ const homes1 = () => {
 									<hr className="second-hr-2" />
 								</div>
 							</div>
-							
+
 							<div className="button_ani home-button"><Button className="button ">Why Buggify</Button></div>
 						</Card.Text>
 						<Card.Img src={Image} className="card-img" />
@@ -47,7 +47,7 @@ const homes1 = () => {
 				</Card>
 			</div>
 
-					</>
+		</>
 	);
 };
 

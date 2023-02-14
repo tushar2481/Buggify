@@ -64,7 +64,7 @@ const Navbar = () => {
 					</ul>
 
 
-					<div class="button_ani try-btn">
+					<div className="button_ani try-btn">
 
 						<button type="button" className="btn" onClick={toLogin}><a href="/Login" style={{ color: "#000000" }}>Try Buggify </a></button>
 

@@ -1,0 +1,16 @@
+.academy-na {
+    padding-top: 3rem;
+}
+
+.academy-nav-ul {
+    background-color: #04ff04;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 5rem;
+}
+
+.academy-nav-li {
+    font-size: 14px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+}
