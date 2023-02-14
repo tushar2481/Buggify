@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Company.css";
-
+import { NavLink } from "react-router-dom";
 
 import CompanyImg1 from "./image/Company-section-1.png";
 import CompanyImg2 from "./image/Company-section-3-1.png";
@@ -52,10 +52,10 @@ function Company() {
 						</p>
 						<div className="section-1-part-1-button">
 							<div className="button_ani section-1-part-1-btn1 ">
-								<a href="/C1"><button className="button2">
+								<NavLink to="/Company"><button className="button2">
 									Enroll in Program
-								</button>\
-								</a>
+								</button>
+								</NavLink>
 							</div>
 
 						</div>

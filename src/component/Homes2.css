@@ -71,8 +71,7 @@
     padding-top: 3rem;
     text-align: justify;
     width: 85%;
-    margin-left: calc(5%);
-    /* height: 15rem; */
+    margin-left: calc(7.5%);
 }
 
 .sq-span {
@@ -83,6 +82,7 @@
     background-color: #04FF69;
     width: 25%;
     border-radius: 50%;
+    font-size: 14px;
 }
 
 .sq-icon {

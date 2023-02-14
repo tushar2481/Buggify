@@ -29,6 +29,7 @@ li {
     width: 100%;
     display: grid;
     grid-template-columns: 10rem 1fr 1fr 5rem;
+    margin-top: 5rem;
 }
 
 .hr-div {
