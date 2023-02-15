@@ -1,6 +1,6 @@
 import React from "react";
 import './AcademyDiscord.css';
-import AcademyDiscord1 from './image/AcademyDiscord1.jpg'
+import AcademyDiscord1 from '../image/AcademyDiscord1.jpg'
 
 
 const AcademyDiscord = () => {

@@ -17,24 +17,10 @@ const Navbar = () => {
 	}
 
 
-	// var Link = require('react-router').Link
-	// const [activeIndex, setActiveIndex] = useState(0);
+	const [activeIndex, setActiveIndex] = useState(' ');
 
-	// const handleClick = (index) => {
-	// 	setActiveIndex(index);
-	// };
 
-	// const [isHomeLinkOpen, setIsHomeLinkOpen] = useState(false);
-	// const [isCompanyLinkOpen, setIsCompanyLinkOpen] = useState(false);
-	// const [isResearcherLinkOpen, setIsResearcherLinkOpen] = useState(false);
-	// const [isProgramLinkOpen, setIsProgramLinkOpen] = useState(false);
-	// const [isAcademyLinkOpen, setIsAcademyLinkOpen] = useState(false);
 
-	// const navigateTo = useNavigate();
-
-	// const handleClick = () => {
-	// 	navigateTo("/login");
-	// };
 
 	return (
 		<>
@@ -49,8 +35,8 @@ const Navbar = () => {
 						<li>
 							<a href="/">Home</a>
 						</li>
-						<li>
-							<a href="/company" >Company</a>
+						<li >
+							<a href="/company" className={activeIndex ? "link" : "Link"}>Company</a>
 						</li>
 						<li>
 							<a href="/researcher">Researchers</a>

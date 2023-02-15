@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import './AcademyGetStarted.css';
-import AcademyGet1 from "./image/AcademyGet1.png";
-import AcademyGetStarted2 from "./image/AcademyGetStarted2.png";
+import AcademyGet1 from "../image/AcademyGet1.png";
+import AcademyGetStarted2 from "../image/AcademyGetStarted2.png";
 
-import right from './image/right.png';
+import right from '../image/right.png';
 
-import left from './image/left.png';
+import left from '../image/left.png';
 
 
-import academy1 from './image/academy1.png';
-import academy2 from './image/academy2.png';
-import academy3 from './image/academy3.png';
-import academy4 from './image/academy4.png';
-import academy5 from './image/academy5.png';
-import academy6 from './image/academy6.png';
-import academy7 from './image/academy7.png';
-import academy8 from './image/academy8.png';
+import academy1 from '../image/academy1.png';
+import academy2 from '../image/academy2.png';
+import academy3 from '../image/academy3.png';
+import academy4 from '../image/academy4.png';
+import academy5 from '../image/academy5.png';
+import academy6 from '../image/academy6.png';
+import academy7 from '../image/academy7.png';
+import academy8 from '../image/academy8.png';
 
 
 

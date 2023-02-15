@@ -7,12 +7,13 @@ import Home from './component/Home';
 import Company from './component/Company';
 import Researcher from './component/Researcher';
 import Program from './component/Program';
-import Academy from './component/Academy';
+import Academy from './component/academy/Academy';
 import Footer from './component/Footer';
 import Login from './component/Login';
 import Forgot from './component/Forgot';
 import Signup from './component/Signup';
 import C1 from './component/C1';
+import C3 from './component/C3';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   BrowserRouter as Router,
@@ -141,6 +142,7 @@ function App() {
           <Route path='/Forgot' element={<Forgot />} />
           <Route path='/Signup' element={<Signup />} />
           <Route path='/C1' element={<C1 />} />
+          <Route path='/C3' element={<C3 />} />
 
         </Routes>
 

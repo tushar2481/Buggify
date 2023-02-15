@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import './Academy.css';
-import AcademyGetStarted from "../component/AcademyGetStarted";
-import AcademyAnnouncement from "../component/AcademyAnnouncement";
-import AcademyCourses from "../component/AcademyCourses";
-import AcademyVideos from "../component/AcademyVideos";
-import AcademyBlogs from "../component/AcademyBlogs";
-import AcademyDiscord from "../component/AcademyDiscord";
+import AcademyGetStarted from "./AcademyGetStarted";
+import AcademyAnnouncement from "./AcademyAnnouncement";
+import AcademyCourses from "./AcademyCourses";
+import AcademyVideos from "./AcademyVideos";
+import AcademyBlogs from "./AcademyBlogs";
+import AcademyDiscord from "./AcademyDiscord";
 
 const Academy = () => {
     const [activeLink, setActiveLink] = useState('');

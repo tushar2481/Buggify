@@ -76,6 +76,13 @@ li {
 
 }
 
+.link {
+    color: #ffffff;
+}
+
+.Link {
+    color: #7a7a7a;
+}
 
 .button_ani {
     display: inline-block;
