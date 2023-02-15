@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './Academy.css';
 import AcademyGetStarted from "../component/AcademyGetStarted";
 import AcademyAnnouncement from "../component/AcademyAnnouncement";
@@ -8,8 +8,8 @@ import AcademyBlogs from "../component/AcademyBlogs";
 import AcademyDiscord from "../component/AcademyDiscord";
 
 const Academy = () => {
-    const [activeLink, setActiveLink] = useState('Get Started');
-    const [content, setContent] = useState(<AcademyGetStarted />);
+    const [activeLink, setActiveLink] = useState('');
+    const [content, setContent] = useState(null);
 
     const links = [
         { title: 'Get Started with Hackacdemy', component: <AcademyGetStarted /> },
@@ -24,6 +24,13 @@ const Academy = () => {
         setActiveLink(link.title);
         setContent(link.component);
     };
+
+    useEffect(() => {
+        const title = decodeURI(window.location.pathname.replace('/academy/', ''));
+        const link = links.find((link) => link.title === title) || links[0];
+        setActiveLink(link.title);
+        setContent(link.component);
+    }, []);
 
     return (
         <>

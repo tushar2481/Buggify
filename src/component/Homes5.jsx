@@ -53,52 +53,53 @@ const Homes5 = () => {
     };
 
     return (
+        <>
+            <div className='section-five' >
 
-        <div className='section-five' >
-
-            <h3 className="section-five-h1 h1">For Academy</h3>
-            <h1 className="h section-five-h2">Learn by breaking things</h1>
-            <p className="section-five-p ">Buggify is willing for Students to master their career into Cyber Security Profession by providing different Security Courses from Various Area of Technologies from Web Application to Network Pentesting, Hardware & IoT Pentesting, Cloud Security Assessment to Malware Analysis and many more.</p>
-
-
+                <h3 className="section-five-h1 h1">For Academy</h3>
+                <h1 className="h section-five-h2">Learn by breaking things</h1>
+                <p className="section-five-p ">Buggify is willing for Students to master their career into Cyber Security Profession by providing different Security Courses from Various Area of Technologies from Web Application to Network Pentesting, Hardware & IoT Pentesting, Cloud Security Assessment to Malware Analysis and many more.</p>
 
 
 
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <img
-                    src={left}
-                    alt="Left Arrow"
-                    onClick={handleLeftArrowClick}
-                    style={{
-                        cursor: 'pointer',
-                        width: '50px',
-                        height: '50px',
-                        justifyContent: 'center',
-                        verticalAlign: 'middle',
-                        marginTop: '12rem',
-                    }}
-                />
-                <div className="slider-container">
-                    {allImages.slice(currentIndex, currentIndex + 3).map((allImages, index) => (
-                        <img key={index} src={allImages} className="section-five-img" />
-                    ))}
+
+
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img
+                        src={left}
+                        alt="Left Arrow"
+                        onClick={handleLeftArrowClick}
+                        style={{
+                            cursor: 'pointer',
+                            width: '50px',
+                            height: '50px',
+                            justifyContent: 'center',
+                            verticalAlign: 'middle',
+                            marginTop: '12rem',
+                        }}
+                    />
+                    <div className="slider-container">
+                        {allImages.slice(currentIndex, currentIndex + 3).map((allImages, index) => (
+                            <img key={index} src={allImages} className="section-five-img" />
+                        ))}
+                    </div>
+                    <img
+                        src={right}
+                        alt="Right Arrow"
+                        onClick={handleRightArrowClick}
+                        style={{
+                            cursor: 'pointer',
+                            width: '50px',
+                            height: '50px',
+                            gridColumn: '2/3',
+                            justifyContent: 'center',
+                            verticalAlign: 'middle',
+                            marginTop: '12rem',
+                        }}>
+                    </img>
                 </div>
-                <img
-                    src={right}
-                    alt="Right Arrow"
-                    onClick={handleRightArrowClick}
-                    style={{
-                        cursor: 'pointer',
-                        width: '50px',
-                        height: '50px',
-                        gridColumn: '2/3',
-                        justifyContent: 'center',
-                        verticalAlign: 'middle',
-                        marginTop: '12rem',
-                    }}
-                />
             </div>
-        </div >
+        </>
     );
 }
 
