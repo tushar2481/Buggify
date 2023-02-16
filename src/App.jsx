@@ -14,6 +14,7 @@ import Forgot from './component/Forgot';
 import Signup from './component/Signup';
 import C1 from './component/C1';
 import C3 from './component/C3';
+import Test from './component/Test';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   BrowserRouter as Router,
@@ -143,6 +144,7 @@ function App() {
           <Route path='/Signup' element={<Signup />} />
           <Route path='/C1' element={<C1 />} />
           <Route path='/C3' element={<C3 />} />
+          <Route path='/Test' element={<Test />} />
 
         </Routes>
 

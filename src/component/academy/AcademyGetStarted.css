@@ -3,11 +3,10 @@
 }
 
 .academy-getstart-section1 {
-    padding-top: 10rem;
+    padding-top: 9rem;
 }
 
 .academy-getstart-section1-h {
-    padding-top: 8rem;
     text-align: center;
     font-family: "Nunito";
     font-size: 26px;
@@ -66,8 +65,8 @@
 }
 
 .academy-getstart-section2-slider-img {
-    width: 300px;
-    height: 450px;
+    width: 250px;
+    /* height: 400px; */
 }
 
 
@@ -81,9 +80,9 @@
 .slider-image {
     position: absolute;
     top: 0;
-    left: 10%;
-    width: 80%;
-    height: 100%;
+    left: 13%;
+    width: 75%;
+    height: 80%;
     opacity: 1;
     transition: opacity 5s ease-in-out;
 }
@@ -92,31 +91,12 @@
     opacity: 0;
 }
 
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    background-color: transparent;
-    border: none;
-    color: #04ff69;
-    cursor: pointer;
-    font-size: 20px;
-}
 
-.slider-arrow:hover {
-    color: #ddd;
-}
 
-.slider-left-arrow {
-    left: 10px;
-}
 
-.slider-right-arrow {
-    right: 10px;
-}
+
+
+
 
 .academy-getstarted-section2-div {
     margin-top: 8rem;
