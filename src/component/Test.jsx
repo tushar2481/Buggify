@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './Test.css'
 import Academy1 from './image/academy1.png';
+import Academy2 from './image/academy2.png';
 import Academy3 from './image/academy3.png';
 import AvatarRemove from './image/AvatarRemove.png';
 
@@ -39,7 +40,7 @@ function CourseCard() {
         category: "Programming",
         description: "Bash Scripting or Shell Scripting Course includes everything you need for Command-line, Automate Daily Tasks, and a lot of fun and experiment with shell.",
         price: "15",
-        img: Academy1,
+        img: Academy2,
         avatar: AvatarRemove,
         instrutor: "Tarjani Patel",
     },
