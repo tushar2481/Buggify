@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './Test.css'
 import Academy1 from './image/academy1.png';
-import Academy4 from './image/Academy4.png';
 import Academy3 from './image/Academy3.png';
 import AvatarRemove from './image/AvatarRemove.png';
 
@@ -40,7 +39,7 @@ function CourseCard() {
         category: "Programming",
         description: "Bash Scripting or Shell Scripting Course includes everything you need for Command-line, Automate Daily Tasks, and a lot of fun and experiment with shell.",
         price: "15",
-        img: Academy4,
+        img: Academy1,
         avatar: AvatarRemove,
         instrutor: "Tarjani Patel",
     },
@@ -60,7 +59,7 @@ function CourseCard() {
         title: "Cyber Security Fundamentals",
         level: "Beginner",
         category: "Windows",
-        img: Academy4,
+        img: Academy1,
     }, {
         id: 5,
         title: "Ethical Hacking for Advanced",
