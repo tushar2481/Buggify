@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Test.css'
 import Academy1 from './image/academy1.png';
-import Academy3 from './image/Academy3.png';
+import Academy3 from './image/academy3.png';
 import AvatarRemove from './image/AvatarRemove.png';
 
 function CourseCard() {
