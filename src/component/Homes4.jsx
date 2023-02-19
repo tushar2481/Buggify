@@ -6,7 +6,7 @@ const Homes4 = () => {
             <div className='section-four'>
                 <h3 className="section-four-h1 h1">For Researcher</h3>
                 <h1 className="h section-four-h2">Break into Company’s Security & Earn Reward</h1>
-                <p className="section-four-p">Buggify is an Bug Bounty Platform for Security Researchers where They can research on various security flaws in Target Companies and in-return they will be Rewarded with various things like Cash Prize, Swags, Badges, Reputation Points, etc.</p>
+                <p className="section-four-p">Buggify is an Bug Bounty Platform for Security Researchers where they can research on various security flaws in Target Companies and in-return they will be Rewarded with various things like Cash Prize, Swags, Badges, Reputation Points, etc.</p>
 
                 <div style={{
                     display: 'grid',

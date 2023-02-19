@@ -3,7 +3,7 @@
 }
 
 .section-1 {
-    padding-top: 5rem;
+    padding-top: 8rem;
     display: grid;
     width: 100%;
     grid-template-columns: 10rem 1fr 1fr 10rem;
@@ -30,7 +30,6 @@
 
 .section-1-part-1-p {
     width: 60%;
-
     margin-left: 10rem;
     margin-right: 5rem;
     margin-top: 3rem;
@@ -85,10 +84,12 @@
 /* Second section */
 
 .section-2-h {
-    margin-top: 7rem;
+    margin-top: 14rem;
     text-align: center;
     color: #878787;
     font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 2.8rem;
 }
 
 .section-2-div {
@@ -96,7 +97,7 @@
     grid-template-columns: 15rem 1fr 1fr 1fr 15rem;
     grid-gap: 2rem;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 .section-2-div1 {
@@ -145,7 +146,7 @@
 /* Section-3 */
 
 .section-3-div1 {
-    margin-top: 8rem;
+    margin-top: 15rem;
     display: grid;
     grid-template-columns: 10rem 1fr 1fr 5rem;
     grid-column-gap: 30px;
@@ -181,15 +182,16 @@
     color: #ffffff;
     margin: 4rem 3rem;
     font-size: 16px;
-
-
+    line-height: 2.8rem;
+    letter-spacing: 1px;
 }
 
 .section-3-div-h2 {
     color: #ffffff;
     margin: 0rem 3rem;
     font-size: 26px;
-    line-height: 2.5rem;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
     text-shadow: 0 0 15px #04FF69;
 }
 
@@ -237,7 +239,7 @@
 /* Section-4 */
 
 .section-4-h {
-    margin-top: 7rem;
+    margin-top: 10rem;
     text-align: center;
     color: #878787;
     font-size: 18px;
@@ -348,6 +350,7 @@
 }
 
 .section-6-div1-h {
+    margin-top: 10rem;
     padding-top: 10rem;
     margin-left: calc(10rem);
     color: #ffffff;
