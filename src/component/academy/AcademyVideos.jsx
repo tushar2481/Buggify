@@ -7,11 +7,11 @@ import ReactPlayer from 'react-player';
 
 const AcademyVideos = () => {
     const video = [
-        { title: 'Learn with Remonsec: How to approach sensitive information disclosure.', url: 'https://youtu.be/ug7FzoByLFc' },
-        { title: 'Frans Rosén Keynote at BSides Ahmedabad', url: 'https://youtu.be/LmTzIKk8K4A' },
+        { title: 'Learn with Remonsec: How to approach sensitive information disclosure.', url: 'https://youtu.be/0EyVb0x-oJU' },
+        { title: 'Frans Rosén Keynote at BSides Ahmedabad', url: 'https://youtu.be/rAuuN0OohJc' },
         { title: 'Stok’s BSides Ahmedabad Talk on Buggify for Security Researchers', url: 'https://youtu.be/8QlWyOPVEak' },
-        { title: 'kavisha Seth Talks About Amazon Cognito (Mis)Configurations', url: 'https://youtu.be/8QlWyOPVEak' },
-        { title: 'Farah Hawa’s Bug Bounty Journey', url: 'https://youtu.be/0EyVb0x-oJU' },
+        { title: 'kavisha Seth Talks About Amazon Cognito (Mis)Configurations', url: 'https://youtu.be/LmTzIKk8K4A' },
+        { title: 'Farah Hawa’s Bug Bounty Journey', url: 'https://youtu.be/ug7FzoByLFc' },
     ];
 
     return (

@@ -15,124 +15,21 @@ import Signup from './component/Signup';
 import C1 from './component/C1';
 import C3 from './component/C3';
 import Test from './component/Test';
+import NavTest from './component/NavTest';
+import TestCourse from './component/TestCourse';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-
-
-
-const Programs = [
-  {
-    id: "1",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "2",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "3",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "4",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "5",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "6",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "7",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "9",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "10",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "11",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "12",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "13",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "14",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-  {
-    id: "15",
-    company: "Google VDP",
-    resolved: "432",
-    avg: "$750",
-    launch: "2/2019",
-  },
-
-]
-
-
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
 
       <Navbar />
-      <Router >
+      <Router>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/company' element={<Company />} />
@@ -145,9 +42,10 @@ function App() {
           <Route path='/C1' element={<C1 />} />
           <Route path='/C3' element={<C3 />} />
           <Route path='/Test' element={<Test />} />
+          <Route path='/NavTest' element={<NavTest />} />
+          <Route path='/TestCourse' element={<TestCourse />} />
 
         </Routes>
-
       </Router>
       <Footer />
     </>

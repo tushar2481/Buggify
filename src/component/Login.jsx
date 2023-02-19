@@ -11,11 +11,11 @@ const LoginForm = () => {
                     <label htmlFor="username" className="login-label">Username:</label>
                     <input type="text" id="username" className="login-form-input" />
                 </div>
-                <div>
+                <div className="login-username">
                     <label htmlFor="password" className="login-label">Password:</label>
                     <input type="password" id="password" className="login-form-input" />
                 </div>
-                <div>
+                <div >
                     <input type="checkbox" id="remember-me" className="login-checkbox" />
                     <label htmlFor="remember-me" className="login-checkbox-label">Remember me for a week</label>
                 </div>
