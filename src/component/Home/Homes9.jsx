@@ -1,9 +1,9 @@
 import React from "react";
 import './Homes9.css'
-import HomeBlogTwitter from './image/HomeBlogTwitter.png';
-import HomeBlogUkrainian from './image/HomeBlogUkrainian.png';
-import HomeBlogRecon from './image/HomeBlogRecon.png';
-import HomeBlogFire from './image/HomeBlogFire.png';
+import HomeBlogTwitter from '../image/HomeBlogTwitter.png';
+import HomeBlogUkrainian from '../image/HomeBlogUkrainian.png';
+import HomeBlogRecon from '../image/HomeBlogRecon.png';
+import HomeBlogFire from '../image/HomeBlogFire.png';
 
 const homes9 = () => {
     return (

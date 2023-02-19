@@ -1,7 +1,7 @@
 import React from "react";
-import "./C1.css"
-import BugHunter from "./image/BugHunter.jpg"
-import RedTeam from "./image/RedTeam.jpg"
+import "./ExploreProgram.css"
+import BugHunter from "../image/BugHunter.jpg"
+import RedTeam from "../image/RedTeam.jpg"
 
 const C1 = () => {
     return (

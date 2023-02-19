@@ -40,7 +40,7 @@ const Academy = () => {
                         {links.map((link) => (
                             <li key={link.title} className="academy-nav-li">
                                 <a
-                                    href="#"
+                                    href={link.title}
                                     style={{
                                         color: activeLink === link.title ? '#878787' : '#000000',
                                     }}

@@ -1,5 +1,5 @@
 import React from "react";
-import './C3.css';
+import './RedTeam_Agreement.css';
 
 const C3 = () => {
     return (

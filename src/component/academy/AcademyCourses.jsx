@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import Academy1 from '../image/academy1.png';
 import Academy2 from '../image/academy2.png';
 import Academy3 from '../image/academy3.png';
+import Academy4 from '../image/academy4.png';
+import Academy5 from '../image/academy5.png';
+import Academy6 from '../image/academy6.png';
+import Academy7 from '../image/academy7.png';
+import Academy8 from '../image/academy8.png';
 import AvatarRemove from '../image/AvatarRemove.png';
 import './AcademyCourse.css';
 
@@ -48,8 +53,8 @@ const AcademyCourses = () => {
     },
     {
         id: 3,
-        title: "WEb Applicataion Pentesting",
-        level: "Intermediate",
+        title: "Web Applicataion Pentesting",
+        level: "Advanced",
         category: "Web",
         description: "Web Application Pentesting Covers Basic of Web Applications, OWASP Top 10 attacks in-depth. Latest Exploits and Techniques in wild.",
         price: "150",
@@ -59,33 +64,57 @@ const AcademyCourses = () => {
     },
     {
         id: 4,
-        title: "Cyber Security Fundamentals",
-        level: "Beginner",
-        category: "Windows",
-        img: Academy1,
-    }, {
-        id: 5,
-        title: "Ethical Hacking for Advanced",
+        title: "Offensive Red Teaming ",
         level: "Advanced",
         category: "Exploitation",
-        price: "10",
-        img: Academy1,
+        description: "Offensive Red Teaming Covers Every Techniques & Tactics covered in MITRE Framework and other infamous Frameworks.",
+        img: Academy4,
+        avatar: AvatarRemove,
+        instrutor: "",
+        price: "220",
+    }, {
+        id: 5,
+        title: "Malware Analysis & RE ",
+        level: "Advanced",
+        category: "Malware",
+        description: "Advance Malware Analysis Training Consist of Static and Dynamic Analysis of Recent Malwares and Reverse Enginner them.",
+        avatar: AvatarRemove,
+        instrutor: "",
+        price: "150",
+        img: Academy5,
     },
     {
         id: 6,
-        title: "Python Programming for Beginners",
-        level: "Beginner",
-        category: "Programming",
-        price: "10",
-        img: Academy1,
+        title: "Active Directory Exploitation ",
+        level: "Advanced",
+        category: "Windows",
+        img: Academy6,
+        description: "AD Exploitation is one of the top notch skill to Pentest 99% of Forbs top 500 Companies and get into their Networks Ethically.",
+        avatar: AvatarRemove,
+        instrutor: "",
+        price: "200",
     },
     {
         id: 7,
-        title: "Python Programming for Beginners",
-        level: "Beginner",
-        category: "Exploitation",
-        price: "10",
-        img: Academy1,
+        title: "Mobile App Pentesting ",
+        level: "Intermediate",
+        category: "Mobile",
+        img: Academy7,
+        description: "Mobile Application Pentesting One of the Most Untouched Area of Pentesting, Hunting Bugs in Mobile App gives High Payouts.",
+        avatar: AvatarRemove,
+        instrutor: "",
+        price: "120",
+    },
+    {
+        id: 8,
+        title: "API Pentesting ",
+        level: "Advanced",
+        category: "Web",
+        img: Academy8,
+        description: "API is a way of Communication Between Systems and Breaking it, Testing it is a Fun.",
+        avatar: AvatarRemove,
+        instrutor: "",
+        price: "150",
     },];
 
     const handleLevelFilterChange = (event) => {
@@ -228,7 +257,7 @@ const AcademyCourses = () => {
                                 checked={categoryFilters.Malware}
                                 onChange={handleCategoryFilterChange}
                             />
-                            <label className="form-check-label" for="Mobile">Malware</label>
+                            <label className="form-check-label" for="Malware">Malware</label>
                         </div>
                         <div className="form-check">
                             <input

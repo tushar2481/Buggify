@@ -1,7 +1,7 @@
 import React from "react";
 import "./Homes1.css";
 
-import Image from "./image/Image.jpg";
+import Image from "../image/Image.jpg";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import CardImg from "react-bootstrap/esm/CardImg";

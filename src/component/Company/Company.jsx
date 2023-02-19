@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./Company.css";
 import { NavLink } from "react-router-dom";
 
-import CompanyImg1 from "./image/Company-section-1.png";
-import CompanyImg2 from "./image/Company-section-3-1.png";
-import CompanyImg3 from "./image/Company-section-3-2.png";
-import CompanyImg4 from "./image/Company-section-3-3.png";
-import CompanyImg5 from "./image/Company-section-3-4.png";
+import CompanyImg1 from "../image/Company-section-1.png";
+import CompanyImg2 from "../image/Company-section-3-1.png";
+import CompanyImg3 from "../image/Company-section-3-2.png";
+import CompanyImg4 from "../image/Company-section-3-3.png";
+import CompanyImg5 from "../image/Company-section-3-4.png";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
@@ -134,7 +134,7 @@ function Company() {
 									Area of Pentesting. Buggify provides team or individuals that are
 									Experienced and can be chosen as a Team. Teams Can be Customized
 									According to Changing Needs. Look at Our Top Hackers From Globe at
-									Leaderboard
+									Leaderboard.
 								</p>
 							</div>
 							<div className="section-3-div-image img-2">

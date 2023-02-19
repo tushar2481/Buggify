@@ -94,7 +94,7 @@
 
 .section-2-div {
     display: grid;
-    grid-template-columns: 15rem 1fr 1fr 1fr 15rem;
+    grid-template-columns: 10rem 1fr 1fr 1fr 10rem;
     grid-gap: 2rem;
     justify-content: center;
     margin-top: 5rem;
@@ -148,8 +148,8 @@
 .section-3-div1 {
     margin-top: 15rem;
     display: grid;
-    grid-template-columns: 10rem 1fr 1fr 5rem;
-    grid-column-gap: 30px;
+    grid-template-columns: 10rem 1fr 1fr 10rem;
+    /* grid-column-gap: 30px; */
 }
 
 .img-1 {

@@ -66,7 +66,6 @@
 
 .academy-getstart-section2-slider-img {
     width: 250px;
-    /* height: 400px; */
 }
 
 
@@ -82,7 +81,7 @@
     top: 0;
     left: 13%;
     width: 75%;
-    height: 80%;
+    height: 100%;
     opacity: 1;
     transition: opacity 5s ease-in-out;
 }
@@ -90,12 +89,6 @@
 .slider-image.fade-out {
     opacity: 0;
 }
-
-
-
-
-
-
 
 
 .academy-getstarted-section2-div {

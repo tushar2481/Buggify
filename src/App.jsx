@@ -3,26 +3,21 @@ import './App.css';
 
 
 import Navbar from './component/Navbar.jsx';
-import Home from './component/Home';
-import Company from './component/Company';
+import Home from './component/Home/Home';
+import Company from './component/Company/Company';
 import Researcher from './component/Researcher';
-import Program from './component/Program';
+import Program from './component/Program/Program';
 import Academy from './component/academy/Academy';
 import Footer from './component/Footer';
 import Login from './component/Login';
 import Forgot from './component/Forgot';
 import Signup from './component/Signup';
-import C1 from './component/C1';
-import C3 from './component/C3';
+import ExploreProgram from './component/Company/ExploreProgram';
+import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
 import Test from './component/Test';
 import NavTest from './component/NavTest';
 import TestCourse from './component/TestCourse';
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
@@ -39,8 +34,8 @@ function App() {
           <Route path='/Login' element={<Login />} />
           <Route path='/Forgot' element={<Forgot />} />
           <Route path='/Signup' element={<Signup />} />
-          <Route path='/C1' element={<C1 />} />
-          <Route path='/C3' element={<C3 />} />
+          <Route path='/ExploreProgram' element={<ExploreProgram />} />
+          <Route path='/RedTeam_Agreement' element={<RedTeam_Agreement />} />
           <Route path='/Test' element={<Test />} />
           <Route path='/NavTest' element={<NavTest />} />
           <Route path='/TestCourse' element={<TestCourse />} />

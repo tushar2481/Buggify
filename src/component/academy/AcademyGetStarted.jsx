@@ -73,7 +73,7 @@ const AcademyGetStarted = () => {
                                     onClick={handleLeftArrowClick}
                                     style={{
                                         position: "absolute",
-                                        top: '37%',
+                                        top: '50%',
                                         left: '5rem',
                                         cursor: 'pointer',
                                         width: '50px',
@@ -93,7 +93,7 @@ const AcademyGetStarted = () => {
                                     onClick={handleRightArrowClick}
                                     style={{
                                         position: "absolute",
-                                        top: '37%',
+                                        top: '50%',
                                         right: '5rem',
                                         cursor: 'pointer',
                                         width: '50px',
