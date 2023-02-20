@@ -17,14 +17,16 @@ import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
 import Test from './component/Test';
 import NavTest from './component/NavTest';
 import TestCourse from './component/TestCourse';
+import PentestingWithPython from './component/academy/Courses/PentestingWithPython';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
 
-      <Navbar />
       <Router>
+
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/company' element={<Company />} />
@@ -39,6 +41,7 @@ function App() {
           <Route path='/Test' element={<Test />} />
           <Route path='/NavTest' element={<NavTest />} />
           <Route path='/TestCourse' element={<TestCourse />} />
+          <Route path='/PentestingWithPython' element={<PentestingWithPython />} />
 
         </Routes>
       </Router>

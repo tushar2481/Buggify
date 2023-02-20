@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { BsList } from "react-icons/bs";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function MyList() {
 	const [navActiveIndex, setNavActiveIndex] = useState(0);
@@ -25,14 +25,14 @@ function MyList() {
 					onClick={() => handleNavClick(index)}
 					className={navActiveIndex === index ? "active" : ""}
 				>
-					<a
-						href={item.link}
+					<Link
+						to={item.link}
 						style={{
 							color: index === navActiveIndex ? "#ffffff" : "#a7a7a7",
 						}}
 					>
 						{item.label}
-					</a>
+					</Link>
 				</li>
 			))}
 		</ul>
@@ -44,7 +44,10 @@ function MyList() {
 
 const Navbar = () => {
 	const [showMediaIcons, setShowMediaIcons] = useState(false);
-
+	const navigate = useNavigate();
+	const gotoLogin = () => {
+		navigate('/login');
+	}
 
 	return (
 		<>
@@ -57,7 +60,7 @@ const Navbar = () => {
 				>
 					<MyList />
 
-					<div className="button_ani try-btn">
+					<div className="button_ani try-btn" onClick={gotoLogin}>
 
 
 						<button className="btn">Try Buggify</button>
