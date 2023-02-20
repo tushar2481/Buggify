@@ -1,3 +1,4 @@
+import React from "react";
 import Homes1 from "./Homes1";
 import Homes2 from "./Homes2";
 import Homes3 from "./Homes3";

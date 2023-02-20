@@ -36,8 +36,6 @@ function Company() {
 	};
 	return (
 		<>
-
-
 			<div className="company">
 				<div className="section-1">
 					<div className="part-1">

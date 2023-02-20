@@ -45,11 +45,6 @@ li {
     display: grid;
 }
 
-
-.active {
-    color: #ffffff;
-}
-
 .menu-link ul {
     height: 10rem;
     display: flex;
@@ -65,24 +60,21 @@ li {
 
 .menu-link ul li a {
     text-transform: capitalize;
-    color: #7a7a7a;
+    /* color: #7a7a7a; */
     transition: 0.5s;
 }
 
-.menu-link ul li:hover>a {
-    color: rgb(176, 176, 206);
+.menu-link ul li a:hover {
+    color: rgb(0, 176, 206);
     transition: 0.5s;
     width: 100%;
-
 }
 
-.link {
+ul li.active a {
     color: #ffffff;
+    font-weight: bold;
 }
 
-.Link {
-    color: #7a7a7a;
-}
 
 .button_ani {
     display: inline-block;

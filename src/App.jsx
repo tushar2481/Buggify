@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 
 
-import Navbar from './component/Navbar.jsx';
+import Navbar from './component/Navbar';
 import Home from './component/Home/Home';
 import Company from './component/Company/Company';
-import Researcher from './component/Researcher';
+import Researcher from './component/Researcher/Researcher';
 import Program from './component/Program/Program';
 import Academy from './component/academy/Academy';
 import Footer from './component/Footer';

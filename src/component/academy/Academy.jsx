@@ -12,12 +12,12 @@ const Academy = () => {
     const [content, setContent] = useState(null);
 
     const links = [
-        { title: 'Get Started with Hackacdemy', component: <AcademyGetStarted /> },
-        { title: 'Courses', component: <AcademyCourses /> },
-        { title: 'Announcement', component: <AcademyAnnouncement /> },
-        { title: 'Videos', component: <AcademyVideos /> },
-        { title: 'Blogs', component: <AcademyBlogs /> },
-        { title: 'Discord', component: <AcademyDiscord /> },
+        { title: 'Get Started with Hackacdemy', component: <AcademyGetStarted />, linkto: "AcademyGetStarted", },
+        { title: 'Courses', component: <AcademyCourses />, linkto: "AcademyCourses", },
+        { title: 'Announcement', component: <AcademyAnnouncement />, linkto: "academy-announcement", },
+        { title: 'Videos', component: <AcademyVideos />, linkto: "AcademyVideos", },
+        { title: 'Blogs', component: <AcademyBlogs />, linkto: "AcademyBlogs", },
+        { title: 'Discord', component: <AcademyDiscord />, linkto: "AcademyDiscord" },
     ];
 
     const handleClick = (link) => {
@@ -40,7 +40,7 @@ const Academy = () => {
                         {links.map((link) => (
                             <li key={link.title} className="academy-nav-li">
                                 <a
-                                    href={link.title}
+                                    href="#"
                                     style={{
                                         color: activeLink === link.title ? '#878787' : '#000000',
                                     }}
@@ -53,9 +53,10 @@ const Academy = () => {
                         ))}
                     </ul>
 
+                    <div>{content}</div>
                 </nav>
             </div>
-            <div>{content}</div>
+
 
         </>
     );
