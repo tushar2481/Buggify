@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BsBorderRight } from "react-icons/bs";
 import ReactPlayer from 'react-player';
 
 import './TestCourse.css';
@@ -12,7 +11,9 @@ const CourseVideo = () => {
 
 
     const handleCompleteLesson = () => {
-        setActiveLessonIndex(activeLessonIndex + 1);
+        if (currentVideoListIndex < courseData.videos.length - 1) {
+            setCurrentVideoListIndex(currentVideoListIndex + 1);
+        }
     };
 
 
@@ -37,6 +38,8 @@ const CourseVideo = () => {
             setVideoProgress(1);
         }
     };
+
+
     const [currentLesson, setCurrentLesson] = useState(0);
     const [currentVideo, setCurrentVideo] = useState(0);
 
@@ -165,3 +168,4 @@ const CourseVideo = () => {
 
 
 export default CourseVideo;
+

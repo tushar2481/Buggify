@@ -9,7 +9,7 @@ import Academy7 from '../image/academy7.png';
 import Academy8 from '../image/academy8.png';
 import AvatarRemove from '../image/AvatarRemove.png';
 import './AcademyCourse.css';
-
+import { useNavigate } from "react-router-dom";
 
 
 const AcademyCourses = () => {
@@ -117,6 +117,15 @@ const AcademyCourses = () => {
         price: "150",
     },];
 
+    // navigation
+    const navigate = useNavigate();
+    const paths = ['/PentestingWithPython',];
+    const goto = (index) => {
+        navigate(paths[index]);
+        console.log("index")
+    }
+
+
     const handleLevelFilterChange = (event) => {
         setLevelFilters({
             ...levelFilters,
@@ -168,7 +177,7 @@ const AcademyCourses = () => {
             (course) => course.category === "Windows"
         );
     }
-    if (categoryFilters.Exploitation) {
+    if (categoryFilters.Exlpoitation) {
         filteredCourses = filteredCourses.filter(
             (course) => course.category === "Exploitation"
         );
@@ -298,7 +307,7 @@ const AcademyCourses = () => {
                 <div className="courses-card-div">
                     <h3 className="h">Courses</h3>
                     <div className="row course-cards">
-                        {filteredCourses.map((course) => (
+                        {filteredCourses.map((course, index) => (
                             <div className="course-cards" key={course.id}>
                                 <div className="course-card">
                                     <div className="card-body-div1">
@@ -319,7 +328,7 @@ const AcademyCourses = () => {
                                     <div className="card-body-div3">
                                         <center>
                                             <p className="card-body-div3-price">Course Price:{'$' + course.price}</p>
-                                            <div className="button_ani card-div3-button1">
+                                            <div className="button_ani card-div3-button1" onClick={() => goto(index)}>
                                                 <button className="button2">View More</button>
                                             </div>
                                             <div className="button_ani card-div3-button2">

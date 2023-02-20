@@ -54,7 +54,7 @@ li {
 }
 
 .menu-link ul li {
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 30px;
 }
 
@@ -64,7 +64,7 @@ li {
     transition: 0.5s;
 }
 
-.menu-link ul li a:hover {
+.menu-link ul li :hover>a {
     color: rgb(0, 176, 206);
     transition: 0.5s;
     width: 100%;

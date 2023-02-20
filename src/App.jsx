@@ -17,7 +17,7 @@ import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
 import Test from './component/Test';
 import NavTest from './component/NavTest';
 import TestCourse from './component/TestCourse';
-import PentestingWithPython from './component/academy/Courses/PentestingWithPython';
+import PentestingWithPython from './component/Academy-Courses/PentestingWithPython';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
