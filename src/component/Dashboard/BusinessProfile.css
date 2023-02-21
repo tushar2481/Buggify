@@ -20,9 +20,7 @@
     align-items: center;
 }
 
-.navbar-logo {
-    margin-right: 10px;
-}
+
 
 .navbar-menu {
     display: flex;
@@ -47,7 +45,27 @@
 }
 
 .navbar-menu-item {
-    font-size: 12px;
+    font-size: 16px;
+}
+
+.back-link-icon {
+    margin-top: -5rem;
+    margin-left: 0rem;
+}
+
+.back-link {
+    margin-top: -5rem;
+}
+
+.company-icon {
+    color: #04ff69;
+    margin-top: -2rem;
+}
+
+.company-name {
+    color: #04ff69;
+    font-size: 20px;
+    margin-top: -2rem;
 }
 
 .navbar-menu.shrink {
@@ -60,7 +78,6 @@
 
 .navbar-menu li .navbar-menu-item {
     display: none;
-    font-size: 12px;
 }
 
 .navbar-menu.open li .navbar-menu-item {
@@ -74,7 +91,7 @@
     background-color: #04ff69;
     display: flex;
     position: absolute;
-    top: 4rem;
+    top: 16rem;
     left: 96%;
     cursor: pointer;
 }
@@ -87,7 +104,7 @@
     display: flex;
     cursor: pointer;
     position: absolute;
-    top: 22rem;
+    top: 34rem;
     left: 5%;
 }
 
@@ -97,10 +114,9 @@
 }
 
 .navbar-hr {
-    margin-left: 2rem;
+    margin: 2rem 0rem 2rem 1rem;
+    width: 100%;
 }
-
-
 
 
 

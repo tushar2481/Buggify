@@ -7,6 +7,8 @@ import { BsPlusSquareDotted } from 'react-icons/bs';
 import { RiUserSettingsLine, RiFileHistoryLine, RiLogoutBoxRLine, RiQuestionLine } from 'react-icons/ri';
 import { TbReportAnalytics } from 'react-icons/tb';
 import { IoSettingsOutline } from 'react-icons/io5';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { SiBigbluebutton } from 'react-icons/si';
 
 
 
@@ -20,11 +22,19 @@ function DashboardNavbar() {
 
     return (
         <nav className={`navbar ${isMenuOpen ? 'open' : 'close'}`}>
+
             <div className={`navbar-toggle ${isMenuOpen ? 'navopen' : 'navclose'}`} onClick={handleMenuToggle}>
                 {isMenuOpen ? <FiChevronLeft /> : <FiChevronRight />}
             </div>
             <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
-
+                <li >
+                    <span className="back-link-icon navbar-menu-icon"><AiOutlineArrowLeft /></span>
+                    {isMenuOpen && <span className="back-link navbar-menu-item">Back to Home</span>}
+                </li>
+                <li >
+                    <span className="company-icon navbar-menu-icon"><SiBigbluebutton /></span>
+                    {isMenuOpen && <p className="company-name navbar-menu-item ">Buggify</p>}
+                </li>
                 <hr className={`navbar-hr ${isMenuOpen ? 'open' : ''}`} />
                 <li >
                     <span className="navbar-menu-icon"><MdAddBusiness /></span>
