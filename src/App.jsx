@@ -18,6 +18,23 @@ import Test from './component/Test';
 import NavTest from './component/NavTest';
 import TestCourse from './component/TestCourse';
 import PentestingWithPython from './component/Academy-Courses/PentestingWithPython';
+import BussinessProfile from './component/Dashboard/BusinessProfile';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
@@ -41,7 +58,8 @@ function App() {
           <Route path='/Test' element={<Test />} />
           <Route path='/NavTest' element={<NavTest />} />
           <Route path='/TestCourse' element={<TestCourse />} />
-          <Route path='/PentestingWithPython' element={<PentestingWithPython />} />
+          <Route path='/pentestingWithPython' element={<PentestingWithPython />} />
+          <Route path='/businessProfile' element={<BussinessProfile />} />
 
         </Routes>
       </Router>

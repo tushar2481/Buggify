@@ -16,8 +16,10 @@ function MyList() {
 	const handleNavClick = (index) => {
 		setNavActiveIndex(index);
 	};
-	console.log("Active index: ", navActiveIndex);
+
+
 	return (
+
 		<ul>
 			{items.map((item, index) => (
 				<li
