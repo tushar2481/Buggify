@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './BusinessProfile.css';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { MdAddBusiness, MdSecurityUpdateGood } from 'react-icons/md';
@@ -58,7 +58,7 @@ function DashboardNavbar() {
                 </li>
                 <li >
                     <span className="navbar-menu-icon"><RiFileHistoryLine /></span>
-                    {isMenuOpen && <span className="navbar-menu-item">Payment History</span>}
+                    {isMenuOpen && <span className="navbar-menu-item">Bounty Payment Details</span>}
                 </li>
                 <li >
                     <span className="navbar-menu-icon"><TbReportAnalytics /></span>
@@ -96,7 +96,7 @@ const BusinessProfile = () => {
                         <DashboardNavbar />
                     </div>
                     <div className="bus-profile-div2">
-                        <h1 className="bus-profile-div2-h">Business Profile</h1>
+                        <center><h1 className="bus-profile-div2-h">Business Profile</h1></center>
                     </div>
                 </div>
             </div>

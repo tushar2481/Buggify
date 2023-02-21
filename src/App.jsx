@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 
@@ -15,11 +15,11 @@ import Signup from './component/Signup';
 import ExploreProgram from './component/Company/ExploreProgram';
 import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
 import Test from './component/Test';
-import NavTest from './component/NavTest';
+
 import TestCourse from './component/TestCourse';
 import PentestingWithPython from './component/Academy-Courses/PentestingWithPython';
 import BussinessProfile from './component/Dashboard/BusinessProfile';
-
+import NoNavbar from './component/NoNavbar';
 
 
 
@@ -38,32 +38,104 @@ import BussinessProfile from './component/Dashboard/BusinessProfile';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
+
   return (
     <>
 
       <Router>
 
-        <Navbar />
+
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/company' element={<Company />} />
-          <Route path='/researcher' element={<Researcher />} />
-          <Route path='/program' element={<Program />} />
-          <Route path='/academy' element={<Academy />} />
-          <Route path='/Login' element={<Login />} />
-          <Route path='/Forgot' element={<Forgot />} />
-          <Route path='/Signup' element={<Signup />} />
-          <Route path='/ExploreProgram' element={<ExploreProgram />} />
-          <Route path='/RedTeam_Agreement' element={<RedTeam_Agreement />} />
-          <Route path='/Test' element={<Test />} />
-          <Route path='/NavTest' element={<NavTest />} />
-          <Route path='/TestCourse' element={<TestCourse />} />
-          <Route path='/pentestingWithPython' element={<PentestingWithPython />} />
-          <Route path='/businessProfile' element={<BussinessProfile />} />
+          <Route path='/' element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          } />
+          <Route path='/company' element={
+            <>
+              <Navbar />
+              <Company />
+            </>
+          } />
+          <Route path='/researcher' element={
+            <>
+              <Navbar />
+              <Researcher />
+            </>
+          } />
+          <Route path='/program' element={
+            <>
+              <Navbar />
+              <Program />
+            </>
+          } />
+          <Route path='/academy' element={
+            <>
+              <Navbar />
+              <Academy />
+            </>
+          } />
+          <Route path='/Login' element={
+            <>
+              <NoNavbar />
+              <Login />
+            </>
+          } />
+          <Route path='/Forgot' element={
+            <>
+              <NoNavbar />
+              <Forgot />
+            </>
+          } />
+          <Route path='/Signup' element={
+            <>
+              <NoNavbar />
+              <Signup />
+            </>
+          } />
+          <Route path='/ExploreProgram' element={
+            <>
+              <Navbar />
+              <ExploreProgram />
+            </>
+          } />
+          <Route path='/RedTeam_Agreement' element={
+            <>
+              <Navbar />
+              <RedTeam_Agreement />
+            </>
+          } />
+          <Route path='/Test' element={
+            <>
+              <Navbar />
+              <Test />
+            </>
+          } />
+
+          <Route path='/TestCourse' element={
+            <>
+              <Navbar />
+              <TestCourse />
+            </>
+          } />
+          <Route path='/pentestingWithPython' element={
+            <>
+              <Navbar />
+              <PentestingWithPython />
+            </>
+          } />
+          <Route path='/businessProfile' element={
+            <>
+              <NoNavbar />
+              <BussinessProfile />
+            </>
+          } />
 
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
+
     </>
   );
 }

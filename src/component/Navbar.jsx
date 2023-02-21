@@ -53,6 +53,7 @@ const Navbar = () => {
 
 	return (
 		<>
+
 			<nav className="main-nav">
 				<div className="logo">
 					<h2>Buggify</h2>
