@@ -114,6 +114,7 @@ function DashboardNavbar() {
 class BusinessProfile extends React.Component {
     render() {
         const {
+            companyName,
             monthlyReceivedReports,
             receivedReportsLast90Days,
             monthlyBountiesPaid,
@@ -143,8 +144,8 @@ class BusinessProfile extends React.Component {
                             <h1 className="bus-profile-div2-h">Business Profile</h1>
                             <div className="dashboard">
                                 <center><div className="bus-profile-header">
-                                    <img src={this.props.companyLogo} alt={this.props.companyName} className="bus-profile-company-logo" />
-                                    <h2 className="bus-profile-company-name">{this.props.companyName}</h2>
+                                    <img src={this.props.companyLogo} className="bus-profile-company-logo" />
+                                    <h3 className="bus-profile-company-name">{companyName}</h3>
                                 </div></center>
                                 <div className="stats">
                                     <p className="bus-profie-stat-h">Statistics</p>
@@ -260,6 +261,7 @@ class BusinessProfile extends React.Component {
 }
 
 BusinessProfile.defaultProps = {
+    companyName: 'Company Name',
     monthlyReceivedReports: 20,
     receivedReportsLast90Days: 70,
     monthlyBountiesPaid: 20000,
