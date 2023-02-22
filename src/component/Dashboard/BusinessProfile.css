@@ -76,6 +76,7 @@
 
 .navbar-menu.shrink li {
     justify-content: center;
+    cursor: pointer;
 }
 
 .navbar-menu li .navbar-menu-item {

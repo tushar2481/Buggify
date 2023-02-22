@@ -1,3 +1,26 @@
+.nav {
+    padding-top: 3rem;
+    background-color: #0b0b0b;
+}
+
+.academy-nav-ul {
+    background-color: #04ff69;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 5rem;
+}
+
+.academy-nav-li {
+    font-size: 14px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.academy-nav-selected {
+    color: #878787;
+}
+
 .academy-getstart {
     background-color: #0b0b0b;
 }

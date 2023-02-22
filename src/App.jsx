@@ -7,13 +7,23 @@ import Home from './component/Home/Home';
 import Company from './component/Company/Company';
 import Researcher from './component/Researcher/Researcher';
 import Program from './component/Program/Program';
-import Academy from './component/academy/Academy';
+// import Academy from './component/academy/Academy';
 import Footer from './component/Footer';
 import Login from './component/Login';
 import Forgot from './component/Forgot';
 import Signup from './component/Signup';
 import ExploreProgram from './component/Company/ExploreProgram';
 import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
+
+import AcademyGetStarted from './component/academy/AcademyGetStarted';
+import AcademyCourses from './component/academy/AcademyCourses';
+import AcademyVideos from './component/academy/AcademyVideos';
+import AcademyAnnouncement from './component/academy/AcademyAnnouncement';
+import AcademyBlogs from './component/academy/AcademyBlogs';
+import AcademyDiscord from './component/academy/AcademyDiscord';
+
+
+
 
 import TestCourse from './component/TestCourse';
 import PentestingWithPython from './component/Academy-Courses/PentestingWithPython';
@@ -85,12 +95,7 @@ function App() {
               <Program />
             </>
           } />
-          <Route path='/academy' element={
-            <>
-              <Navbar />
-              <Academy />
-            </>
-          } />
+
           <Route path='/Login' element={
             <>
               <NoNavbar />
@@ -119,6 +124,44 @@ function App() {
             <>
               <Navbar />
               <RedTeam_Agreement />
+            </>
+          } />
+
+          <Route path='/academyGetStarted' element={
+            <>
+              <Navbar />
+              <AcademyGetStarted />
+            </>
+          } />
+
+          <Route path='/academyCourses' element={
+            <>
+              <Navbar />
+              <AcademyCourses />
+            </>
+          } />
+          <Route path='/academyAnnouncement' element={
+            <>
+              <Navbar />
+              <AcademyAnnouncement />
+            </>
+          } />
+          <Route path='/academyVideos' element={
+            <>
+              <Navbar />
+              <AcademyVideos />
+            </>
+          } />
+          <Route path='/academyBlogs' element={
+            <>
+              <Navbar />
+              <AcademyBlogs />
+            </>
+          } />
+          <Route path='/academyDiscord' element={
+            <>
+              <Navbar />
+              <AcademyDiscord />
             </>
           } />
 

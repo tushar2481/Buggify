@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './Academy.css';
+// import './Academy.css';
 import AcademyGetStarted from "./AcademyGetStarted";
 import AcademyAnnouncement from "./AcademyAnnouncement";
 import AcademyCourses from "./AcademyCourses";
@@ -9,27 +9,24 @@ import AcademyDiscord from "./AcademyDiscord";
 
 const Academy = () => {
     const [activeLink, setActiveLink] = useState('');
-    const [content, setContent] = useState(null);
 
     const links = [
-        { title: 'Get Started with Hackacdemy', component: <AcademyGetStarted />, linkto: "AcademyGetStarted", },
-        { title: 'Courses', component: <AcademyCourses />, linkto: "AcademyCourses", },
-        { title: 'Announcement', component: <AcademyAnnouncement />, linkto: "academy-announcement", },
-        { title: 'Videos', component: <AcademyVideos />, linkto: "AcademyVideos", },
-        { title: 'Blogs', component: <AcademyBlogs />, linkto: "AcademyBlogs", },
-        { title: 'Discord', component: <AcademyDiscord />, linkto: "AcademyDiscord" },
+        { title: 'Get Started with Hackacdemy', component: <AcademyGetStarted />, },
+        { title: 'Courses', component: <AcademyCourses />, },
+        { title: 'Announcement', component: <AcademyAnnouncement />, },
+        { title: 'Videos', component: <AcademyVideos />, },
+        { title: 'Blogs', component: <AcademyBlogs />, },
+        { title: 'Discord', component: <AcademyDiscord />, },
     ];
 
     const handleClick = (link) => {
         setActiveLink(link.title);
-        setContent(link.component);
     };
 
     useEffect(() => {
         const title = decodeURI(window.location.pathname.replace('/academy/', ''));
         const link = links.find((link) => link.title === title) || links[0];
-        setActiveLink(link.title);
-        setContent(link.component);
+
     }, []);
 
     return (
@@ -53,7 +50,7 @@ const Academy = () => {
                         ))}
                     </ul>
 
-                    <div>{content}</div>
+
                 </nav>
             </div>
 

@@ -11,7 +11,7 @@ function MyList() {
 		{ label: "Company", link: "/company" },
 		{ label: "Researchers", link: "/researcher" },
 		{ label: "Programs", link: "/program" },
-		{ label: "Academy", link: "/academy" },
+		{ label: "Academy", link: "/AcademygetStarted" },
 	];
 	const handleNavClick = (index) => {
 		setNavActiveIndex(index);
