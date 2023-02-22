@@ -8,7 +8,7 @@ import { RiUserSettingsLine, RiFileHistoryLine, RiLogoutBoxRLine, RiQuestionLine
 import { TbReportAnalytics } from 'react-icons/tb';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { SiBigbluebutton } from 'react-icons/si';
+import { SiBigbluebutton, SiReactrouter } from 'react-icons/si';
 import { useNavigate } from "react-router-dom";
 
 
@@ -111,34 +111,170 @@ function DashboardNavbar() {
 
 }
 
-const BusinessProfile = () => {
+class BusinessProfile extends React.Component {
+    render() {
+        const {
+            monthlyReceivedReports,
+            receivedReportsLast90Days,
+            monthlyBountiesPaid,
+            bountiesPaidLast90Days,
+            averageBountyPaidMonthly,
+            averageBountiesPaidLast90Days,
+            openReport,
+            resolvedReport,
+            na,
+            medium,
+            duplicate,
+            high,
+            informative,
+            critical,
+        } = this.props;
+
+        return (
+            <>
+
+                <div className="bus-profile">
+
+                    <div className="bus-profile-divs">
+                        <div className="bus-profile-div1">
+                            <DashboardNavbar />
+                        </div>
+                        <div className="bus-profile-div2">
+                            <h1 className="bus-profile-div2-h">Business Profile</h1>
+                            <div className="dashboard">
+                                <center><div className="bus-profile-header">
+                                    <img src={this.props.companyLogo} alt={this.props.companyName} className="bus-profile-company-logo" />
+                                    <h2 className="bus-profile-company-name">{this.props.companyName}</h2>
+                                </div></center>
+                                <div className="stats">
+                                    <p className="bus-profie-stat-h">Statistics</p>
+                                    <div className="bus-profile-stat-div">
+
+                                        <div class="column">
+                                            <div className="box column-div1">
+                                                <label className="bus-profile-label">Monthly Received Reports:</label>
+                                                <span className="bus-profile-span">{monthlyReceivedReports}</span>
+                                            </div>
+                                            <div className="box column-div2">
+                                                <label className="bus-profile-label">Received Reports (Last 90 Days):</label>
+                                                <span className="bus-profile-span">{receivedReportsLast90Days}</span>
+                                            </div>
+                                        </div>
 
 
-    return (
-        <>
+                                        <div class="column">
+                                            <div className="box column-div1">
+                                                <label className="bus-profile-label">Monthly Bounties Paid:</label>
+                                                <span className="bus-profile-span">{monthlyBountiesPaid}</span>
+                                            </div>
+                                            <div className="box column-div2">
+                                                <label className="bus-profile-label">Bounties Paid (Last 90 Days):</label>
+                                                <span className="bus-profile-span">{bountiesPaidLast90Days}</span>
+                                            </div>
+                                        </div>
 
-            <div className="bus-profile">
 
-                <div className="bus-profile-divs">
-                    <div className="bus-profile-div1">
-                        <DashboardNavbar />
-                    </div>
-                    <div className="bus-profile-div2">
-                        <center><h1 className="bus-profile-div2-h">Business Profile</h1>
-                            <div className="">
+                                        <div class="column">
+                                            <div className="box column-div1">
+                                                <label className="bus-profile-label">Average Bounty Paid (Monthly):</label>
+                                                <span className="bus-profile-span">{averageBountyPaidMonthly}</span>
+                                            </div>
+                                            <div className="box column-div2">
+                                                <label className="bus-profile-label">Average Bounties Paid (Last 90 Days):</label>
+                                                <span className="bus-profile-span">{averageBountiesPaidLast90Days}</span>
+                                            </div>
+                                        </div>
 
+                                    </div>
+                                </div>
+                                <div className="report-count">
+                                    <p className="bus-profie-stat-h">Report Counts</p>
+                                    <div className="bus-profile-stat-div">
+
+                                        <div class="column">
+                                            <div className="box column-div1">
+                                                <label className="bus-profile-label">Open Reports:</label>
+                                                <span className="bus-profile-span">{openReport}</span>
+                                            </div>
+                                            <div className="box column-div2">
+                                                <label className="bus-profile-label">Resoved Reports (Last 90 Days):</label>
+                                                <span className="bus-profile-span">{resolvedReport}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="report-count-based">
+                                    <p className="bus-profie-stat-h">Report Counts (Based on CVSS)</p>
+                                    <div className="bus-profile-stat-div">
+                                        <div class="column">
+                                            <div className="box column-div1">
+                                                <label className="bus-profile-label">N/A</label>
+                                                <span className="bus-profile-span">{na}</span>
+                                            </div>
+                                            <div className="box column-div2">
+                                                <label className="bus-profile-label">Medium:</label>
+                                                <span className="bus-profile-span">{medium}</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="column">
+                                            <div className="box column-div1">
+                                                <label className="bus-profile-label">Duplicate:</label>
+                                                <span className="bus-profile-span">{duplicate}</span>
+                                            </div>
+                                            <div className="box column-div2">
+                                                <label className="bus-profile-label">High:</label>
+                                                <span className="bus-profile-span">{high}</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="column">
+                                            <div className="box column-div1">
+                                                <label className="bus-profile-label">Informative:</label>
+                                                <span className="bus-profile-span">{informative}</span>
+                                            </div>
+                                            <div className="box column-div2">
+                                                <label className="bus-profile-label">critical:</label>
+                                                <span className="bus-profile-span">{critical}</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
 
-                        </center>
 
 
 
 
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </>
-    )
+            </>
+        )
+    }
 }
+
+BusinessProfile.defaultProps = {
+    monthlyReceivedReports: 20,
+    receivedReportsLast90Days: 70,
+    monthlyBountiesPaid: 20000,
+    bountiesPaidLast90Days: 100000,
+    averageBountyPaidMonthly: 100,
+    averageBountiesPaidLast90Days: 1428.57,
+    openReport: 32,
+    resolvedReport: 1345,
+    na: 48,
+    medium: 177,
+    duplicate: 400,
+    high: 390,
+    informative: 200,
+    critical: 130,
+
+};
+
 export default BusinessProfile;

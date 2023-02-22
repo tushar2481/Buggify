@@ -127,6 +127,7 @@
 
 .bus-profile {
     background-color: #0b0b0b;
+    padding-bottom: 15rem;
 }
 
 .bus-profile-divs {
@@ -149,4 +150,74 @@
     font-size: 20px;
     text-align: center;
 
+}
+
+.bus-profie-header {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.bus-profile-company-logo {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid #04ff69;
+    border-radius: 10px;
+    text-align: center;
+    margin: 1rem;
+
+}
+
+.bus-profile-company-name {
+    color: #04ff69;
+}
+
+.bus-profie-stat-h {
+    margin-top: 8rem;
+    font-size: 16px;
+    color: #04ff69;
+    text-align: center;
+}
+
+.column {
+    display: flex;
+    width: 100%;
+}
+
+.column-div1 {
+    margin-top: 3rem;
+    width: 50%;
+    position: relative;
+    margin-left: 5rem;
+}
+
+.column-div2 {
+    margin-top: 3rem;
+    width: 50%;
+    position: relative;
+}
+
+
+
+.bus-profile-label {
+    text-align: center;
+    color: #878787;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2.8rem;
+    margin-left: 5rem;
+}
+
+.bus-profile-span {
+    position: absolute;
+    right: 8rem;
+    color: #04ff69;
+    font-size: 14px;
+    background-color: #141414;
+    width: 10rem;
+    height: 24px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #04ff69;
 }
