@@ -59,12 +59,12 @@ function DashboardNavbar() {
                     <span className="back-link-icon navbar-menu-icon"><AiOutlineArrowLeft /></span>
                     {isMenuOpen && <span className="back-link navbar-menu-item">Back to Home</span>}
                 </li>
-                <li onClick={gotoBusinessProfile}>
+                <li >
                     <span className="company-icon navbar-menu-icon"><SiBigbluebutton /></span>
                     {isMenuOpen && <p className="company-name navbar-menu-item ">Buggify</p>}
                 </li>
                 <hr className={`navbar-hr ${isMenuOpen ? 'open' : ''}`} />
-                <li className="dashboard-link">
+                <li onClick={gotoBusinessProfile}>
                     <span className="navbar-menu-icon"><MdAddBusiness /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Business Profile</span>}
                 </li>
@@ -76,7 +76,7 @@ function DashboardNavbar() {
                     <span className="navbar-menu-icon"><VscReport /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Bug Reports</span>}
                 </li>
-                <li onClick={gotoRewardUpdate}>
+                <li onClick={gotoRewardUpdate} className="dashboard-link">
                     <span className="navbar-menu-icon"><MdSecurityUpdateGood /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Reward Update</span>}
                 </li>
@@ -124,7 +124,7 @@ const BusinessProfile = () => {
                         <DashboardNavbar />
                     </div>
                     <div className="bus-profile-div2">
-                        <center><h1 className="bus-profile-div2-h">Business Profile</h1>
+                        <center><h1 className="bus-profile-div2-h">Reward Update</h1>
                             <div className="">
 
                             </div>

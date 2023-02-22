@@ -64,7 +64,7 @@ function DashboardNavbar() {
                     {isMenuOpen && <p className="company-name navbar-menu-item ">Buggify</p>}
                 </li>
                 <hr className={`navbar-hr ${isMenuOpen ? 'open' : ''}`} />
-                <li className="dashboard-link">
+                <li >
                     <span className="navbar-menu-icon"><MdAddBusiness /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Business Profile</span>}
                 </li>
@@ -84,7 +84,7 @@ function DashboardNavbar() {
                     <span className="navbar-menu-icon"><BsPlusSquareDotted /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Retesting</span>}
                 </li>
-                <li onClick={gotoBountyPayment}>
+                <li onClick={gotoBountyPayment} >
                     <span className="navbar-menu-icon"><RiFileHistoryLine /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Bounty Payment Details</span>}
                 </li>
@@ -101,7 +101,7 @@ function DashboardNavbar() {
                     <span className="navbar-menu-icon"><IoSettingsOutline /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Settings</span>}
                 </li>
-                <li onClick={gotoFAQs}>
+                <li onClick={gotoFAQs} className="dashboard-link">
                     <span className="navbar-menu-icon"><RiQuestionLine /></span>
                     {isMenuOpen && <span className="navbar-menu-item">FAQs</span>}
                 </li>
@@ -124,7 +124,7 @@ const BusinessProfile = () => {
                         <DashboardNavbar />
                     </div>
                     <div className="bus-profile-div2">
-                        <center><h1 className="bus-profile-div2-h">Business Profile</h1>
+                        <center><h1 className="bus-profile-div2-h">FAQs</h1>
                             <div className="">
 
                             </div>

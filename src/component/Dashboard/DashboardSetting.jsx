@@ -64,7 +64,7 @@ function DashboardNavbar() {
                     {isMenuOpen && <p className="company-name navbar-menu-item ">Buggify</p>}
                 </li>
                 <hr className={`navbar-hr ${isMenuOpen ? 'open' : ''}`} />
-                <li className="dashboard-link">
+                <li >
                     <span className="navbar-menu-icon"><MdAddBusiness /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Business Profile</span>}
                 </li>
@@ -97,7 +97,7 @@ function DashboardNavbar() {
                     {isMenuOpen && <span className="navbar-menu-item">Logout</span>}
                 </li>
                 <hr className={`navbar-hr ${isMenuOpen ? 'open' : ''}`} />
-                <li onClick={gotoDashboardSetting}>
+                <li onClick={gotoDashboardSetting} className="dashboard-link">
                     <span className="navbar-menu-icon"><IoSettingsOutline /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Settings</span>}
                 </li>
@@ -124,7 +124,7 @@ const BusinessProfile = () => {
                         <DashboardNavbar />
                     </div>
                     <div className="bus-profile-div2">
-                        <center><h1 className="bus-profile-div2-h">Business Profile</h1>
+                        <center><h1 className="bus-profile-div2-h">Setting</h1>
                             <div className="">
 
                             </div>

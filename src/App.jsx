@@ -18,6 +18,21 @@ import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
 import TestCourse from './component/TestCourse';
 import PentestingWithPython from './component/Academy-Courses/PentestingWithPython';
 import BussinessProfile from './component/Dashboard/BusinessProfile';
+import ScopeSetting from './component/Dashboard/ScopeSetting';
+import RewardUpdate from './component/Dashboard/RewardUpdate';
+import BugReport from './component/Dashboard/BugReport';
+import Retesting from './component/Dashboard/Retesting';
+import BountyPayment from './component/Dashboard/BountyPayment';
+import PreviousFinding from './component/Dashboard/PreviousFinding';
+import Dashboardsetting from './component/Dashboard/DashboardSetting'
+import FAQs from './component/Dashboard/FAQs';
+
+
+
+
+
+
+
 import NoNavbar from './component/NoNavbar';
 
 
@@ -36,6 +51,7 @@ import NoNavbar from './component/NoNavbar';
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 function App() {
 
   return (
@@ -123,6 +139,54 @@ function App() {
             <>
               <NoNavbar />
               <BussinessProfile />
+            </>
+          } />
+          <Route path='/scopeSetting' element={
+            <>
+              <NoNavbar />
+              <ScopeSetting />
+            </>
+          } />
+          <Route path='/bugReport' element={
+            <>
+              <NoNavbar />
+              <BugReport />
+            </>
+          } />
+          <Route path='/rewardUpdate' element={
+            <>
+              <NoNavbar />
+              <RewardUpdate />
+            </>
+          } />
+          <Route path='/retesting' element={
+            <>
+              <NoNavbar />
+              <Retesting />
+            </>
+          } />
+          <Route path='/bountyPayment' element={
+            <>
+              <NoNavbar />
+              <BountyPayment />
+            </>
+          } />
+          <Route path='/previousFinding' element={
+            <>
+              <NoNavbar />
+              <PreviousFinding />
+            </>
+          } />
+          <Route path='/dashboard-setting' element={
+            <>
+              <NoNavbar />
+              <Dashboardsetting />
+            </>
+          } />
+          <Route path='/dashboard-FAQ' element={
+            <>
+              <NoNavbar />
+              <FAQs />
             </>
           } />
 
