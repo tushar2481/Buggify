@@ -7,7 +7,7 @@ function NoFooter() {
 
 
 
-    return (null)
+    return (<><div className='NoFooter' style={{height: "4rem", backgroundColor: "#0b0b0b"}}></div></>);
 }
 
 export default NoFooter;

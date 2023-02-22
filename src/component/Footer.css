@@ -19,6 +19,7 @@ li {
     background-color: #141414;
     padding-top: 10px;
     border-top: 1px solid #4ff069;
+    height: 100%;
 }
 
 .footer .logo {
