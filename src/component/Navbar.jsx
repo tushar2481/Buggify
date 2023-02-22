@@ -48,15 +48,17 @@ const Navbar = () => {
 	const [showMediaIcons, setShowMediaIcons] = useState(false);
 	const navigate = useNavigate();
 	const gotoLogin = () => {
-		navigate('/login');
+		navigate('/Login');
 	}
-
+	const gotoHome = () => {
+		navigate('/')
+	}
 	return (
 		<>
 
 			<nav className="main-nav">
 				<div className="logo">
-					<h2>Buggify</h2>
+					<h2 onClick={gotoHome}>Buggify</h2>
 				</div>
 				<div
 					className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}

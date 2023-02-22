@@ -96,7 +96,16 @@ const BusinessProfile = () => {
                         <DashboardNavbar />
                     </div>
                     <div className="bus-profile-div2">
-                        <center><h1 className="bus-profile-div2-h">Business Profile</h1></center>
+                        <center><h1 className="bus-profile-div2-h">Business Profile</h1>
+                            <div className="">
+
+                            </div>
+
+                        </center>
+
+
+
+
                     </div>
                 </div>
             </div>

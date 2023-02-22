@@ -14,7 +14,6 @@ import Forgot from './component/Forgot';
 import Signup from './component/Signup';
 import ExploreProgram from './component/Company/ExploreProgram';
 import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
-import Test from './component/Test';
 
 import TestCourse from './component/TestCourse';
 import PentestingWithPython from './component/Academy-Courses/PentestingWithPython';
@@ -106,12 +105,7 @@ function App() {
               <RedTeam_Agreement />
             </>
           } />
-          <Route path='/Test' element={
-            <>
-              <Navbar />
-              <Test />
-            </>
-          } />
+
 
           <Route path='/TestCourse' element={
             <>

@@ -1,9 +1,15 @@
 import React from "react";
 import './AcademyDiscord.css';
 import AcademyDiscord1 from '../image/AcademyDiscord1.jpg'
-
+import { useNavigate } from "react-router-dom";
 
 const AcademyDiscord = () => {
+    const navigate = useNavigate();
+
+    const gotoDiscordLink = () => {
+        navigate('')
+    }
+
     return (
         <>
             <div className="academy-discord">
@@ -22,12 +28,14 @@ const AcademyDiscord = () => {
 
                     <img src={AcademyDiscord1} className="academy-discord-img"></img>
                 </center>
+                <a href="https://discord.gg/d3UmFR9Z" target="_blank">
+                    <div className="button_ani academy-discord-button" >
 
-                <div className="button_ani academy-discord-button">
-                    <button className="btn" >
-                        Join Discord Server
-                    </button>
-                </div>
+                        <button className="btn" >
+                            Join Discord Server
+                        </button>
+                    </div>
+                </a>
             </div>
 
         </>

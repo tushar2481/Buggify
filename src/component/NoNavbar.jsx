@@ -1,6 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function NoNavbar() {
+    const navigate = useNavigate();
+
+    const gotoHome = () => {
+        navigate('/')
+    }
+
     return (
         <>
             <div style={{ backgroundColor: "#0b0b0b" }}>
@@ -9,7 +17,11 @@ function NoNavbar() {
                     paddingTop: "30px",
                     marginLeft: "10rem",
                     fontSize: "20px",
-                }}>Buggify</h1></div>
+                }}
+                    onClick={gotoHome}
+                >
+                    Buggify
+                </h1></div>
         </>
 
     );
