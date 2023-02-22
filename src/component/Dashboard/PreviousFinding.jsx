@@ -36,7 +36,7 @@ function DashboardNavbar() {
         Navigate('/Retesting')
     };
     const gotoBountyPayment = () => {
-        Navigate('/businessProfile')
+        Navigate('/BountyPayment')
     };
     const gotoPreviousFinding = () => {
         Navigate('/PreviousFinding')
