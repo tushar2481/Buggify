@@ -8,11 +8,13 @@ import Academy6 from '../image/academy6.png';
 import Academy7 from '../image/academy7.png';
 import Academy8 from '../image/academy8.png';
 import AvatarRemove from '../image/AvatarRemove.png';
+import HeathAdam from '../image/heathAdam.png';
 import './AcademyCourse.css';
 import { useNavigate } from "react-router-dom";
 
 
 const AcademyCourses = () => {
+
     const [levelFilters, setLevelFilters] = useState({
         Beginner: false,
         Intermediate: false,
@@ -34,11 +36,10 @@ const AcademyCourses = () => {
         level: "Beginner",
         category: "Programming",
         description: "Learn Python concepts & modules important for hacking. Learn how to use python as scripting language.",
-
         price: "10",
         img: Academy1,
-        avatar: AvatarRemove,
-        instrutor: "Tarjani Patel",
+        avatar: HeathAdam,
+        instrutor: "Heath Admans",
     },
     {
         id: 2,
@@ -48,8 +49,8 @@ const AcademyCourses = () => {
         description: "Bash Scripting or Shell Scripting Course includes everything you need for Command-line, Automate Daily Tasks, and a lot of fun and experiment with shell.",
         price: "15",
         img: Academy2,
-        avatar: AvatarRemove,
-        instrutor: "Tarjani Patel",
+        avatar: HeathAdam,
+        instrutor: "Heath Adam",
     },
     {
         id: 3,
@@ -59,8 +60,8 @@ const AcademyCourses = () => {
         description: "Web Application Pentesting Covers Basic of Web Applications, OWASP Top 10 attacks in-depth. Latest Exploits and Techniques in wild.",
         price: "150",
         img: Academy3,
-        avatar: AvatarRemove,
-        instrutor: "Tarjani Patel",
+        avatar: HeathAdam,
+        instrutor: "Heath Adam",
     },
     {
         id: 4,
@@ -69,8 +70,8 @@ const AcademyCourses = () => {
         category: "Exploitation",
         description: "Offensive Red Teaming Covers Every Techniques & Tactics covered in MITRE Framework and other infamous Frameworks.",
         img: Academy4,
-        avatar: AvatarRemove,
-        instrutor: "",
+        avatar: HeathAdam,
+        instrutor: "Heath Adam",
         price: "220",
     }, {
         id: 5,
@@ -78,8 +79,8 @@ const AcademyCourses = () => {
         level: "Advanced",
         category: "Malware",
         description: "Advance Malware Analysis Training Consist of Static and Dynamic Analysis of Recent Malwares and Reverse Enginner them.",
-        avatar: AvatarRemove,
-        instrutor: "",
+        avatar: HeathAdam,
+        instrutor: " HeathAdam",
         price: "150",
         img: Academy5,
     },
@@ -90,8 +91,8 @@ const AcademyCourses = () => {
         category: "Windows",
         img: Academy6,
         description: "AD Exploitation is one of the top notch skill to Pentest 99% of Forbs top 500 Companies and get into their Networks Ethically.",
-        avatar: AvatarRemove,
-        instrutor: "",
+        avatar: HeathAdam,
+        instrutor: "Heath Adam ",
         price: "200",
     },
     {
@@ -101,8 +102,8 @@ const AcademyCourses = () => {
         category: "Mobile",
         img: Academy7,
         description: "Mobile Application Pentesting One of the Most Untouched Area of Pentesting, Hunting Bugs in Mobile App gives High Payouts.",
-        avatar: AvatarRemove,
-        instrutor: "",
+        avatar: HeathAdam,
+        instrutor: "Heath Adam",
         price: "120",
     },
     {
@@ -112,14 +113,15 @@ const AcademyCourses = () => {
         category: "Web",
         img: Academy8,
         description: "API is a way of Communication Between Systems and Breaking it, Testing it is a Fun.",
-        avatar: AvatarRemove,
-        instrutor: "",
+        avatar: HeathAdam,
+        instrutor: "Heath Adam ",
         price: "150",
+        URL: '/PentestingWithPython'
     },];
 
     // navigation
     const navigate = useNavigate();
-    const paths = ['/PentestingWithPython',];
+    const paths = ['/PentestingWithPython', '/BashWithBeginner', '/WebApplicationPentesting', '/OffensiveRedTeaming', '/MalwareAnalysis', '/ActiveDirectoryExploitation', '/MobileAppPentesting', '/ApiPentesting'];
     const goto = (index) => {
         navigate(paths[index]);
     };
@@ -234,6 +236,8 @@ const AcademyCourses = () => {
 
                     </ul>
                 </nav>
+
+
                 <div className="container" >
                     <div className="courses-div">
                         <div className="filter-div">

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 function MyList() {
-	const [navActiveIndex, setNavActiveIndex] = useState(0);
+
 	const items = [
 		{ label: "Home", link: "/" },
 		{ label: "Company", link: "/company" },
@@ -13,9 +13,15 @@ function MyList() {
 		{ label: "Programs", link: "/program" },
 		{ label: "Academy", link: "/AcademygetStarted" },
 	];
+	const [navActiveIndex, setNavActiveIndex] = useState(
+		items.findIndex((item) => item.link === window.location.pathname)
+	);
+
 	const handleNavClick = (index) => {
 		setNavActiveIndex(index);
+		window.localStorage.setItem("navActiveIndex", index);
 	};
+
 
 
 	return (
@@ -25,7 +31,7 @@ function MyList() {
 				<li
 					key={index}
 					onClick={() => handleNavClick(index)}
-					className={navActiveIndex === index ? "active" : ""}
+					className={navActiveIndex == index ? "active" : ""}
 				>
 					<Link
 						to={item.link}
@@ -52,6 +58,11 @@ const Navbar = () => {
 	const gotoHome = () => {
 		navigate('/')
 	}
+
+
+	const navActiveIndex = Number(window.localStorage.getItem("navActiveIndex"));
+
+
 	return (
 		<>
 

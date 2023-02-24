@@ -1,12 +1,37 @@
-import React from "react";
-import "./ExploreProgram.css"
+import React, { useRef, useLayoutEffect } from "react";
+import "./ExploreProgram.css";
+import { useNavigate } from "react-router-dom";
 import BugHunter from "../image/BugHunter.jpg"
 import RedTeam from "../image/RedTeam.jpg"
 
+
+
+
 const C1 = () => {
+
+    const navigate = useNavigate();
+    const gotoRedTeam_Agreement = () => {
+        navigate('/RedTeam_Agreement');
+    }
+
+
+
+    const scrollRefToPublic = useRef(null);
+    const scrollRefToPrivate = useRef(null);
+    useLayoutEffect(() => {
+        if (scrollRefToPublic.current) {
+            window.scrollTo(0, 0);
+        }
+        if (scrollRefToPrivate.current) {
+            window.scrollTo(0, 0);
+        }
+
+    }, []);
+
+
     return (
         <>
-            <div className="c1">
+            <div className="c1" ref={scrollRefToPrivate}>
                 <div className="c1-section-1">
                     <h1 className="c1-h" >Choose according to Your Neeeds</h1>
                     <h3 className="c1-h2">Private Red Team Engagement</h3>
@@ -46,11 +71,11 @@ const C1 = () => {
                             <img src={RedTeam} className="c1-div2-img"></img>
                         </div>
                     </div>
-                    <div className="button_ani c1-section1-button">
+                    <div className="button_ani c1-section1-button" id="scrollTo" onClick={gotoRedTeam_Agreement}>
                         <button className=" button3">Register Engagement</button></div>
                 </div>
 
-                <div className="c1-section2">
+                <div className="c1-section2" ref={scrollRefToPublic}>
                     <h1 className="c1-section2-h">Open Source Bug Bounty Program</h1>
 
                     <div className="c1-div">

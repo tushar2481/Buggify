@@ -12,6 +12,16 @@ import Login from './component/Login';
 import Forgot from './component/Forgot';
 import Signup from './component/Signup';
 import ExploreProgram from './component/Company/ExploreProgram';
+import PentestingWithPython from './component/Academy-Courses/PentestingWithPython';
+import BashWithBeginner from './component/Academy-Courses/BashWithBeginner';
+import WebApplicationPentesting from './component/Academy-Courses/WebApplicationPentesting';
+import OffensiveRedTeaming from './component/Academy-Courses/OffensiveRedTeaming';
+import MalwareAalysis from './component/Academy-Courses/MalwareAnalysis';
+import ActiveDirectoryExploitation from './component/Academy-Courses/ActiveDirectoryExploitation';
+import MobileAppPentesting from './component/Academy-Courses/MobileAppPentesting';
+import ApiPentesting from './component/Academy-Courses/ApiPentesting';
+
+
 import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
 
 import AcademyGetStarted from './component/academy/AcademyGetStarted';
@@ -25,7 +35,6 @@ import AcademyDiscord from './component/academy/AcademyDiscord';
 
 
 import TestCourse from './component/TestCourse';
-import PentestingWithPython from './component/Academy-Courses/PentestingWithPython';
 import BussinessProfile from './component/Dashboard/BusinessProfile';
 import ScopeSetting from './component/Dashboard/ScopeSetting';
 import RewardUpdate from './component/Dashboard/RewardUpdate';
@@ -122,6 +131,55 @@ function App() {
             <>
               <Navbar />
               <ExploreProgram />
+              <Footer />
+            </>
+          } />
+          <Route path='/BashWithBeginner' element={
+            <>
+              <Navbar />
+              <BashWithBeginner />
+              <Footer />
+            </>
+          } />
+          <Route path='/WebApplicationPentesting' element={
+            <>
+              <Navbar />
+              <WebApplicationPentesting />
+              <Footer />
+            </>
+          } />
+          <Route path='/OffensiveRedTeaming' element={
+            <>
+              <Navbar />
+              <OffensiveRedTeaming />
+              <Footer />
+            </>
+          } />
+          <Route path='/MalwareAnalysis' element={
+            <>
+              <Navbar />
+              <MalwareAalysis />
+              <Footer />
+            </>
+          } />
+          <Route path='/ActiveDirectoryExploitation' element={
+            <>
+              <Navbar />
+              <ActiveDirectoryExploitation />
+              <Footer />
+            </>
+          } />
+          <Route path='/MobileAppPentesting' element={
+            <>
+              <Navbar />
+              <MobileAppPentesting />
+              <Footer />
+            </>
+          } />
+          <Route path='/ApiPentesting' element={
+            <>
+              <Navbar />
+              <ApiPentesting />
               <Footer />
             </>
           } />

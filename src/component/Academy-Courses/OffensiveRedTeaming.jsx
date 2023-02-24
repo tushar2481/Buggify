@@ -1,6 +1,6 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import './PentestingWithPython.css';
-import Academy1 from '../image/academy1.png';
+import Academy4 from '../image/academy4.png';
 import HeathAdam from '../image/heathAdam.png';
 
 
@@ -12,11 +12,12 @@ const CourseDescription = () => {
         }
     }, []);
 
+
     return (
         <>
             <div className='a-c-d' ref={scrollRef}>
                 <div>
-                    <h1 className='a-c-d-title-h'>Pentesting with Python</h1>
+                    <h1 className='a-c-d-title-h'>Offensive Red Teaming</h1>
 
                     <div className='a-c-d-title-div'>
 
@@ -25,10 +26,9 @@ const CourseDescription = () => {
                                 <span className='a-c-d-title-p1-span'>
                                     Course Overview
                                 </span><br />
-                                This course is designed to provide a comprehensive understanding of how to use Python programming language for Penetration
-                                Testing (Pentesting) purposes. The course will cover different types of attacks and their detection methods, network scanning
-                                and enumeration techniques, vulnerability assessment, exploitation and post-exploitation
-                                techniques, and defensive countermeasures.
+
+                                This course is designed to provide students with a practical understanding of the principles and techniques used in offensive red teaming. The course will cover the different phases of red teaming, including reconnaissance, vulnerability identification, exploitation, and post-exploitation. Students will also learn how to generate comprehensive reports and provide recommendations for remediation.
+
                             </p>
                             <p className='a-c-d-title-p2'>
                                 <span className='a-c-d-title-p2-span'>
@@ -58,7 +58,7 @@ const CourseDescription = () => {
 
                         </div>
                         <div className='a-c-d-title-div2'>
-                            <img src={Academy1} className='a-c-d-title-div2-img' />
+                            <img src={Academy4} className='a-c-d-title-div2-img' />
                             <div className='button_ani a-c-d-title-div2-button'>
                                 <button className='button2' >Buy Now</button>
                             </div>
@@ -72,53 +72,49 @@ const CourseDescription = () => {
 
                         <ul className='a-c-d-syllabus-ul'>
                             <div className='column-ul'>
-                                <li className='a-c-d-syallabus-h-li'>Module 1: Introduction to Pentesting with Python</li>
+                                <li className='a-c-d-syallabus-h-li'>Module 1: Introduction to Offensive Red Teaming</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Overview of Pentesting and Python</li>
-                                    <li>Setting up the Pentesting environment</li>
-                                    <li>Overview of Python libraries for Pentesting</li>
+                                    <li>Overview of offensive red teaming</li>
+                                    <li>Understanding the red teaming landscape</li>
+                                    <li>Threat modeling and attack surface identification</li>
                                 </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 2: Network Scanning and Enumeration</li>
+                                <li className='a-c-d-syallabus-h-li'>Module 2: Information Gathering and Scanning</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Understanding network scanning</li>
-                                    <li>Scanning methods and tools</li>
-                                    <li>Using Python for network scanning and enumeration</li>
+                                    <li>Reconnaissance techniques for offensive red teaming</li>
+                                    <li>Understanding the red teaming landscape</li>
+                                    <li>Threat modeling and attack surface identification</li>
                                 </ul>
                                 <li className='a-c-d-syallabus-h-li'>Module 3: Vulnerability Assessment</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Introduction to vulnerability assessment</li>
-                                    <li>Vulnerability scanning tools and techniques</li>
-                                    <li>Automating vulnerability assessment with Python</li>
+                                    <li>Understanding vulnerabilities in an organization's defenses</li>
+                                    <li>Vulnerability assessment techniques and tools</li>
+                                    <li>Automating vulnerability assessment</li>
                                 </ul>
                                 <li className='a-c-d-syallabus-h-li'>Module 4: Exploitation</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Understanding exploitation</li>
-                                    <li>Common exploit types</li>
-                                    <li>Exploiting vulnerabilities with Python</li>
+                                    <li>Introduction to exploitation techniques</li>
+                                    <li>Common vulnerabilities and their exploitation</li>
+                                    <li>Exploiting vulnerabilities with manual techniques and automated tools</li>
                                 </ul>
                             </div>
                             <div className='column-ul'>
                                 <li className='a-c-d-syallabus-h-li'>Module 5: Post-Exploitation Techniques</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Post-exploitation techniques</li>
-                                    <li>Maintaining access</li>
-                                    <li>Covering tracks</li>
+                                    <li>Pivoting to other systems and applications</li>
+                                    <li>Maintaining access to target systems</li>
+                                    <li>Covering tracks and erasing evidence</li>
                                 </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 6: Defensive Countermeasures</li>
+                                <li className='a-c-d-syallabus-h-li'>Module 6:  Reporting and Remediation</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Understanding defensive countermeasures</li>
-                                    <li>Common countermeasures</li>
-                                    <li>Bypassing countermeasures with Python</li>
+                                    <li>Writing effective red teaming reports</li>
+                                    <li>Providing recommendations for remediation</li>
+                                    <li>Working with clients to fix identified vulnerabilities</li>
                                 </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 7: Reporting</li>
-                                <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Reporting techniques and tools</li>
-                                    <li>Generating reports with Python</li>
-                                </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 8: Final Project</li>
+                                <li className='a-c-d-syallabus-h-li'>Module 7: Final Project</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
                                     <li>Applying the knowledge gained from the course to complete a final project</li>
                                 </ul>
+
                             </div>
                         </ul>
                     </div>
@@ -126,7 +122,7 @@ const CourseDescription = () => {
                         <p className='a-c-d-assessment-h'>Assessment:</p>
                         <ul className='a-c-d-assessment-ul'>
                             <li>In-class exercises and assignments</li>
-                            <li>Final project showcasing the practical application of Pentesting with Python</li>
+                            <li>Final project showcasing the practical application of offensive red teaming</li>
                         </ul>
                     </div>
                     <div className='a-c-d-author'>

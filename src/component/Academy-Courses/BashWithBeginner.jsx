@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import './PentestingWithPython.css';
-import Academy1 from '../image/academy1.png';
+import Academy2 from '../image/academy2.png';
 import HeathAdam from '../image/heathAdam.png';
 
 
@@ -12,11 +12,13 @@ const CourseDescription = () => {
         }
     }, []);
 
+
+
     return (
         <>
             <div className='a-c-d' ref={scrollRef}>
                 <div>
-                    <h1 className='a-c-d-title-h'>Pentesting with Python</h1>
+                    <h1 className='a-c-d-title-h'>Bash for Beginners</h1>
 
                     <div className='a-c-d-title-div'>
 
@@ -25,10 +27,9 @@ const CourseDescription = () => {
                                 <span className='a-c-d-title-p1-span'>
                                     Course Overview
                                 </span><br />
-                                This course is designed to provide a comprehensive understanding of how to use Python programming language for Penetration
-                                Testing (Pentesting) purposes. The course will cover different types of attacks and their detection methods, network scanning
-                                and enumeration techniques, vulnerability assessment, exploitation and post-exploitation
-                                techniques, and defensive countermeasures.
+                                This course is designed for individuals who have little or no experience with the Linux command line interface and want to learn how to use the Bash shell. The course will cover the basics of Bash scripting, how to navigate the Linux file system, managing files and directories, and working with Linux utilities and commands.
+
+
                             </p>
                             <p className='a-c-d-title-p2'>
                                 <span className='a-c-d-title-p2-span'>
@@ -58,7 +59,7 @@ const CourseDescription = () => {
 
                         </div>
                         <div className='a-c-d-title-div2'>
-                            <img src={Academy1} className='a-c-d-title-div2-img' />
+                            <img src={Academy2} className='a-c-d-title-div2-img' />
                             <div className='button_ani a-c-d-title-div2-button'>
                                 <button className='button2' >Buy Now</button>
                             </div>
@@ -72,53 +73,49 @@ const CourseDescription = () => {
 
                         <ul className='a-c-d-syllabus-ul'>
                             <div className='column-ul'>
-                                <li className='a-c-d-syallabus-h-li'>Module 1: Introduction to Pentesting with Python</li>
+                                <li className='a-c-d-syallabus-h-li'>Module 1: Introduction to Bash </li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Overview of Pentesting and Python</li>
-                                    <li>Setting up the Pentesting environment</li>
-                                    <li>Overview of Python libraries for Pentesting</li>
+                                    <li>Overview of the Bash shell</li>
+                                    <li>Bash syntax and scripting basics</li>
+                                    <li>Introduction to the Linux file system</li>
                                 </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 2: Network Scanning and Enumeration</li>
+                                <li className='a-c-d-syallabus-h-li'>Module 2: Navigating the File System</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Understanding network scanning</li>
-                                    <li>Scanning methods and tools</li>
-                                    <li>Using Python for network scanning and enumeration</li>
+                                    <li>Understanding the Linux file system</li>
+                                    <li>Navigating the file system with Bash</li>
+                                    <li>Using Bash to create, move, and delete files and directories</li>
                                 </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 3: Vulnerability Assessment</li>
+                                <li className='a-c-d-syallabus-h-li'>Module 3: Managing Files and Directories</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Introduction to vulnerability assessment</li>
-                                    <li>Vulnerability scanning tools and techniques</li>
-                                    <li>Automating vulnerability assessment with Python</li>
-                                </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 4: Exploitation</li>
-                                <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Understanding exploitation</li>
-                                    <li>Common exploit types</li>
-                                    <li>Exploiting vulnerabilities with Python</li>
+                                    <li>Basic file management with Bash</li>
+                                    <li>Advanced file management with Bash</li>
+                                    <li>Working with permissions and ownership in Bash</li>
+
                                 </ul>
                             </div>
                             <div className='column-ul'>
-                                <li className='a-c-d-syallabus-h-li'>Module 5: Post-Exploitation Techniques</li>
+                                <li className='a-c-d-syallabus-h-li'>Module 4: Working with Utilities and Commands</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Post-exploitation techniques</li>
-                                    <li>Maintaining access</li>
-                                    <li>Covering tracks</li>
+                                    <li>Understanding Linux utilities and commands</li>
+                                    <li>Using Bash to execute commands</li>
+                                    <li>Using pipes and redirects with Bash</li>
                                 </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 6: Defensive Countermeasures</li>
+
+
+                                <li className='a-c-d-syallabus-h-li'>Module 5: Bash Scripting</li>
                                 <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Understanding defensive countermeasures</li>
+                                    <li>Basics of Bash scripting</li>
+                                    <li>Variables and data types in Bash</li>
+                                    <li>Control flow and looping in Bash</li>
+                                </ul>
+                                <li className='a-c-d-syallabus-h-li'>Module 6: Final Project</li>
+                                <ul className='a-c-d-syllabus-second-ul'>
+                                    <li>Applying the knowledge gained from the course to complete a final project</li>
                                     <li>Common countermeasures</li>
                                     <li>Bypassing countermeasures with Python</li>
                                 </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 7: Reporting</li>
-                                <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Reporting techniques and tools</li>
-                                    <li>Generating reports with Python</li>
-                                </ul>
-                                <li className='a-c-d-syallabus-h-li'>Module 8: Final Project</li>
-                                <ul className='a-c-d-syllabus-second-ul'>
-                                    <li>Applying the knowledge gained from the course to complete a final project</li>
-                                </ul>
+
+
                             </div>
                         </ul>
                     </div>
@@ -126,7 +123,7 @@ const CourseDescription = () => {
                         <p className='a-c-d-assessment-h'>Assessment:</p>
                         <ul className='a-c-d-assessment-ul'>
                             <li>In-class exercises and assignments</li>
-                            <li>Final project showcasing the practical application of Pentesting with Python</li>
+                            <li>Final project showcasing the practical application of Bash scripting</li>
                         </ul>
                     </div>
                     <div className='a-c-d-author'>
@@ -154,8 +151,8 @@ const CourseDescription = () => {
 
                     </div>
 
-                </div>
-            </div>
+                </div >
+            </div >
         </>
     );
 }

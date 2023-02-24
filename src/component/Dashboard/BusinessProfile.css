@@ -39,6 +39,7 @@
     height: 40px;
     margin: 5px 0;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .navbar-menu-icon {
@@ -125,6 +126,8 @@
     color: #ffffff;
     background-color: #3b3b3b;
     border-radius: 10px;
+    padding: 0rem 1rem;
+    cursor: pointer;
 }
 
 /*  */

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import "./Company.css";
-import { NavLink } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import CompanyImg1 from "../image/Company-section-1.png";
 import CompanyImg2 from "../image/Company-section-3-1.png";
 import CompanyImg3 from "../image/Company-section-3-2.png";
@@ -10,30 +9,44 @@ import CompanyImg5 from "../image/Company-section-3-4.png";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
-const Data = [
-	{ image: "image1", heading: "Heading 1", anchor: "Learn More" },
-	{ image: "image2", heading: "Web Application Pentest", anchor: "Learn More" },
-	{
-		image: "image3",
-		heading: "Active Directory Pentest",
-		anchor: "Learn More",
-	},
-	{ image: "image4", heading: "Heading 4", anchor: "Learn More" },
-];
+import CompanyProduct1 from '../image/CompanyProduct1.png'
+import CompanyProduct2 from '../image/CompanyProduct2.png'
+import CompanyProduct3 from '../image/CompanyProduct3.png'
+import CompanyProduct4 from '../image/CompanyProduct4.png'
+import CompanyProduct5 from '../image/CompanyProduct5.png'
+import CompanyProduct6 from '../image/CompanyProduct6.png'
+import CompanyProduct7 from '../image/CompanyProduct7.png'
+import CompanyProduct8 from '../image/CompanyProduct8.png'
+
+
+
+
+// const [allImages, setAllImages] = useState([CompanyProduct1, CompanyProduct2, CompanyProduct3, CompanyProduct4, CompanyProduct5, CompanyProduct6, CompanyProduct7, CompanyProduct8])
+
+
 
 function Company() {
-	const [div2Index, setDiv2Index] = useState(1);
-	const [div3Index, setDiv3Index] = useState(2);
+	const navigate = useNavigate();
+	const gotoPrograms = () => {
+		navigate('/ExploreProgram');
+	}
+
+	const [firstIndex, setFirstIndex] = useState(0);
+	const images = [CompanyProduct1, CompanyProduct2, CompanyProduct3, CompanyProduct4, CompanyProduct5, CompanyProduct6, CompanyProduct7, CompanyProduct8];
+	const maxIndex = images.length - 2;
 
 	const handleLeftIconClick = () => {
-		setDiv2Index(div2Index === 0 ? Data.length - 1 : div2Index - 1);
-		setDiv3Index(div3Index === 0 ? Data.length - 1 : div2Index - 1);
+		const newIndex = firstIndex - 2;
+		setFirstIndex(newIndex < 0 ? maxIndex - (Math.abs(newIndex) % (maxIndex + 2)) : newIndex);
 	};
 
 	const handleRightIconClick = () => {
-		setDiv2Index(div2Index === Data.length - 1 ? 0 : div3Index + 1);
-		setDiv3Index(div3Index === Data.length - 1 ? 0 : div3Index + 1);
+		const newIndex = firstIndex + 2;
+		setFirstIndex(newIndex > maxIndex ? newIndex % (maxIndex + 2) : newIndex);
 	};
+
+
+
 	return (
 		<>
 			<div className="company">
@@ -49,11 +62,10 @@ function Company() {
 							Data Protection, Regulation & Governance.
 						</p>
 						<div className="section-1-part-1-button">
-							<div className="button_ani section-1-part-1-btn1 ">
-								<NavLink to="/Company"><button className="button2">
+							<div className="button_ani section-1-part-1-btn1 " onClick={gotoPrograms}>
+								<button className="button2">
 									Enroll in Program
 								</button>
-								</NavLink>
 							</div>
 
 						</div>
@@ -187,26 +199,18 @@ function Company() {
 					</h1>
 					<div className="section-4-div">
 						<span className="section-4-div-leftArrow">
-							{" "}
+
 							<BsFillArrowLeftCircleFill
 								className="arrow-left-icon"
 								onClick={handleLeftIconClick}
 							/>
 						</span>
 						<div className="section-4-div1">
-							<img src={div2Index.image} className="section-4-div-img" />
-							<h3 className="section-4-div-h">{div2Index.heading}</h3>
-							<a href={div2Index.anchor} className="section-4-div-a">
-								{div2Index.anchor}
-							</a>
+							<img src={images[firstIndex]} className="section-4-div-img1" />
+							<img src={images[firstIndex + 1]} className="section-4-div-img2" />
+
 						</div>
-						<div className="section-4-div2">
-							<img src={div3Index.image} className="section-4-div-img" />
-							<h3 className="section-4-div-h">{div3Index.heading}</h3>
-							<a href={div3Index.anchor} className="section-4-div-a">
-								{div3Index.anchor}
-							</a>
-						</div>
+
 						<div className="section-4-div-rightArrow">
 							<BsFillArrowRightCircleFill
 								className="arrow-right-icon"
@@ -226,16 +230,17 @@ function Company() {
 						<div className="section-6-display-flex">
 							<p className="section-6-div1-p">Be Quick to Secure Your Assets, Before Hacker Attacks.</p>
 
-							<div className="section-6-button">
-								<div className="button_ani  section-6-button1 ">
-									<button className="btn">
+							<div className="section-6-button" >
+								<div className="button_ani  section-6-button1" onClick={gotoPrograms}>
+									<button className="btn" >
 										Private Program
 									</button>
 								</div>
-								<div className="button_ani section-6-button2  ">
+								<div className="button_ani section-6-button2" onClick={gotoPrograms}>
 									<button className="button2">
 										Public Program
 									</button>
+
 								</div>
 							</div>
 						</div>
