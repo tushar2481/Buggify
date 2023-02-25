@@ -1,10 +1,11 @@
 .signin {
     background-color: #0b0b0b;
+    padding-top: 1rem;
     padding-bottom: 20rem;
 }
 
 .signin-h {
-    padding-top: 10rem;
+    /* padding-top: 10rem; */
     text-align: center;
     font-size: 26px;
     line-height: 2.8rem;
