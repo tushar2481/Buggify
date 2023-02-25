@@ -1,3 +1,5 @@
+// This file is deprecated
+
 const mongoose = require('mongoose');
 
 // defining Schema for Business
@@ -6,12 +8,12 @@ const businessSchema = new mongoose.Schema({
         type: String,
         unique: true,
         required: true,
-        minlength: 5
+        minlength: 2
     },
     email:{
         type: String,
         required: true,
-        unique: true,
+        unique: true, 
         minlength: 7
     },
     password:{
@@ -21,6 +23,7 @@ const businessSchema = new mongoose.Schema({
     },
     company_name:{
         type: String,
+        
         required: true,
         minlength: 5,
         maxlength:30

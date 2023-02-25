@@ -1,3 +1,5 @@
+// This file is deprecated
+
 const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', true);

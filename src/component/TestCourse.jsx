@@ -70,11 +70,11 @@ const CourseVideo = () => {
                 id: 1,
                 title: 'Introduction',
                 videosList: [
-                    { id: 1, title: 'Video 1', url: 'https://www.youtube.com/watch?v=VMU7F7DeUrY', completed: false },
-                    { id: 2, title: 'Video 2', url: 'https://www.youtube.com/watch?v=6eP7jzhfXwQ&list', completed: false },
-                    { id: 3, title: 'Video 3', url: 'https://www.youtube.com/watch?v=dqRG6PYKwxw&list', completed: false },
-                    { id: 4, title: 'Video 4', url: 'https://www.youtube.com/watch?v=8PTOkwze0Vw&list', completed: false },
-                    { id: 5, title: 'Video 5', url: 'https://www.youtube.com/watch?v=E184qk8E7bA&list', completed: false },
+                    { id: 1, title: 'Video 1', url: 'https://www.youtube.com/watch?v=eVI0Ny5cZ2c', completed: false },
+                    { id: 2, title: 'Video 2', url: 'https://www.youtube.com/watch?v=zHxgZJCy9fA', completed: false },
+                    { id: 3, title: 'Video 3', url: 'hhttps://www.youtube.com/@TCMSecurityAcademy', completed: false },
+                    { id: 4, title: 'Video 4', url: 'https://www.youtube.com/watch?v=POgrNo4xRko', completed: false },
+                    { id: 5, title: 'Video 5', url: 'https://youtube.com/watch?v=7utwZYKweho', completed: false },
                 ],
             },
             {
