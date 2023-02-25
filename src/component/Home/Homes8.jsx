@@ -14,68 +14,40 @@ function Form() {
             <h2 className="h1 section-eight-h2">How Can We Help You? Let Us know and we will get back to you as soon as Possible</h2>
 
             <form className="section-eight-form">
+
+
                 <div>
-                    <label className="section-eight-form-label" htmlFor="firstName">First Name</label>
-                    <input className="section-eight-form-input"
-                        type="text"
-                        id="firstName"
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label className="section-eight-form-label" htmlFor="lastName">Last Name</label>
-                    <input className="section-eight-form-input"
-                        type="text"
-                        id="lastName"
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label className="section-eight-form-label" htmlFor="email">Email</label>
+                    <label className="section-eight-form-label">Email</label>
                     <input className="section-eight-form-input"
                         type="email"
-                        id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
+
                 <div>
-                    <label className="section-eight-form-label" htmlFor="company">Company</label>
-                    <input className="section-eight-form-input"
+                    <label className="section-eight-form-label">What's your Concern</label>
+                    <input className="section-eight-form-input-concern"
                         type="text"
-                        id="company"
-                        value={company}
-                        onChange={(e) => setCompany(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label className="section-eight-form-label" htmlFor="jobTitle">Job Title</label>
-                    <input className="section-eight-form-input" align="middle"
-                        type="text"
-                        id="jobTitle"
-                        value={jobTitle}
-                        onChange={(e) => setJobTitle(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label className="section-eight-form-label" htmlFor="country">Country</label>
-                    <input className="section-eight-form-input"
-                        type="text"
-                        id="country"
-                        value={country}
-                        onChange={(e) => setCountry(e.target.value)}
+                        id="concern"
+                        onChange={(e) => setConcern(e.target.value)}
                     />
                 </div>
 
 
-                <p className="section-eight-form-p">We will handle all information Safe according to Our Privacy Policy. If you don’t want to receive marketing mail, you can manually Turn it off from here.</p>
+                <p className="section-eight-form-p"><center>We will handle all information Safe according to Our Privacy Policy.
+
+                    <br /> <input type="checkbox"></input>
+                    <span className="section-eighr-form-p-span">If you don’t want to receive marketing mail, you can manually Turn it off from here.</span>
+                </center>
+                </p>
                 <div className="button_ani  section-eight-form-button">
                     <button className="btn" >
                         Get in Touch!
                     </button>
+
                 </div>
+
             </form >
 
         </div >

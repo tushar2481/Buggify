@@ -4,9 +4,6 @@ import { useNavigate } from "react-router-dom";
 import BugHunter from "../image/BugHunter.jpg"
 import RedTeam from "../image/RedTeam.jpg"
 
-
-
-
 const C1 = () => {
 
     const navigate = useNavigate();
