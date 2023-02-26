@@ -10,43 +10,40 @@ const SignInForm = () => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [companyName, setCompanyName] = useState("");
     const [position, setPosition] = useState("");
-    const [country, setCountry] = useState("");
+    const [selectedCountry, setSelectedCountry] = useState('');
     const [acceptedTerms, setAcceptedTerms] = useState(false);
 
-    var data = {
-        username: username,
-        email: email,
-        password: password,
-        confirmPassword: confirmPassword,
-        companyName: companyName,
-        position: position,
-        country: country,
-        acceptedTerms: acceptedTerms
-    }
-    const jsonData = JSON.stringify(data);
-    // const countries = [
-    //     { key: "af", value: "af", text: "Afghanistan" },
-    //     { key: "ax", value: "ax", text: "Aland Islands" },
-    //     { key: "al", value: "al", text: "Albania" },
-    //     // ... more countries here
-    // ];
+    const countries = [
+        { code: 'US', name: 'United States' },
+        { code: 'CA', name: 'Canada' },
+        { code: 'MX', name: 'Mexico' },
+        // add more countries here
+    ];
+
+
+    const handleCountryChange = (event) => {
+        setSelectedCountry(event.target.value);};
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if(password==confirmPassword){
-            try{
-                alert(typeof(jsonData));
-                const response = await fetch(`http://127.0.0.1:8000/business`, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    header: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: jsonData
-                     });
-                console.log(response.json());
-            } catch (error) {
-                    console.log(error);
-                  }
+            const url = 'http://127.0.0.1:3000/business';
+            const data = {  username: username, email: email, password: password, companyName:companyName, position:position, country:selectedCountry, acceptedTerms:acceptedTerms }
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+              })
+                .then(response => {
+                  console.log(response);
+                })
+                .catch(error => {
+                  console.log(error);
+                });
+        }else{
+            alert(`Password and Confirm Password is not matching`);
         };
     };
 
@@ -69,11 +66,11 @@ const SignInForm = () => {
 
                 <div>
                     <label className="signin-label">Password*</label>
-                    <input className="signin-input" type="text" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required/>
+                    <input className="signin-input" type="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required/>
                 </div>
                 <div>
                     <label className="signin-label">Confirm Password*</label>
-                    <input className="signin-input" type="text" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required/>
+                    <input className="signin-input" type="password" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required/>
                 </div>
                 <div>
                     <label className="signin-label">Company Name</label>
@@ -85,8 +82,13 @@ const SignInForm = () => {
                 </div>
                 <div>
                     <label className="signin-label">Country</label>
-                    <input className="signin-input" type="text" name="country" value={country} onChange={(event) => setCountry(event.target.value)} />
-                </div>
+                    <select className="signin-input" id="country" value={selectedCountry} onChange={handleCountryChange}>
+                        <option value="">Select a country</option>
+                        {countries.map((country) => (
+                            <option key={country.code} value={country.name} > {country.name}</option>
+                        ))}
+                    </select>
+                </div>
                 <div>
                     <input type="checkbox" id="acceptedTerms" className="signin-checkbox" checked={acceptedTerms} onChange={handleAcceptedTerms}/>
                     <label className="signin-checkbox-label">By Countinuing you agree to Buggify's <a href="#">Terms and Condition</a> and <a href="#">Privacy Policy</a></label>
