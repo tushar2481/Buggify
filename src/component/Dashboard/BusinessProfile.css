@@ -219,14 +219,54 @@
 
 .bus-profile-span {
     position: absolute;
-    right: 8rem;
+    right: 5rem;
     color: #04ff69;
     font-size: 14px;
     background-color: #141414;
-    width: 10rem;
+    width: 12rem;
     height: 24px;
     text-align: center;
     padding: 5px 0px 5px 0px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 0 3px #04ff69;
+}
+
+.dashboard-form {
+    margin-top: 5rem;
+}
+
+.dashboard-form-label {
+    position: relative;
+    left: calc(40%);
+    text-align: center;
+    color: #878787;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2.8rem;
+    margin-left: 5rem;
+}
+
+.dashboard-input {
+    position: absolute;
+    left: calc(80%);
+    margin-left: 11rem;
+    color: #04ff69;
+    font-size: 14px;
+    background-color: #141414;
+    width: 15rem;
+    height: 30px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #04ff69;
+    border: none;
+}
+
+.dashboard-form-option {
+    color: #ffffff;
+}
+
+.dashboard-button {
+    width: fit-content;
+    margin-top: 8rem;
 }

@@ -262,7 +262,7 @@ class BusinessProfile extends React.Component {
 
 BusinessProfile.defaultProps = {
     companyName: 'Company Name',
-    monthlyReceivedReports: 20,
+    monthlyReceivedReports: 220,
     receivedReportsLast90Days: 70,
     monthlyBountiesPaid: 20000,
     bountiesPaidLast90Days: 100000,

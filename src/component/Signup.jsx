@@ -32,9 +32,9 @@ const SignInForm = () => {
     // ];
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if(password==confirmPassword){
-            try{
-                alert(typeof(jsonData));
+        if (password == confirmPassword) {
+            try {
+                alert(typeof (jsonData));
                 const response = await fetch(`http://127.0.0.1:8000/business`, {
                     method: 'POST',
                     mode: 'no-cors',
@@ -42,11 +42,11 @@ const SignInForm = () => {
                         'Content-Type': 'application/json'
                     },
                     body: jsonData
-                     });
+                });
                 console.log(response.json());
             } catch (error) {
-                    console.log(error);
-                  }
+                console.log(error);
+            }
         };
     };
 
@@ -60,20 +60,20 @@ const SignInForm = () => {
                 <h2 style={{ textAlign: "center" }} className="signin-h">Sign In</h2>
                 <div>
                     <label className="signin-label">User Name*</label>
-                    <input className="signin-input" type="text" name="userName" value={username} onChange={(event) => setUserName(event.target.value)} required/>
+                    <input className="signin-input" type="text" name="userName" value={username} onChange={(event) => setUserName(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Email*</label>
-                    <input className="signin-input" type="text" name="email" value={email} onChange={(event) => setEmail(event.target.value)} required/>
+                    <input className="signin-input" type="text" name="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
                 </div>
 
                 <div>
                     <label className="signin-label">Password*</label>
-                    <input className="signin-input" type="text" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required/>
+                    <input className="signin-input" type="text" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Confirm Password*</label>
-                    <input className="signin-input" type="text" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required/>
+                    <input className="signin-input" type="text" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Company Name</label>
@@ -88,10 +88,10 @@ const SignInForm = () => {
                     <input className="signin-input" type="text" name="country" value={country} onChange={(event) => setCountry(event.target.value)} />
                 </div>
                 <div>
-                    <input type="checkbox" id="acceptedTerms" className="signin-checkbox" checked={acceptedTerms} onChange={handleAcceptedTerms}/>
+                    <input type="checkbox" id="acceptedTerms" className="signin-checkbox" checked={acceptedTerms} onChange={handleAcceptedTerms} />
                     <label className="signin-checkbox-label">By Countinuing you agree to Buggify's <a href="#">Terms and Condition</a> and <a href="#">Privacy Policy</a></label>
                 </div>
-                <div className="button_ani signin-button"  onClick={handleSubmit}>
+                <div className="button_ani signin-button" onClick={handleSubmit}>
                     <button type="submit" className="button2">Sign In</button>
                 </div>
                 <p className="signin-p">
