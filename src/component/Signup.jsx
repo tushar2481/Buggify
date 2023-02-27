@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useRef } from "react";
+import React, { useState } from "react";
 import './signin.css';
 import './Login.css';
 // import { Form, Input, Label, Dropdown, Checkbox, Button } from "semantic-ui-react";
@@ -20,7 +20,6 @@ const SignInForm = () => {
         // add more countries here
     ];
 
-
     const handleCountryChange = (event) => {
         setSelectedCountry(event.target.value);
     };
@@ -28,21 +27,36 @@ const SignInForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (password == confirmPassword) {
-            const url = 'http://127.0.0.1:3000/business';
-            const data = { username: username, email: email, password: password, companyName: companyName, position: position, country: selectedCountry, acceptedTerms: acceptedTerms }
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => {
-                    console.log(response);
-                })
-                .catch(error => {
-                    console.log(error);
-                });
+            if (companyName == '' && position == '') {
+                const url = 'http://127.0.0.1:3000/researcher';
+                const data = { username: username, email: email, password: password, country: selectedCountry, accepted_terms: acceptedTerms }
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }).then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error(error));
+            } else {
+                if (companyName != '' && position != '') {
+                    const url = 'http://127.0.0.1:3000/business';
+                    const data = { username: username, email: email, password: password, company_name: companyName, position: position, country: selectedCountry, accepted_terms: acceptedTerms }
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                        .then(response => response.json())
+                        .then(data => console.log(data))
+                        .catch(error => console.error(error));
+                } else {
+                    alert('Company Name or Position Missing for Business Account');
+                }
+            }
         } else {
             alert(`Password and Confirm Password is not matching`);
         };
@@ -52,11 +66,8 @@ const SignInForm = () => {
         setAcceptedTerms(!acceptedTerms);
     };
 
-
-
     return (
         <div className="signin">
-
             <form className="login-form">
                 <h2 style={{ textAlign: "center" }} className="signin-h">Sign In</h2>
                 <div>
@@ -70,11 +81,11 @@ const SignInForm = () => {
 
                 <div>
                     <label className="signin-label">Password*</label>
-                    <input className="signin-input" type="text" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
+                    <input className="signin-input" type="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Confirm Password*</label>
-                    <input className="signin-input" type="text" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required />
+                    <input className="signin-input" type="password" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Company Name</label>
@@ -111,4 +122,3 @@ const SignInForm = () => {
 };
 
 export default SignInForm;
-

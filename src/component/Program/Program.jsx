@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Program.css'
 import { useNavigate } from 'react-router-dom';
+// import { FcGoogle } from 'react-icons/fc';
 
+import Google from '../image/Google.png';
 
 const Program = () => {
   const navigate = useNavigate();
@@ -51,11 +53,40 @@ const Program = () => {
       [event.target.name]: event.target.checked
     });
   };
-  const Programs = [{
-    id: 1,
-    feature: "Manged by Buggify",
-    assetType: "All",
-  },]
+  const Programs = [
+    {
+      id: 1,
+      name: "Google VDP",
+      icon: Google,
+      resolved: 210,
+      averageBounty: "$750",
+      launchDate: "2/2019",
+      feature: "Manged by Buggify",
+      assetType: "All",
+    },
+    {
+      id: 2,
+      name: "Google VDP",
+      icon: Google,
+      resolved: 220,
+      averageBounty: "$750",
+      launchDate: "2/2017",
+      feature: "Manged by Buggify",
+      assetType: "All",
+    },
+    {
+      id: 3,
+      name: "Google VDP",
+      icon: Google,
+      resolved: 230,
+      averageBounty: "$750",
+      launchDate: "6/2016",
+      feature: "Manged by Buggify",
+      assetType: "All",
+    },
+
+
+  ]
 
   let filteredPrograms = Programs;
   if (featureFilters.MBB) {
@@ -166,9 +197,9 @@ const Program = () => {
           </ul>
         </nav>
 
-        <div className="courses-div">
-          <div className='filter-div'>
-            <div className="level-filter">
+        <div className="program-div">
+          <div className='filter-divs'>
+            <div className="feature-filter">
               <div className="col-md-3 filter-box1">
                 <h5 className="level-filter-h">Feature:  </h5>
                 <div className="form-check">
@@ -191,29 +222,29 @@ const Program = () => {
                     checked={featureFilters.LRT}
                     onChange={handleFeatureFilterChange}
                   />
-                  <label className="form-check-label" for="MBB">Managed by Buggify</label>
+                  <label className="form-check-label" for="LRT">Less Response Timw</label>
                 </div>
                 <div className="form-check">
                   <input
                     type="checkbox"
                     className="form-check-input"
-                    name="LRT"
-                    id="LRT"
-                    checked={featureFilters.LRT}
+                    name="OCT"
+                    id="OCT"
+                    checked={featureFilters.OCT}
                     onChange={handleFeatureFilterChange}
                   />
-                  <label className="form-check-label" for="MBB">Managed by Buggify</label>
+                  <label className="form-check-label" for="OCT">Offer Collabarative Testing</label>
                 </div>
                 <div className="form-check">
                   <input
                     type="checkbox"
                     className="form-check-input"
-                    name="LRT"
-                    id="LRT"
-                    checked={featureFilters.LRT}
+                    name="SP"
+                    id="SP"
+                    checked={featureFilters.SP}
                     onChange={handleFeatureFilterChange}
                   />
-                  <label className="form-check-label" for="MBB">Managed by Buggify</label>
+                  <label className="form-check-label" for="SP">Sustainable Programs</label>
                 </div>
                 <div className="form-check">
                   <input
@@ -237,7 +268,7 @@ const Program = () => {
                   />
                   <label className="form-check-label" for="VDP">Vulnerability Discloure Programs</label>
                 </div>
-                <div className="form-check">
+                <div className="form-check last">
                   <input
                     type="checkbox"
                     className="form-check-input"
@@ -368,7 +399,7 @@ const Program = () => {
                 />
                 <label className="form-check-label" for="Windows">Windows</label>
               </div>
-              <div className="form-check">
+              <div className="form-check last">
                 <input
                   type="checkbox"
                   className="form-check-input"
@@ -384,6 +415,38 @@ const Program = () => {
 
             </div>
           </div>
+
+          <div className='program-divs-programs'>
+            <div className='programs-div'>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Programs</th>
+                    <th>Resolved</th>
+                    <th>Average bounty</th>
+                    <th>Launch Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {Programs.map((program) => (
+                    <tr key={program.id}>
+                      <td className='program-heading'>
+                        <img
+                          className="program-icon"
+                          src={program.icon}
+                          alt="program icon"
+                        />{program.name}</td>
+                      <td>{program.resolved}</td>
+                      <td>{program.averageBounty}</td>
+                      <td>{program.launchDate}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
 
         </div>
 
