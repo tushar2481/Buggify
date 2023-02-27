@@ -27,21 +27,36 @@ const SignInForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if(password==confirmPassword){
-            const url = 'http://127.0.0.1:3000/business';
-            const data = {  username: username, email: email, password: password, companyName:companyName, position:position, country:selectedCountry, acceptedTerms:acceptedTerms }
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-              })
-                .then(response => {
-                  console.log(response);
-                })
-                .catch(error => {
-                  console.log(error);
-                });
+            if(companyName=='' && position==''){
+                const url = 'http://127.0.0.1:3000/researcher';
+                    const data = {  username: username, email: email, password: password, country:selectedCountry, accepted_terms:acceptedTerms }
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    }).then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error(error));
+            }else{
+                if(companyName!='' && position!=''){
+                    const url = 'http://127.0.0.1:3000/business';
+                    const data = {  username: username, email: email, password: password, company_name:companyName, position:position, country:selectedCountry, accepted_terms:acceptedTerms }
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error(error));
+                }else{
+                    alert('Company Name or Position Missing for Business Account');
+                }
+            }
         }else{
             alert(`Password and Confirm Password is not matching`);
         };
@@ -52,7 +67,6 @@ const SignInForm = () => {
     };
     return (
         <div className="signin">
-
             <form className="login-form">
                 <h2 style={{ textAlign: "center" }} className="signin-h">Sign In</h2>
                 <div>
