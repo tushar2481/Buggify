@@ -111,7 +111,7 @@ function DashboardNavbar() {
 
 }
 
-const BusinessProfile = () => {
+const BusinessProfile = (props) => {
 
 
     return (
@@ -125,10 +125,28 @@ const BusinessProfile = () => {
                     </div>
                     <div className="bus-profile-div2">
                         <center><h1 className="bus-profile-div2-h">Bug Report</h1>
-                            <div className="">
+                            <div className="dashboard">
+                                <center><div className="bus-profile-header">
+                                    <img src={props.companyLogo} className="bus-profile-company-logo" />
+                                    <h3 className="bus-profile-company-name">{props.companyName}</h3>
+                                </div></center>
+                                <div className="stats">
+                                    <p className="bus-profie-stat-h">Active Bug Reports</p>
+                                    <div className="bus-profile-bug-report">
 
+                                        {(BusinessProfile.defaultProps.map((title) => (
+                                            <div key={title.id} className="bus-profile-bug-report-div">
+                                                <div className="bus-profile-bug-report-divtitle">
+                                                    <p className="bus-profile-bug-report-div-title-p">Report Title: {title.reportTitle}</p>
+                                                    <p className="bus-profile-bug-report-div-id-p">Report Id: {title.reportId}</p>
+                                                </div>
+                                                <p className="bus-profile-bug-report-div-link"><a href={title.reportLink} className="bus-profile-bug-report-div-link">Check Report</a></p>
+                                            </div>
+                                        )))}
+                                    </div>
+
+                                </div>
                             </div>
-
                         </center>
 
 
@@ -141,4 +159,25 @@ const BusinessProfile = () => {
         </>
     )
 }
+
+BusinessProfile.defaultProps = [{
+    id: '1',
+    reportId: '#a7ag3-jh38g',
+    reportTitle: 'XSS in Search Field of abc.def.com',
+    reportLink: '',
+
+},
+{
+    id: '2',
+    reportId: '#v3jd8-st62s ',
+    reportTitle: 'CSRF in Password Change Function of staging.def.com',
+    reportLink: '',
+
+},
+]
+
+
+
+
+
 export default BusinessProfile;
