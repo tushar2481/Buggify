@@ -160,20 +160,23 @@ const BusinessProfile = (props) => {
     )
 }
 
-BusinessProfile.defaultProps = [{
-    id: '1',
-    reportId: '#a7ag3-jh38g',
-    reportTitle: 'XSS in Search Field of abc.def.com',
-    reportLink: '',
+BusinessProfile.defaultProps = [
+    { companyName: 'Company', },
 
-},
-{
-    id: '2',
-    reportId: '#v3jd8-st62s ',
-    reportTitle: 'CSRF in Password Change Function of staging.def.com',
-    reportLink: '',
+    {
+        id: '1',
+        reportId: '#a7ag3-jh38g',
+        reportTitle: 'XSS in Search Field of abc.def.com',
+        reportLink: '',
 
-},
+    },
+    {
+        id: '2',
+        reportId: '#v3jd8-st62s ',
+        reportTitle: 'CSRF in Password Change Function of staging.def.com',
+        reportLink: '',
+
+    },
 ]
 
 

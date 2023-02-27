@@ -334,10 +334,77 @@
 }
 
 .dashboard-reward-update-note {
+    position: relative;
     color: #ffffff;
     font-size: 14px;
     line-height: 2.8rem;
     letter-spacing: 1px;
     margin-top: 5rem;
     text-align: center;
+}
+
+
+
+
+/*  Retesting */
+
+.dashboard-reward-update-input {
+    position: absolute;
+    left: calc(30%);
+    bottom: 0;
+    margin-left: 11rem;
+    color: #04ff69;
+    font-size: 14px;
+    background-color: #141414;
+    width: 30rem;
+    height: 50px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #04ff69;
+    border: none;
+}
+
+.search-button {
+    margin-left: 65rem;
+    background-color: #141414;
+    padding: 15px 15px 10px 15px;
+    font-size: 20px;
+    color: #04ff69;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #04ff69;
+    border: none;
+}
+
+
+.report-div {
+    background-color: #141414;
+    width: 80%;
+    margin-left: calc(10%);
+    position: relative;
+    /* height: 10px; */
+}
+
+.report-steps {
+    margin-top: 3rem;
+}
+
+.report-div-steps-li {
+    text-indent: 5rem;
+}
+
+.report-proof {
+    margin-top: 3rem;
+}
+
+.report-proof-link-of-poc {
+    color: #04ff69;
+    font-size: 12px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    text-indent: 5rem;
+}
+
+.report-div-poclink-li {
+    text-indent: 10rem;
 }
