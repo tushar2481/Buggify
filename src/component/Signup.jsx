@@ -53,15 +53,9 @@ const SignInForm = () => {
     };
 
 
-    const scrollRef = useRef(null);
-    useLayoutEffect(() => {
-        if (scrollRef.current) {
-            window.scrollTo(0, 0);
-        }
-    }, []);
 
     return (
-        <div className="signin" ref={scrollRef}>
+        <div className="signin">
 
             <form className="login-form">
                 <h2 style={{ textAlign: "center" }} className="signin-h">Sign In</h2>

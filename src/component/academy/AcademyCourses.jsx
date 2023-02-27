@@ -7,7 +7,6 @@ import Academy5 from '../image/academy5.png';
 import Academy6 from '../image/academy6.png';
 import Academy7 from '../image/academy7.png';
 import Academy8 from '../image/academy8.png';
-import AvatarRemove from '../image/AvatarRemove.png';
 import HeathAdam from '../image/heathAdam.png';
 import './AcademyCourse.css';
 import { useNavigate } from "react-router-dom";
