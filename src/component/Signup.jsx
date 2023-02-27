@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import './signin.css';
 import './Login.css';
 // import { Form, Input, Label, Dropdown, Checkbox, Button } from "semantic-ui-react";
@@ -51,8 +51,17 @@ const SignInForm = () => {
     const handleAcceptedTerms = () => {
         setAcceptedTerms(!acceptedTerms);
     };
+
+
+    const scrollRef = useRef(null);
+    useLayoutEffect(() => {
+        if (scrollRef.current) {
+            window.scrollTo(0, 0);
+        }
+    }, []);
+
     return (
-        <div className="signin">
+        <div className="signin" ref={scrollRef}>
 
             <form className="login-form">
                 <h2 style={{ textAlign: "center" }} className="signin-h">Sign In</h2>
