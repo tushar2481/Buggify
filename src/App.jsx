@@ -67,6 +67,7 @@ import NoFooter from './component/NoFooter';
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProgramLeaderBoard from './component/Program/ProgramLeaderBoard';
 
 function App() {
 
@@ -102,6 +103,13 @@ function App() {
             <>
               <Navbar />
               <Program />
+              <Footer />
+            </>
+          } />
+          <Route path='/programLeaderBoard' element={
+            <>
+              <Navbar />
+              <ProgramLeaderBoard />
               <Footer />
             </>
           } />

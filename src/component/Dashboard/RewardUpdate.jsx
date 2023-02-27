@@ -111,8 +111,15 @@ function DashboardNavbar() {
 
 }
 
-const BusinessProfile = () => {
+const BusinessProfile = (props) => {
 
+    const [assetSeverity, setAssetSeverity] = useState("")
+    const [currentPayout, setCurrentPayout] = useState("")
+    const [newPayout, setNewPayout] = useState("")
+
+    const handleRewardUpdate = () => {
+
+    }
 
     return (
         <>
@@ -125,11 +132,44 @@ const BusinessProfile = () => {
                     </div>
                     <div className="bus-profile-div2">
                         <center><h1 className="bus-profile-div2-h">Reward Update</h1>
-                            <div className="">
+                            <div className="bus-profile-header">
+                                <img src={props.companyLogo} className="bus-profile-company-logo" />
+                                <h3 className="bus-profile-company-name">{props.companyName}</h3>
+                            </div></center>
+                        <div className="stats">
+                            <p className="bus-profie-stat-h">In-Scope</p>
+                            <div className="bus-profile-stat-div">
 
+                                <form className="dashboard-form">
+                                    <div className="box column-div1">
+                                        <label className="dashboard-form-label label">Asset Severity: </label>
+                                        <input className="dashboard-input input"
+                                            type="text"
+                                            value={assetSeverity}
+                                            onChange={(event) => setAssetSeverity(event.target.value)} />
+                                    </div>
+                                    <div className="box column-div1">
+                                        <label className="dashboard-form-label">Curent Payout: </label>
+                                        <input className="dashboard-input input"
+                                            type="text"
+                                            value={currentPayout}
+                                            onChange={(event) => setCurrentPayout(event.target.value)} />
+                                    </div>
+                                    <div className="box column-div1">
+                                        <label className="dashboard-form-label ">New Payout: </label>
+                                        <input className="dashboard-input input"
+                                            type="text"
+                                            value={newPayout}
+                                            onChange={(event) => setNewPayout(event.target.value)} />
+                                    </div>
+                                    <p className="dashboard-reward-update-note" >Note : Do Not Insert $ symbol as all payout is calculated in US dollar by default</p>
+                                    <div className="button_ani dashboard-button" onClick={handleRewardUpdate}>
+                                        <button type="submit" className="button2">Change Reward</button>
+                                    </div>
+                                </form>
                             </div>
+                        </div>
 
-                        </center>
 
 
 
@@ -141,4 +181,10 @@ const BusinessProfile = () => {
         </>
     )
 }
+
+BusinessProfile.defaultProps = {
+    companyLogo: '',
+    companyName: 'Company',
+};
+
 export default BusinessProfile;

@@ -219,14 +219,192 @@
 
 .bus-profile-span {
     position: absolute;
-    right: 8rem;
+    right: 5rem;
     color: #04ff69;
     font-size: 14px;
     background-color: #141414;
-    width: 10rem;
+    width: 12rem;
     height: 24px;
     text-align: center;
     padding: 5px 0px 5px 0px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 0 3px #04ff69;
+}
+
+
+/* Scope Setting */
+.dashboard-form {
+    margin-top: 5rem;
+}
+
+.dashboard-form-label {
+    position: relative;
+    left: calc(40%);
+    text-align: center;
+    color: #878787;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2.8rem;
+    margin-left: 5rem;
+}
+
+.dashboard-input {
+    position: absolute;
+    left: calc(80%);
+    margin-left: 11rem;
+    color: #04ff69;
+    font-size: 14px;
+    background-color: #141414;
+    width: 15rem;
+    height: 30px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #04ff69;
+    border: none;
+}
+
+.dashboard-form-option {
+    color: #ffffff;
+}
+
+.dashboard-button {
+    width: fit-content;
+    margin-top: 8rem;
+}
+
+
+
+/* Bug Report */
+
+.bus-profile-bug-report {
+    position: relative;
+    margin-top: 8rem;
+    width: 70%;
+    background-color: #141414;
+}
+
+.bus-profile-bug-report-div {
+    border-bottom: 1px solid #878787;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.bus-profile-bug-report-divtitle {
+    display: flex;
+    padding-top: 2rem;
+
+}
+
+.bus-profile-bug-report-div-title-p {
+    color: #04ff69;
+    font-size: 14px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    margin-left: 2rem;
+
+}
+
+.bus-profile-bug-report-div-id-p {
+    color: #04ff69;
+    font-size: 12px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    position: absolute;
+    right: calc(2%);
+}
+
+.bus-profile-bug-report-div-link {
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    margin-left: -30rem;
+}
+
+
+
+/* Reward Update */
+
+.input {
+    width: 25rem;
+    left: calc(70%);
+}
+
+.dashboard-reward-update-note {
+    position: relative;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+
+
+
+/*  Retesting */
+
+.dashboard-reward-update-input {
+    position: absolute;
+    left: calc(30%);
+    bottom: 0;
+    margin-left: 11rem;
+    color: #04ff69;
+    font-size: 14px;
+    background-color: #141414;
+    width: 30rem;
+    height: 50px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #04ff69;
+    border: none;
+}
+
+.search-button {
+    margin-left: 65rem;
+    background-color: #141414;
+    padding: 15px 15px 10px 15px;
+    font-size: 20px;
+    color: #04ff69;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #04ff69;
+    border: none;
+}
+
+
+.report-div {
+    background-color: #141414;
+    width: 80%;
+    margin-left: calc(10%);
+    position: relative;
+    /* height: 10px; */
+}
+
+.report-steps {
+    margin-top: 3rem;
+}
+
+.report-div-steps-li {
+    text-indent: 5rem;
+}
+
+.report-proof {
+    margin-top: 3rem;
+}
+
+.report-proof-link-of-poc {
+    color: #04ff69;
+    font-size: 12px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    text-indent: 5rem;
+}
+
+.report-div-poclink-li {
+    text-indent: 10rem;
 }

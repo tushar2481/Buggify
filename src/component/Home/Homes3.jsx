@@ -1,7 +1,17 @@
 import React from "react";
 import "./Homes3.css";
+import { useNavigate } from "react-router-dom";
+
 
 const homes3 = () => {
+	const navigate = useNavigate()
+
+	const gotoProgram = () => {
+		navigate('/ExploreProgram');
+	}
+
+
+
 	return (
 		<>
 			<div className="section-three">
@@ -42,7 +52,7 @@ const homes3 = () => {
 							Making Capabilities Greater Efficiency of Systems
 							<br />many more....
 						</p>
-						<div className="button_ani section-three-div-button">
+						<div className="button_ani section-three-div-button" onClick={gotoProgram}>
 							<button className="btn">Explore Futher</button>
 						</div>
 					</div>
@@ -77,7 +87,7 @@ const homes3 = () => {
 							<br />Enhanced Brand Reputation
 							<br /> much more...
 						</p>
-						<div className="button_ani button-invert">
+						<div className="button_ani button-invert" onClick={gotoProgram}>
 							<button className="btn">Explore Futher</button>
 						</div>
 					</div>

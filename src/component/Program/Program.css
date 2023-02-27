@@ -1,10 +1,24 @@
-@media (max-width: 998px) {
-    footer ul li ul {
-      display: none;
-    }
-  
-    footer button {
-      display: block;
-    }
-  }
-  
+.program {
+  background-color: #0b0b0b;
+  padding-bottom: 10rem;
+}
+
+.program-nav-ul {
+  display: flex;
+  margin-left: 15rem;
+  padding-top: 5rem;
+}
+
+.program-nav-ul-li {
+  margin-left: 2rem;
+  font-size: 18px;
+  line-height: 2.8rem;
+  letter-spacing: 1px;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+.list-selected {
+  color: #04ff69;
+}

@@ -30,6 +30,9 @@ function Company() {
 	const gotoPrograms = () => {
 		navigate('/ExploreProgram');
 	}
+	const gotoLogin = () => {
+		navigate('/Login');
+	}
 
 	const [firstIndex, setFirstIndex] = useState(0);
 	const images = [CompanyProduct1, CompanyProduct2, CompanyProduct3, CompanyProduct4, CompanyProduct5, CompanyProduct6, CompanyProduct7, CompanyProduct8];
@@ -231,14 +234,14 @@ function Company() {
 							<p className="section-6-div1-p">Be Quick to Secure Your Assets, Before Hacker Attacks.</p>
 
 							<div className="section-6-button" >
-								<div className="button_ani  section-6-button1" onClick={gotoPrograms}>
+								<div className="button_ani  section-6-button1" onClick={gotoLogin}>
 									<button className="btn" >
-										Private Program
+										Try Buggify
 									</button>
 								</div>
-								<div className="button_ani section-6-button2" onClick={gotoPrograms}>
+								<div className="button_ani section-6-button2">
 									<button className="button2">
-										Public Program
+										Contact Us
 									</button>
 
 								</div>

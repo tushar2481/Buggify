@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import './signin.css';
 import './Login.css';
 // import { Form, Input, Label, Dropdown, Checkbox, Button } from "semantic-ui-react";
@@ -21,7 +21,8 @@ const SignInForm = () => {
     ];
 
     const handleCountryChange = (event) => {
-        setSelectedCountry(event.target.value);};
+        setSelectedCountry(event.target.value);
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -71,20 +72,20 @@ const SignInForm = () => {
                 <h2 style={{ textAlign: "center" }} className="signin-h">Sign In</h2>
                 <div>
                     <label className="signin-label">User Name*</label>
-                    <input className="signin-input" type="text" name="userName" value={username} onChange={(event) => setUserName(event.target.value)} required/>
+                    <input className="signin-input" type="text" name="userName" value={username} onChange={(event) => setUserName(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Email*</label>
-                    <input className="signin-input" type="text" name="email" value={email} onChange={(event) => setEmail(event.target.value)} required/>
+                    <input className="signin-input" type="text" name="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
                 </div>
 
                 <div>
                     <label className="signin-label">Password*</label>
-                    <input className="signin-input" type="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required/>
+                    <input className="signin-input" type="text" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Confirm Password*</label>
-                    <input className="signin-input" type="password" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required/>
+                    <input className="signin-input" type="text" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Company Name</label>
@@ -102,12 +103,12 @@ const SignInForm = () => {
                             <option key={country.code} value={country.name} > {country.name}</option>
                         ))}
                     </select>
-                </div>
+                </div>
                 <div>
-                    <input type="checkbox" id="acceptedTerms" className="signin-checkbox" checked={acceptedTerms} onChange={handleAcceptedTerms}/>
+                    <input type="checkbox" id="acceptedTerms" className="signin-checkbox" checked={acceptedTerms} onChange={handleAcceptedTerms} />
                     <label className="signin-checkbox-label">By Countinuing you agree to Buggify's <a href="#">Terms and Condition</a> and <a href="#">Privacy Policy</a></label>
                 </div>
-                <div className="button_ani signin-button"  onClick={handleSubmit}>
+                <div className="button_ani signin-button" onClick={handleSubmit}>
                     <button type="submit" className="button2">Sign In</button>
                 </div>
                 <p className="signin-p">

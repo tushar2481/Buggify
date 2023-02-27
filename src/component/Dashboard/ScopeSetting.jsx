@@ -48,6 +48,9 @@ function DashboardNavbar() {
         Navigate('/FAQs')
     }
 
+
+
+
     return (
         <nav className={`navbar ${isMenuOpen ? 'open' : 'close'}`}>
 
@@ -111,7 +114,51 @@ function DashboardNavbar() {
 
 }
 
-const BusinessProfile = () => {
+const BusinessProfile = (props) => {
+
+    const [assetName, setAssetName] = useState("");
+    const [assetType, setAssetType] = useState("");
+    const [selectedAssetType, setSelectedCountry] = useState('');
+    const [selectedImpactLevel, setImpactLevel] = useState('');
+    const [selectedEligible, setEligible] = useState('');
+
+    const assetTypes = [
+
+        { id: '1', type: 'Mobile' },
+        { id: '2', type: 'API' },
+        { id: '3', type: 'Source Code Review' },
+        { id: '4', type: 'CIDR' },
+        { id: '5', type: 'IoT' },
+    ];
+
+    const handleAssetTypeChange = (event) => {
+        setSelectedCountry(event.target.value);
+    };
+
+    const impactLevel = [
+
+        { id: '1', type: 'High' },
+        { id: '2', type: 'Medium' },
+        { id: '3', type: 'Low' },
+    ];
+    const handleImpactLevelChange = (event) => {
+        setImpactLevel(event.target.value);
+    };
+
+
+    const eligibles = [
+
+        { id: '1', type: 'No' },
+    ];
+
+    const handleEligibleChange = (event) => {
+        setEligible(event.target.value);
+    };
+
+    const handleUpdateInScope = () => {
+    }
+    const handleUpdateOutScope = () => {
+    }
 
 
     return (
@@ -124,21 +171,118 @@ const BusinessProfile = () => {
                         <DashboardNavbar />
                     </div>
                     <div className="bus-profile-div2">
-                        <center><h1 className="bus-profile-div2-h">Scope Setting</h1>
-                            <div className="">
+                        <h1 className="bus-profile-div2-h">Scope Setting</h1>
+                        <div className="dashboard">
+                            <center><div className="bus-profile-header">
+                                <img src={props.companyLogo} className="bus-profile-company-logo" />
+                                <h3 className="bus-profile-company-name">{props.companyName}</h3>
+                            </div></center>
+                            <div className="stats">
+                                <p className="bus-profie-stat-h">In-Scope</p>
+                                <div className="bus-profile-stat-div">
 
+                                    <form className="dashboard-form">
+                                        <div className="box column-div1">
+                                            <label className="dashboard-form-label">Asset: </label>
+                                            <input className="dashboard-input"
+                                                type="text"
+                                                value={assetName}
+                                                onChange={(event) => setAssetName(event.target.value)} />
+                                        </div>
+                                        <div className="box column-div1">
+                                            <label className="dashboard-form-label">Asset Type: </label>
+                                            <select className="dashboard-input" id="assetType" value={selectedAssetType} onChange={handleAssetTypeChange}>
+                                                <option value="">Web</option>
+                                                {assetTypes.map((assettype) => (
+                                                    <option className="dashboard-form-option" key={assettype.id} value={assettype.type} >{assettype.type}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                        <div className="box column-div1">
+                                            <label className="dashboard-form-label">Impact Level: </label>
+                                            <select className="dashboard-input" id="assetType" value={selectedImpactLevel} onChange={handleImpactLevelChange}>
+                                                <option value="">Critical</option>
+                                                {impactLevel.map((impactlevel) => (
+                                                    <option className="dashboard-form-option" key={impactlevel.id} value={impactlevel.type} >{impactlevel.type}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                        <div className="box column-div1">
+                                            <label className="dashboard-form-label">Eligible for Bounty? </label>
+                                            <select className="dashboard-input input3" id="assetType" value={selectedEligible} onChange={handleEligibleChange}>
+                                                <option value="">Yes</option>
+                                                {eligibles.map((eligible) => (
+                                                    <option className="dashboard-form-option" key={eligible.id} value={eligible.type} >{eligible.type}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                        <div className="button_ani dashboard-button" onClick={handleUpdateInScope}>
+                                            <button type="submit" className="button2">Update Scope</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div className="report-count">
+                                <p className="bus-profie-stat-h">Out-Scope</p>
+                                <div className="bus-profile-stat-div">
+                                    <form className="dashboard-form">
+                                        <div className="box column-div1">
+                                            <label className="dashboard-form-label">Asset: </label>
+                                            <input className="dashboard-input"
+                                                type="text"
+                                                value={assetName}
+                                                onChange={(event) => setAssetName(event.target.value)} />
+                                        </div>
+                                        <div className="box column-div1">
+                                            <label className="dashboard-form-label">Asset Type: </label>
+                                            <select className="dashboard-input" id="assetType" value={selectedAssetType} onChange={handleAssetTypeChange}>
+                                                <option value="">Web</option>
+                                                {assetTypes.map((assettype) => (
+                                                    <option className="dashboard-form-option" key={assettype.id} value={assettype.type} >{assettype.type}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+
+                                        <div className="button_ani dashboard-button" onClick={handleUpdateOutScope}>
+                                            <button type="submit" className="button2">Update Scope</button>
+                                        </div>
+                                    </form>
+
+                                </div>
                             </div>
 
-                        </center>
 
 
 
 
+
+
+
+
+                        </div>
                     </div>
                 </div>
+
+
+
+
+
+
             </div>
+
+
 
         </>
     )
 }
+
+
+BusinessProfile.defaultProps = {
+    companyLogo: '',
+    companyName: 'Company',
+
+
+};
+
 export default BusinessProfile;

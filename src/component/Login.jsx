@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import './Login.css';
 
 
@@ -18,38 +18,47 @@ const LoginForm = () => {
         //   return;
         // }
         fetch(`http://127.0.0.1:8000/business/${username}`, {
-          method: 'GET'
+            method: 'GET'
         })
-          .then(response => response.json())
-          .then(data => console.log(data))
-          .catch(error => console.error(error));
-      };
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+    };
     //   const isValidUser = (username) => {
     //     const userRegex = /^[a-zA-Z0-9]+$/;
     //     return userRegex.test(username);
     //   };
-      const handleRememberMeChange = () => {
+    const handleRememberMeChange = () => {
         setRememberMe(!rememberMe);
-      };
+    };
+
+    const scrollRef = useRef(null);
+    useLayoutEffect(() => {
+        if (scrollRef.current) {
+            window.scrollTo(0, 0);
+        }
+    }, []);
+
+
     return (
-        <div className="login">
+        <div className="login" ref={scrollRef}>
 
             <h2 className="login-h">Login</h2>
             <form className="login-form">
                 <div className="login-username">
-                <label htmlFor="username" className="login-label">Username:</label>
-                <input type="text" id="username" className="login-form-input" value={username} onChange={(e) => setUserName(e.target.value)} required/>
+                    <label htmlFor="username" className="login-label">Username:</label>
+                    <input type="text" id="username" className="login-form-input" value={username} onChange={(e) => setUserName(e.target.value)} required />
                     {/* <label htmlFor="username" className="login-label">Username:</label>
                     <input type="text" id="username" className="login-form-input" /> */}
                 </div>
                 <div className="login-username">
                     <label htmlFor="password" className="login-label">Password:</label>
-                    <input type="password" id="password" className="login-form-input" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                    <input type="password" id="password" className="login-form-input" value={password} onChange={(e) => setPassword(e.target.value)} required />
                 </div>
                 <div >
                     {/* <input type="checkbox" id="remember-me" className="login-checkbox" />
                     <label htmlFor="remember-me" className="login-checkbox-label">Remember me for a week</label> */}
-                    <input type="checkbox" id="rememberMe" className="login-checkbox" checked={rememberMe} onChange={handleRememberMeChange}/>
+                    <input type="checkbox" id="rememberMe" className="login-checkbox" checked={rememberMe} onChange={handleRememberMeChange} />
                     <label htmlFor="rememberMe" className="login-checkbox-label">Remember me</label>
                 </div>
                 <div className="button_ani login-button-div" onClick={handleSubmit}>

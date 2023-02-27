@@ -5,12 +5,12 @@ import { MdAddBusiness, MdSecurityUpdateGood } from 'react-icons/md';
 import { VscReport } from 'react-icons/vsc';
 import { BsPlusSquareDotted } from 'react-icons/bs';
 import { RiUserSettingsLine, RiFileHistoryLine, RiLogoutBoxRLine, RiQuestionLine } from 'react-icons/ri';
-import { TbReportAnalytics } from 'react-icons/tb';
+import { TbReportAnalytics, TbReportSearch } from 'react-icons/tb';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { SiBigbluebutton } from 'react-icons/si';
 import { useNavigate } from "react-router-dom";
-
+import { FaSearchMinus } from 'react-icons/fa';
 
 function DashboardNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -111,7 +111,20 @@ function DashboardNavbar() {
 
 }
 
-const BusinessProfile = () => {
+
+
+const BusinessProfile = (props) => {
+
+    const [query, setQuery] = useState('');
+
+    function handleInputChange(event) {
+        setQuery(event.target.value);
+    }
+
+    async function handleSearchClick() {
+        const results = await searchDatabase(query);
+        // Do something with the results, e.g. update a state variable
+    }
 
 
     return (
@@ -125,20 +138,135 @@ const BusinessProfile = () => {
                     </div>
                     <div className="bus-profile-div2">
                         <center><h1 className="bus-profile-div2-h">Retesting</h1>
-                            <div className="">
+                            <div className="bus-profile-header">
+                                <img src={props.companyLogo} className="bus-profile-company-logo" />
+                                <h3 className="bus-profile-company-name">{props.companyName}</h3>
+                            </div></center>
+                        <div className="stats">
+                            <p className="bus-profie-stat-h">Search Report by Report Unique Identification Number fot Retesting</p>
+
+                            <form className="dashboard-form">
+                                <div className="box column-div1">
+
+                                    <input className="dashboard-reward-update-input"
+                                        type="text"
+                                        value={query}
+                                        onChange={handleInputChange}
+                                        placeholder="Enter Report Id :"
+                                    // onChange={(event) => setReportSearch(event.target.value)}
+                                    />
+                                    <div>
+                                        <button className="search-button" onClick={handleSearchClick}><FaSearchMinus /></button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            /*  report div */
+
+                            <div className="bus-profile-bug-report"></div>
+
+
+                            <div className="report-div">
+                                <div className="bus-profile-bug-report-divtitle">
+                                    <p className="bus-profile-bug-report-div-title-p">Report Title: {props.reportTitle}</p>
+                                    <p className="bus-profile-bug-report-div-id-p">Report Id: {props.reportId}</p>
+                                </div>
+                                <div className="report-steps">
+
+                                    <p className="bus-profile-bug-report-div-title-p">Steps to Reproduce :
+                                        {(BusinessProfile.defaultProps.reportSteps.map((report) => (
+                                            <li className="report-div-steps-li" key={report.id}>{report.li}</li>
+                                        )))}
+                                    </p>
+
+                                </div>
+
+                                <div className="report-proof">
+                                    <p className="bus-profile-bug-report-div-title-p">Proof-of-Concept :</p>
+                                    <p className="report-proof-link-of-poc">Link of POC screenshot: {props.linkOfPOC}</p>
+
+                                    <p className="report-proof-link-of-poc">Additional Link :
+                                        {(BusinessProfile.defaultProps.pocLink.map((poclink) => (
+                                            <p className="report-div-poclink-li" key={poclink.id}>{poclink.li}</p>
+                                        )))}
+                                    </p>
+
+                                </div>
+
+
+
 
                             </div>
 
-                        </center>
 
 
-
+                        </div>
 
                     </div>
                 </div>
             </div>
 
+
         </>
     )
 }
+
+
+BusinessProfile.defaultProps = {
+    reportTitle: 'Reflected XSS in search field of abc.def.com',
+    reportId: '#a7ag3-jh48g',
+    reportSteps: [{
+        id: '1',
+        li: 'Search field of https://abc.def.com/page?search=abc',
+    },
+    {
+        id: '2',
+        li: 'Replace Payload “><script>alert(document.cookie);</script> with abc in search parameter ',
+    },
+    {
+        id: '3',
+        li: 'Entering this payload will show alert popup having cookie of current user ',
+    },
+    {
+        id: '4',
+        li: 'bkfaeb',
+    },
+    {
+        id: '5',
+        li: ' iflakenflkan ',
+    },
+    {
+        id: '6',
+        li: 'flaflakefa',
+    },
+    {
+        id: '7',
+        li: ' akfvajfuafka',
+    },
+
+
+    ],
+    linkOfPOC: 'https://drive.amazing.com ',
+    pocLink: [{
+        id: '1',
+        li: 'link1',
+    },
+    {
+        id: '2',
+        li: 'link2 ',
+    },
+    {
+        id: '3',
+        li: 'link3 ',
+    },
+    {
+        id: '4',
+        li: 'link4',
+    },
+
+    ],
+
+}
+
+
 export default BusinessProfile;
