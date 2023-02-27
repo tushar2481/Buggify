@@ -18,8 +18,7 @@ const businessAccSchema = new mongoose.Schema({
     },
     company_name: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     position: {
         type: String,

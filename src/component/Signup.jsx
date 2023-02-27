@@ -20,7 +20,6 @@ const SignInForm = () => {
         // add more countries here
     ];
 
-
     const handleCountryChange = (event) => {
         setSelectedCountry(event.target.value);};
 
@@ -65,6 +64,7 @@ const SignInForm = () => {
     const handleAcceptedTerms = () => {
         setAcceptedTerms(!acceptedTerms);
     };
+    
     return (
         <div className="signin">
             <form className="login-form">
