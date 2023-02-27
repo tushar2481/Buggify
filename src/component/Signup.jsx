@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useRef } from "react";
+import React, { useState } from "react";
 import './signin.css';
 import './Login.css';
 // import { Form, Input, Label, Dropdown, Checkbox, Button } from "semantic-ui-react";
@@ -81,11 +81,11 @@ const SignInForm = () => {
 
                 <div>
                     <label className="signin-label">Password*</label>
-                    <input className="signin-input" type="text" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
+                    <input className="signin-input" type="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Confirm Password*</label>
-                    <input className="signin-input" type="text" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required />
+                    <input className="signin-input" type="password" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Company Name</label>
@@ -122,4 +122,3 @@ const SignInForm = () => {
 };
 
 export default SignInForm;
-
