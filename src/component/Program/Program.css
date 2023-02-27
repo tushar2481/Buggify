@@ -59,7 +59,7 @@ th,
 td {
   padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #878787;
+  /* border-top: 1px solid #878787; */
 }
 
 th {
@@ -69,6 +69,7 @@ th {
   padding-left: 2rem;
   color: #ffffff;
   text-transform: uppercase;
+  border-bottom: 1px solid #878787;
 }
 
 .program-heading {
@@ -78,11 +79,13 @@ th {
 
 .program-icon {
   margin-left: 2rem;
+  width: 20%;
 }
 
 td {
   color: #ffffff;
-  padding: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 th:first-child {
@@ -93,6 +96,6 @@ td {
   text-align: center;
 }
 
-tr:last-child td {
-  border-bottom: none;
+th {
+  border-top: none;
 }

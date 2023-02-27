@@ -82,7 +82,7 @@ const Program = () => {
       averageBounty: "$750",
       launchDate: "6/2016",
       feature: "Manged by Buggify",
-      assetType: "All",
+      assetType: "Domains",
     },
 
 
@@ -428,7 +428,7 @@ const Program = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {Programs.map((program) => (
+                  {filteredPrograms.map((program, index) => (
                     <tr key={program.id}>
                       <td className='program-heading'>
                         <img
