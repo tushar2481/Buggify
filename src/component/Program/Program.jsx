@@ -84,6 +84,46 @@ const Program = () => {
       feature: "Manged by Buggify",
       assetType: "Domains",
     },
+    {
+      id: 4,
+      name: "Google VDP",
+      icon: Google,
+      resolved: 230,
+      averageBounty: "$750",
+      launchDate: "6/2016",
+      feature: "Manged by Buggify",
+      assetType: "IoT",
+    },
+    {
+      id: 5,
+      name: "Google VDP",
+      icon: Google,
+      resolved: 230,
+      averageBounty: "$750",
+      launchDate: "6/2016",
+      feature: "Manged by Buggify",
+      assetType: "Android",
+    },
+    {
+      id: 6,
+      name: "Google VDP",
+      icon: Google,
+      resolved: 230,
+      averageBounty: "$750",
+      launchDate: "6/2016",
+      feature: "Offer Bounty",
+      assetType: "Windows",
+    },
+    {
+      id: 7,
+      name: "Google VDP",
+      icon: Google,
+      resolved: 230,
+      averageBounty: "$750",
+      launchDate: "6/2016",
+      feature: "Less Response Time",
+      assetType: "iOS",
+    },
 
 
   ]
@@ -126,7 +166,16 @@ const Program = () => {
   }
   if (assetFilters.All) {
     filteredPrograms = filteredPrograms.filter(
-      (program) => program.assetType === "All"
+      (program) => program.assetType === "All" ||
+        program.assetType === "Domains" ||
+        program.assetType === "Android" ||
+        program.assetType === "iOS" ||
+        program.assetType === "Hardware" ||
+        program.assetType === "IoT" ||
+        program.assetType === "Executable" ||
+        program.assetType === "SourceCodeReview" ||
+        program.assetType === "Windows" ||
+        program.assetType === "ActiveDirectory"
     );
   }
   if (assetFilters.Domains) {
