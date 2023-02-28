@@ -31,6 +31,7 @@ app.post('/business', async (req, res) => {
     res.status(400).send(e);
     // res.status(400).send(JSON.stringify({result:'User Already Exists'}));
   }
+  
 });
 app.post('/researcher', async (req, res) => {
   try{
