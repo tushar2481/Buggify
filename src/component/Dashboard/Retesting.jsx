@@ -184,12 +184,14 @@ const BusinessProfile = (props) => {
                                 <div className="report-proof">
                                     <p className="bus-profile-bug-report-div-title-p">Proof-of-Concept :</p>
                                     <p className="report-proof-link-of-poc">Link of POC screenshot: {props.linkOfPOC}</p>
+                                    {(BusinessProfile.defaultProps.pocLink.map((poclink) => (
+                                        <p className="report-proof-link-of-poc" key={poclink.id} >Additional Link :{poclink.li}
+                                        </p>
+                                    )))}
 
-                                    <p className="report-proof-link-of-poc">Additional Link :
-                                        {(BusinessProfile.defaultProps.pocLink.map((poclink) => (
-                                            <p className="report-div-poclink-li" key={poclink.id}>{poclink.li}</p>
-                                        )))}
-                                    </p>
+                                    <p className="bus-profile-bug-report-div-title-p">CVSS Score: {props.CvssScore}</p>
+                                    <p className="bus-profile-bug-report-div-title-p">Attack Scenario: {props.CvssScore}</p>
+
 
                                 </div>
 
@@ -265,6 +267,8 @@ BusinessProfile.defaultProps = {
     },
 
     ],
+    CvssScore: 'Low (3.0 CVSS)',
+
 
 }
 
