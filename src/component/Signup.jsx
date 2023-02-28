@@ -26,23 +26,23 @@ const SignInForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (password == confirmPassword) {
-            if (companyName == '' && position == '') {
+        if(password==confirmPassword){
+            if(companyName=='' && position==''){
                 const url = 'http://127.0.0.1:3000/researcher';
-                const data = { username: username, email: email, password: password, country: selectedCountry, accepted_terms: acceptedTerms }
-                fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                }).then(response => response.json())
+                    const data = {  username: username, email: email, password: password, country:selectedCountry, accepted_terms:acceptedTerms }
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    }).then(response => response.json())
                     .then(data => console.log(data))
                     .catch(error => console.error(error));
-            } else {
-                if (companyName != '' && position != '') {
+            }else{
+                if(companyName!='' && position!=''){
                     const url = 'http://127.0.0.1:3000/business';
-                    const data = { username: username, email: email, password: password, company_name: companyName, position: position, country: selectedCountry, accepted_terms: acceptedTerms }
+                    const data = {  username: username, email: email, password: password, company_name:companyName, position:position, country:selectedCountry, accepted_terms:acceptedTerms }
                     fetch(url, {
                         method: 'POST',
                         headers: {
@@ -50,14 +50,14 @@ const SignInForm = () => {
                         },
                         body: JSON.stringify(data)
                     })
-                        .then(response => response.json())
-                        .then(data => console.log(data))
-                        .catch(error => console.error(error));
-                } else {
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error(error));
+                }else{
                     alert('Company Name or Position Missing for Business Account');
                 }
             }
-        } else {
+        }else{
             alert(`Password and Confirm Password is not matching`);
         };
     };
@@ -65,7 +65,7 @@ const SignInForm = () => {
     const handleAcceptedTerms = () => {
         setAcceptedTerms(!acceptedTerms);
     };
-
+    
     return (
         <div className="signin">
             <form className="login-form">
