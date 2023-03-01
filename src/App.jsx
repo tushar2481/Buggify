@@ -10,6 +10,8 @@ import Program from './component/Program/Program';
 import Footer from './component/Footer';
 import Login from './component/Login';
 import Forgot from './component/Forgot';
+import OTP from './component/OTP';
+import SetNewPassword from './component/SetNewPassword';
 import Signup from './component/Signup';
 import ExploreProgram from './component/Company/ExploreProgram';
 import PentestingWithPython from './component/Academy-Courses/PentestingWithPython';
@@ -129,6 +131,20 @@ function App() {
             <>
               <NoNavbar />
               <Forgot />
+              <NoFooter />
+            </>
+          } />
+          <Route path='/confirm_otp' element={
+            <>
+              <NoNavbar />
+              <OTP />
+              <NoFooter />
+            </>
+          } />
+          <Route path='/newPassword' element={
+            <>
+              <NoNavbar />
+              <SetNewPassword />
               <NoFooter />
             </>
           } />

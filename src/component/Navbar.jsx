@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 function MyList() {
-
+	const [userName, setUserName] = useState("")
 	const items = [
 		{ label: "Home", link: "/" },
 		{ label: "Company", link: "/company" },
@@ -21,8 +21,6 @@ function MyList() {
 		setNavActiveIndex(index);
 		window.localStorage.setItem("navActiveIndex", index);
 	};
-
-
 
 	return (
 

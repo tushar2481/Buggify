@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./ForgotPassword.css";
 
-const ForgotPasswordForm = () => {
-    const [username, setUserName] = useState("");
+const ConfirmOTP = () => {
+    const [otp, setOtp] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,21 +22,22 @@ const ForgotPasswordForm = () => {
     return (
         <div className="forgot">
 
-            <h2 className="forgot-h " >Forgot Password</h2>
+            <h2 className="forgot-h ">OTP</h2>
             <form>
                 {/* <div>
                     <label htmlFor="email-or-username" className="forgot-label">Enter Email Id or Username</label>
                     <input type="text" id="email-or-username" className="forgot-input" />
                 </div> */}
                 <div>
-                    <label className="forgot-label" htmlFor="email-or-username">Enter Email or Username</label>
-                    <input className="forgot-input" type="text" name="username" value={username} onChange={(event) => setUserName(event.target.value)} required />
+                    <p className="forgot-otp-p">OTP is send to your  Registered Email.</p>
                 </div>
                 <div>
-                    <p className="forgot-p">You will receive a link to create a new password via email.</p>
+                    <label className="forgot-label" htmlFor="otp">Enter OTP</label>
+                    <input className="forgot-input" type="text" name="otp" value={otp} onChange={(event) => setOtp(event.target.value)} required />
                 </div>
+
                 <div className="forgot-button-div button_ani" onClick={handleSubmit}>
-                    <button type="submit" className="button2">Send OTP</button>
+                    <button type="submit" className="button2">Confirm OTP</button>
                 </div>
             </form>
 
@@ -44,4 +45,4 @@ const ForgotPasswordForm = () => {
     );
 };
 
-export default ForgotPasswordForm;
+export default ConfirmOTP;

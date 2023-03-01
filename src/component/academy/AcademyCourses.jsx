@@ -129,7 +129,7 @@ const AcademyCourses = () => {
         link: "/ApiPentesting/",
     },];
 
-    navigation
+    /* navigation  */
     const navigate = useNavigate();
     const paths = ['/PentestingWithPython', '/BashWithBeginner', '/WebApplicationPentesting', '/OffensiveRedTeaming', '/MalwareAnalysis', '/ActiveDirectoryExploitation', '/MobileAppPentesting', '/ApiPentesting'];
     const goto = (index) => {

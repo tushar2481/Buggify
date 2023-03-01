@@ -12,10 +12,10 @@ import { IoBugOutline } from "react-icons/io5";
 const homes1 = () => {
 	return (
 		<>
-			<div className="body">
-				<Card className="card">
-					<Card.Body className="card-body">
-						<Card.Text className="card-text">
+			<div className="h1">
+				<div className="card1">
+					<div className="card-body">
+						<div className="card-text">
 							<div>
 								<div className="hr-div">
 									<hr className="hr-1" />
@@ -41,10 +41,10 @@ const homes1 = () => {
 							</div>
 
 							<div className="button_ani home-button"><Button className="button ">Why Buggify</Button></div>
-						</Card.Text>
+						</div>
 						<Card.Img src={Image} className="card-img" />
-					</Card.Body>
-				</Card>
+					</div>
+				</div>
 			</div>
 
 		</>

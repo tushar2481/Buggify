@@ -18,9 +18,11 @@ li {
     list-style: none;
 }
 
-
-.card {
+.h1 {
     background-color: #0B0B0B;
+}
+
+.card1 {
     padding: 10rem 10rem 5rem;
 
 }
