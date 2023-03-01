@@ -68,7 +68,7 @@ const Navbar = () => {
 
 			<nav className="main-nav">
 				<div className="logo">
-					<h2 onClick={gotoHome}>Buggify</h2>
+					<h2 onClick={gotoHome} className="mint">Buggify</h2>
 				</div>
 				<div
 					className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}

@@ -18,12 +18,15 @@ const Report = () => {
     const gotoGamblingBlog = () => {
         navigate('/AcademyBlogs-Blog4')
     }
+    const gotoUkrainianBlog = () => {
+        navigate('/AcademyBlogs-Blog1')
+    }
 
     return (
         <>
             <div className="blog-div">
                 <div className="blog-heading">
-                    <h2 className="blog-h mint">Ukraine Hit with New Golang-based 'SwiftSlicer' Wiper Malware in Latest Cyber Attack</h2>
+                    <h2 className="blog-h mint">Atlassian's Jira Service Management Found Vulnerable to Critical Vulnerability</h2>
 
 
 
@@ -84,14 +87,12 @@ const Report = () => {
                         </div>
                         <div className="card-grid-space">
                             <div className="num">02</div>
-                            <a className="card box" href="">
+                            <a className=" card box" href="">
                                 <div>
-                                    <h1>Atlassian's Jira Service Management Found Vulnerable to Critical Vulnerability</h1>
+                                    <h1>Ukraine Hit with New Golang-based 'SwiftSlicer' Wiper Malware in Latest Cyber Attack</h1>
 
                                     <div className="tags">
-                                        <div className="tag" onClick={gotoAtlassianBlog}>
-                                            Read More
-                                        </div>
+                                        <div className="tag" onClick={gotoUkrainianBlog}>Read More</div>
                                     </div>
                                 </div>
                             </a>
