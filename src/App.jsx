@@ -21,6 +21,9 @@ import ActiveDirectoryExploitation from './component/Academy-Courses/ActiveDirec
 import MobileAppPentesting from './component/Academy-Courses/MobileAppPentesting';
 import ApiPentesting from './component/Academy-Courses/ApiPentesting';
 import ReportBlogs1 from './component/Blog-Descprition/Ukrainian-Blog';
+import ReportBlogs4 from './component/Blog-Descprition/GlamblingIndustry-Blog';
+import ReportBlogs2 from './component/Blog-Descprition/CiscoVulernability-Blog';
+import ReportBlogs3 from './component/Blog-Descprition/Atlassian-Blog';
 
 import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
 
@@ -240,6 +243,27 @@ function App() {
             <>
               <Navbar />
               <ReportBlogs1 />
+              <Footer />
+            </>
+          } />
+          <Route path='/academyBlogs-Blog2' element={
+            <>
+              <Navbar />
+              <ReportBlogs2 />
+              <Footer />
+            </>
+          } />
+          <Route path='/academyBlogs-Blog3' element={
+            <>
+              <Navbar />
+              <ReportBlogs3 />
+              <Footer />
+            </>
+          } />
+          <Route path='/academyBlogs-Blog4' element={
+            <>
+              <Navbar />
+              <ReportBlogs4 />
               <Footer />
             </>
           } />

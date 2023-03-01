@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { BsArrowLeft } from 'react-icons/bs';
 
 const Report = () => {
-
     const navigate = useNavigate()
     const gotoBlogs = () => {
         navigate('/academyBlogs');
@@ -18,12 +17,14 @@ const Report = () => {
     const gotoGamblingBlog = () => {
         navigate('/AcademyBlogs-Blog4')
     }
-
+    const gotoUkrainianBlog = () => {
+        navigate('/AcademyBlogs-Blog1')
+    }
     return (
         <>
             <div className="blog-div">
                 <div className="blog-heading">
-                    <h2 className="blog-h mint">Ukraine Hit with New Golang-based 'SwiftSlicer' Wiper Malware in Latest Cyber Attack</h2>
+                    <h2 className="blog-h mint">Experts Warn of 'Ice Breaker' Cyberattacks Targeting Gaming and Gambling Industry</h2>
 
 
 
@@ -100,10 +101,10 @@ const Report = () => {
                             <div className="num">03</div>
                             <a className=" card box" href="">
                                 <div>
-                                    <h1>Experts Warn of 'Ice Breaker' Cyberattacks Targeting Gaming and Gambling Industry</h1>
+                                    <h1>Ukraine Hit with New Golang-based 'SwiftSlicer' Wiper Malware in Latest Cyber Attack</h1>
 
                                     <div className="tags">
-                                        <div className="tag" onClick={gotoGamblingBlog}>Read More</div>
+                                        <div className="tag" onClick={gotoUkrainianBlog}>Read More</div>
                                     </div>
                                 </div>
                             </a>

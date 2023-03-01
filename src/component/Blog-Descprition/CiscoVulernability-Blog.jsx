@@ -18,12 +18,17 @@ const Report = () => {
     const gotoGamblingBlog = () => {
         navigate('/AcademyBlogs-Blog4')
     }
+    const gotoUkrainianBlog = () => {
+        navigate('/AcademyBlogs-Blog1')
+    }
+
+
 
     return (
         <>
             <div className="blog-div">
                 <div className="blog-heading">
-                    <h2 className="blog-h mint">Ukraine Hit with New Golang-based 'SwiftSlicer' Wiper Malware in Latest Cyber Attack</h2>
+                    <h2 className="blog-h mint">New High-Severity Vulnerabilities Discovered in Cisco IOx and F5 BIG-IP Products</h2>
 
 
 
@@ -70,20 +75,9 @@ const Report = () => {
                 <div className="more-blogs-div">
                     <h1 className="more-blogs-h">More From Blogs </h1>
                     <section className="cards-wrapper">
+
                         <div className="card-grid-space">
                             <div className="num">01</div>
-                            <a className="card box" href="">
-                                <div>
-                                    <h1>New High-Severity Vulnerabilities Discovered in Cisco IOx and F5 BIG-IP Products</h1>
-
-                                    <div className="tags">
-                                        <div className="tag" onClick={gotoCiscoVulernability}>Read More</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="card-grid-space">
-                            <div className="num">02</div>
                             <a className="card box" href="">
                                 <div>
                                     <h1>Atlassian's Jira Service Management Found Vulnerable to Critical Vulnerability</h1>
@@ -97,13 +91,25 @@ const Report = () => {
                             </a>
                         </div>
                         <div className="card-grid-space">
-                            <div className="num">03</div>
+                            <div className="num">02</div>
                             <a className=" card box" href="">
                                 <div>
                                     <h1>Experts Warn of 'Ice Breaker' Cyberattacks Targeting Gaming and Gambling Industry</h1>
 
                                     <div className="tags">
                                         <div className="tag" onClick={gotoGamblingBlog}>Read More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="card-grid-space">
+                            <div className="num">03</div>
+                            <a className=" card box" href="">
+                                <div>
+                                    <h1>Ukraine Hit with New Golang-based 'SwiftSlicer' Wiper Malware in Latest Cyber Attack</h1>
+
+                                    <div className="tags">
+                                        <div className="tag" onClick={gotoUkrainianBlog}>Read More</div>
                                     </div>
                                 </div>
                             </a>
