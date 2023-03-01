@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect, useRef } from "react";
+import Cookies from 'js-cookie';
 import './Login.css';
 
 
@@ -17,17 +18,31 @@ const LoginForm = () => {
         //   alert('Unsupported Character Entered in Username');
         //   return;
         // }
-        fetch(`http://127.0.0.1:8000/business/${username}`, {
-            method: 'GET'
+        const response = await fetch(`http://127.0.0.1:5173/userfetch`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
         })
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error));
+        const jwt = await response.json()
+        const username2 = jwt.username; //set this in component
+        if(rememberMe == true){
+            Cookies.set('myCookie', `${jwt.jwttoken}`, { expires: 14, path: '/' });
+            if(jwt.buss_id){
+            Cookies.set('buss_id', `${jwt.buss_id}`, { expires: 14, path: '/' });
+            }else{
+            Cookies.set('rsrc_id', `${jwt.rsrc_id}`, { expires: 14, path: '/' });
+            }
+        }else{
+            Cookies.set('myCookie', `${jwt.jwttoken}`, { expires: 2, path: '/' });
+            if(jwt.buss_id){
+                Cookies.set('buss_id', `${jwt.buss_id}`, { expires: 2, path: '/' });
+            }else{
+                Cookies.set('rsrc_id', `${jwt.rsrc_id}`, { expires: 2, path: '/' });
+            }
+        }
     };
-    //   const isValidUser = (username) => {
-    //     const userRegex = /^[a-zA-Z0-9]+$/;
-    //     return userRegex.test(username);
-    //   };
     const handleRememberMeChange = () => {
         setRememberMe(!rememberMe);
     };
