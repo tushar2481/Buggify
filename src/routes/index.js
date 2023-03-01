@@ -137,6 +137,26 @@ app.post('/userfetch', async (req, res) => {
 }}
 })
 
+app.get('/forgetPass/:username', async (req, res) => {
+        const name = req.params.username;
+        const getUser11 = await Buss.find({"username" : `${name}`});
+        if(getUser11[0] != null){
+          console.log('printme at 1');
+        }
+        const getUser12 = await Buss.find({"email" : `${name}`});
+        if(getUser12[0] != null){
+          console.log('printme at 2');
+        }
+        const getUser21 = await Rsrc.find({"username" : `${name}`});
+        if(getUser21[0] != null){
+          console.log('printme at 3');
+        }
+        const getUser22 = await Rsrc.find({"email" : `${name}`});
+        if(getUser22[0] != null){
+          console.log('printme at 4');
+        }
+})
+
 
 // Start the server
 app.listen(process.env.PORT || 5173, () => {
