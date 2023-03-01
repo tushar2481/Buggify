@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 function MyList() {
-	const [userName, setUserName] = useState("")
 	const items = [
 		{ label: "Home", link: "/" },
 		{ label: "Company", link: "/company" },
@@ -48,6 +47,8 @@ function MyList() {
 
 
 const Navbar = () => {
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 	const [showMediaIcons, setShowMediaIcons] = useState(false);
 	const navigate = useNavigate();
 	const gotoLogin = () => {
@@ -57,6 +58,14 @@ const Navbar = () => {
 		navigate('/')
 	}
 
+	// login form ma login button click kare taire aa handle ma setIsLoggedIn in value true thase 
+	// tho isLoggedIn valu div (i.e. userName ) display thase tho aa login form ma aa handle avu joiye ne 
+
+	const handleLogin = () => {
+		// Perform login logic...
+		setIsLoggedIn(true);
+	}
+	const buttonContent = isLoggedIn ? 'Welcome, John' : 'Try Buggify';
 
 	const navActiveIndex = Number(window.localStorage.getItem("navActiveIndex"));
 
@@ -73,12 +82,16 @@ const Navbar = () => {
 				>
 					<MyList />
 
-					<div className="button_ani try-btn" onClick={gotoLogin}>
+					{isLoggedIn ? (
+						<div className="button_ani try-btn">
+							<button className="btn">Welcome, John</button>
+						</div>
+					) : (
+						<div className="button_ani try-btn" onClick={gotoLogin}>
+							<button className="btn">Try Buggify</button>
+						</div>
+					)}
 
-
-						<button className="btn">Try Buggify</button>
-
-					</div>
 				</div>
 
 				<div className="social-media">
