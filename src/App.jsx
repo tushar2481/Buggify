@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import './routes/index';
 
 import Navbar from './component/Navbar';
 import Home from './component/Home/Home';
@@ -134,14 +134,14 @@ function App() {
               <NoFooter />
             </>
           } />
-          <Route path='/confirm_otp' element={
+          <Route path='/OTP' element={
             <>
               <NoNavbar />
               <OTP />
               <NoFooter />
             </>
           } />
-          <Route path='/newPassword' element={
+          <Route path='/SetNewPassword' element={
             <>
               <NoNavbar />
               <SetNewPassword />
