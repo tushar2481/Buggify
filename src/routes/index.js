@@ -137,6 +137,7 @@ app.post('/userfetch', async (req, res) => {
 }}
 })
 
+
 // Start the server
 app.listen(process.env.PORT || 5173, () => {
     console.log(`Server started on port 5173`);
