@@ -1,0 +1,67 @@
+.blog-div {
+    background-color: #0b0b0b;
+    padding-bottom: 10rem;
+}
+
+
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+.blog-h {
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 30px;
+    padding-top: 5rem;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-left: calc(15%);
+    color: #04ff69;
+    font-palette: --Mint;
+}
+
+@font-palette-values --Mint {
+    font-family: Rocher;
+    base-palette: 2;
+    override-colors:
+        2 rgb(0, 290, 0);
+}
+
+.back-to-home-link {
+    color: #878787;
+    font-size: 18px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    display: flexbox;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 16px;
+}
+
+.blog-p1 {
+    margin-top: 5rem;
+    margin-left: calc(12rem);
+    /* margin-right: calc(12rem); */
+    width: 60%;
+}
+
+.blog-p1-p {
+    color: #dadada;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2.8rem;
+    text-align: justify;
+}
+
+.blog-p1-p a {
+    text-decoration: none;
+    color: #04ffff;
+}
