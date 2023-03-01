@@ -329,11 +329,11 @@ const SignInForm = () => {
 
                 <div>
                     <label className="signin-label">Password*</label>
-                    <input className="signin-input" type="password" name="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
+                    <input className="signin-input" type="password" name="password" minLength='8' value={password} onChange={(event) => setPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Confirm Password*</label>
-                    <input className="signin-input" type="password" name="confirmPassword" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required />
+                    <input className="signin-input" type="password" name="confirmPassword" minLength='8' value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} required />
                 </div>
                 <div>
                     <label className="signin-label">Company Name</label>
