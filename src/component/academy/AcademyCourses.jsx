@@ -11,7 +11,6 @@ import HeathAdam from '../image/heathAdam.png';
 import './AcademyCourse.css';
 import { useNavigate } from "react-router-dom";
 
-
 const AcademyCourses = () => {
 
     const [levelFilters, setLevelFilters] = useState({
@@ -29,6 +28,11 @@ const AcademyCourses = () => {
         Programming: false,
     });
 
+    // const btn = document.getElementById("course-btn");
+    // btn.addEventListener("click", function () {
+    //     window.location.href = courses.link;
+    // });
+
     const courses = [{
         id: 1,
         title: "Pentesting with Python",
@@ -39,6 +43,7 @@ const AcademyCourses = () => {
         img: Academy1,
         avatar: HeathAdam,
         instrutor: "Heath Admans",
+        link: "/PentestingWithPython/",
     },
     {
         id: 2,
@@ -50,6 +55,7 @@ const AcademyCourses = () => {
         img: Academy2,
         avatar: HeathAdam,
         instrutor: "Heath Adam",
+        link: "/BashWithBeginner/",
     },
     {
         id: 3,
@@ -61,6 +67,7 @@ const AcademyCourses = () => {
         img: Academy3,
         avatar: HeathAdam,
         instrutor: "Heath Adam",
+        link: "/WebApplicationPentesting/",
     },
     {
         id: 4,
@@ -72,6 +79,7 @@ const AcademyCourses = () => {
         avatar: HeathAdam,
         instrutor: "Heath Adam",
         price: "220",
+        link: "/OffensiveRedTeaming/",
     }, {
         id: 5,
         title: "Malware Analysis & RE ",
@@ -82,6 +90,7 @@ const AcademyCourses = () => {
         instrutor: " HeathAdam",
         price: "150",
         img: Academy5,
+        link: "/MalwareAnalysis/",
     },
     {
         id: 6,
@@ -93,6 +102,7 @@ const AcademyCourses = () => {
         avatar: HeathAdam,
         instrutor: "Heath Adam ",
         price: "200",
+        link: "/ActiveDirectoryExploitation/",
     },
     {
         id: 7,
@@ -104,6 +114,7 @@ const AcademyCourses = () => {
         avatar: HeathAdam,
         instrutor: "Heath Adam",
         price: "120",
+        link: "/MobileAppPentesting/",
     },
     {
         id: 8,
@@ -115,10 +126,10 @@ const AcademyCourses = () => {
         avatar: HeathAdam,
         instrutor: "Heath Adam ",
         price: "150",
-        URL: '/PentestingWithPython'
+        link: "/ApiPentesting/",
     },];
 
-    // navigation
+    navigation
     const navigate = useNavigate();
     const paths = ['/PentestingWithPython', '/BashWithBeginner', '/WebApplicationPentesting', '/OffensiveRedTeaming', '/MalwareAnalysis', '/ActiveDirectoryExploitation', '/MobileAppPentesting', '/ApiPentesting'];
     const goto = (index) => {
@@ -376,7 +387,7 @@ const AcademyCourses = () => {
                                                 <center>
                                                     <p className="card-body-div3-price">Course Price:{'$' + course.price}</p>
                                                     <div className="button_ani card-div3-button1" onClick={() => goto(index)}>
-                                                        <button className="button2">View More</button>
+                                                        <button className="button2"> View More</button>
                                                     </div>
                                                     <div className="button_ani card-div3-button2">
                                                         <button className="btn card-div3-button2-button">Buy Now</button>

@@ -255,6 +255,7 @@ class BusinessProfile extends React.Component {
 }
 
 BusinessProfile.defaultProps = {
+    companyLogo: '',
     companyName: 'Company Name',
     monthlyReceivedReports: 220,
     receivedReportsLast90Days: 70,

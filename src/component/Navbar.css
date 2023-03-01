@@ -34,6 +34,7 @@ li {
     color: #04FF69;
     font-size: 15px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .menu-link {

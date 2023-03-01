@@ -11,7 +11,6 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { SiBigbluebutton } from 'react-icons/si';
 import { useNavigate } from "react-router-dom";
 
-
 function DashboardNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(true);
 
@@ -113,6 +112,11 @@ function DashboardNavbar() {
 
 const BusinessProfile = (props) => {
 
+    const navigate = useNavigate()
+    const gotoReportInfoUpdate = () => {
+        navigate('/ReportInfoUpdate')
+    }
+
 
     return (
         <>
@@ -134,13 +138,13 @@ const BusinessProfile = (props) => {
                                     <p className="bus-profie-stat-h">Active Bug Reports</p>
                                     <div className="bus-profile-bug-report">
 
-                                        {(BusinessProfile.defaultProps.map((title) => (
+                                        {(BusinessProfile.defaultProps.reports.map((title) => (
                                             <div key={title.id} className="bus-profile-bug-report-div">
                                                 <div className="bus-profile-bug-report-divtitle">
                                                     <p className="bus-profile-bug-report-div-title-p">Report Title: {title.reportTitle}</p>
                                                     <p className="bus-profile-bug-report-div-id-p">Report Id: {title.reportId}</p>
                                                 </div>
-                                                <p className="bus-profile-bug-report-div-link"><a href={title.reportLink} className="bus-profile-bug-report-div-link">Check Report</a></p>
+                                                <p className="bus-profile-bug-report-div-link1" onClick={gotoReportInfoUpdate}>Check Report</p>
                                             </div>
                                         )))}
                                     </div>
@@ -148,7 +152,6 @@ const BusinessProfile = (props) => {
                                 </div>
                             </div>
                         </center>
-
 
 
 
@@ -160,24 +163,26 @@ const BusinessProfile = (props) => {
     )
 }
 
-BusinessProfile.defaultProps = [
-    { companyName: 'Company', },
+BusinessProfile.defaultProps = {
+    companyLogo: '',
+    companyName: 'Company',
+    reports: [
+        {
+            id: '1',
+            reportId: '#a7ag3-jh38g',
+            reportTitle: 'XSS in Search Field of abc.def.com',
+            reportLink: '',
 
-    {
-        id: '1',
-        reportId: '#a7ag3-jh38g',
-        reportTitle: 'XSS in Search Field of abc.def.com',
-        reportLink: '',
+        },
+        {
+            id: '2',
+            reportId: '#v3jd8-st62s ',
+            reportTitle: 'CSRF in Password Change Function of staging.def.com',
+            reportLink: '',
 
-    },
-    {
-        id: '2',
-        reportId: '#v3jd8-st62s ',
-        reportTitle: 'CSRF in Password Change Function of staging.def.com',
-        reportLink: '',
-
-    },
-]
+        },
+    ],
+}
 
 
 

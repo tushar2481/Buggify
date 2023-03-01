@@ -111,9 +111,14 @@ function DashboardNavbar() {
 
 }
 
-const BusinessProfile = () => {
+const BusinessProfile = (props) => {
 
+    const [paymentId, setPaymentId] = useState("")
+    const [paymentAmount, setPaymentAmount] = useState("")
+    const [paidTo, setPaidTo] = useState("")
 
+    const handleAddPaymentInfo = () => {
+    }
     return (
         <>
 
@@ -125,13 +130,69 @@ const BusinessProfile = () => {
                     </div>
                     <div className="bus-profile-div2">
                         <center><h1 className="bus-profile-div2-h">Bounty Payment</h1>
-                            <div className="">
-
-                            </div>
-
                         </center>
 
+                        <div className="dashboard">
+                            <center><div className="bus-profile-header">
+                                <img src={props.companyLogo} className="bus-profile-company-logo" />
+                                <h3 className="bus-profile-company-name">{props.companyName}</h3>
+                            </div></center>
+                            <div className="stats">
+                                <p className="bus-profie-stat-h">Enter Payment Detail</p>
+                                <div className="bus-profile-stat-div">
 
+
+
+                                    <form className="dashboard-form">
+                                        <div className="box column-div1">
+                                            <label className="dashboard-form-label">Payment Id: </label>
+                                            <input className="dashboard-input"
+                                                type="text"
+                                                value={paymentId}
+                                                onChange={(event) => setAssetName(event.target.value)} />
+                                        </div>
+                                        <div className="box column-div1">
+                                            <label className="dashboard-form-label">Paid to (Researcher Name): </label>
+                                            <input className="dashboard-input"
+                                                type="text"
+                                                value={paidTo}
+                                                onChange={(event) => setAssetName(event.target.value)} />
+                                        </div>
+                                        <div className="box column-div1">
+                                            <label className="dashboard-form-label">Payment Amount: </label>
+                                            <input className="dashboard-input"
+                                                type="text"
+                                                value={paymentAmount}
+                                                onChange={(event) => setAssetName(event.target.value)} />
+                                        </div>
+                                        <div className="button_ani dashboard-button" onClick={handleAddPaymentInfo}>
+                                            <button type="submit" className="button2">Add new Payment Info</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div className="stats">
+                                <p className="bus-profie-stat-h">Payment History</p>
+                                <div className="bus-profile-stat-div">
+                                    <div className="payment-history-table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Payment Id</th>
+                                                    <th>Paid to</th>
+                                                    <th>Payment Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr></tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
 
 
                     </div>
@@ -141,4 +202,13 @@ const BusinessProfile = () => {
         </>
     )
 }
+
+
+
+BusinessProfile.defaultProps = {
+    companyLogo: '',
+    companyName: 'Company',
+
+
+};
 export default BusinessProfile;

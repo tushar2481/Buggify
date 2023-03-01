@@ -215,6 +215,8 @@ const BusinessProfile = (props) => {
 
 
 BusinessProfile.defaultProps = {
+    companyLogo: '',
+    companyName: 'Company',
     reportTitle: 'Reflected XSS in search field of abc.def.com',
     reportId: '#a7ag3-jh48g',
     reportSteps: [{

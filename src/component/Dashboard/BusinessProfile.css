@@ -314,14 +314,15 @@
     right: calc(2%);
 }
 
-.bus-profile-bug-report-div-link {
+.bus-profile-bug-report-div-link1 {
     text-decoration: underline;
     color: #ffffff;
     font-size: 12px;
     line-height: 2.8rem;
     letter-spacing: 1px;
     margin-top: 2rem;
-    margin-left: -30rem;
+    margin-left: -60rem;
+    cursor: pointer;
 }
 
 
@@ -407,4 +408,30 @@
 
 .report-div-poclink-li {
     text-indent: 10rem;
+}
+
+
+
+
+/* Bounty Payment */
+
+.payment-history-table {
+    width: 70%;
+    margin-left: calc(15%);
+    margin-top: 5rem;
+}
+
+
+
+/* Previous Finding */
+
+.bus-profile-bug-report-div-link {
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    margin-left: -30rem;
+    cursor: pointer;
 }

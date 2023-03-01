@@ -59,7 +59,7 @@ function DashboardNavbar() {
                     <span className="back-link-icon navbar-menu-icon"><AiOutlineArrowLeft /></span>
                     {isMenuOpen && <span className="back-link navbar-menu-item">Back to Home</span>}
                 </li>
-                <li >
+                <li>
                     <span className="company-icon navbar-menu-icon"><SiBigbluebutton /></span>
                     {isMenuOpen && <p className="company-name navbar-menu-item ">Buggify</p>}
                 </li>
@@ -72,7 +72,7 @@ function DashboardNavbar() {
                     <span className="navbar-menu-icon" style={{ color: "#ffffff" }}><RiUserSettingsLine /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Scope Setting</span>}
                 </li>
-                <li onClick={gotoBugReport}>
+                <li onClick={gotoBugReport} className="dashboard-link">
                     <span className="navbar-menu-icon"><VscReport /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Bug Reports</span>}
                 </li>
@@ -88,7 +88,7 @@ function DashboardNavbar() {
                     <span className="navbar-menu-icon"><RiFileHistoryLine /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Bounty Payment Details</span>}
                 </li>
-                <li onClick={gotoPreviousFinding} className="dashboard-link">
+                <li onClick={gotoPreviousFinding}>
                     <span className="navbar-menu-icon"><TbReportAnalytics /></span>
                     {isMenuOpen && <span className="navbar-menu-item">Previous finding</span>}
                 </li>
@@ -124,37 +124,30 @@ const BusinessProfile = (props) => {
                         <DashboardNavbar />
                     </div>
                     <div className="bus-profile-div2">
-                        <center><h1 className="bus-profile-div2-h">Previous Finding</h1>
+                        <center><h1 className="bus-profile-div2-h">Bug Report</h1>
                             <div className="dashboard">
                                 <center><div className="bus-profile-header">
                                     <img src={props.companyLogo} className="bus-profile-company-logo" />
                                     <h3 className="bus-profile-company-name">{props.companyName}</h3>
-                                </div></center>
-                                <div className="stats">
-                                    <p className="bus-profie-stat-h">Previous Findings (Closed)</p>
-                                    <div className="bus-profile-bug-report">
-
-                                        {(BusinessProfile.defaultProps.reports.map((title) => (
-                                            <div key={title.id} className="bus-profile-bug-report-div">
-                                                <div className="bus-profile-bug-report-divtitle">
-                                                    <p className="bus-profile-bug-report-div-title-p">Report Title: {title.reportTitle}</p>
-                                                    <p className="bus-profile-bug-report-div-id-p">Report Id: {title.reportId}</p>
-                                                </div>
-                                                <p className="bus-profile-bug-report-div-link"><a href={title.reportLink} className="bus-profile-bug-report-div-link">Check Report</a></p>
-                                            </div>
-                                        )))}
-                                    </div>
-
                                 </div>
-                            </div>
-                        </center>
+                                </center>
+                                <div className="bus-profile-bug-report">
 
+                                    <div className="bus-profile-bug-report-divtitle">
+                                        <p className="bus-profile-bug-report-div-title-p">Report Title: </p>
+                                        <p className="bus-profile-bug-report-div-id-p">Report Id: </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </center>
 
 
 
                     </div>
                 </div>
-            </div>
+            </div >
 
         </>
     )
@@ -180,5 +173,9 @@ BusinessProfile.defaultProps = {
         },
     ],
 }
+
+
+
+
 
 export default BusinessProfile;

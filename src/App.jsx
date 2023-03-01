@@ -20,7 +20,7 @@ import MalwareAalysis from './component/Academy-Courses/MalwareAnalysis';
 import ActiveDirectoryExploitation from './component/Academy-Courses/ActiveDirectoryExploitation';
 import MobileAppPentesting from './component/Academy-Courses/MobileAppPentesting';
 import ApiPentesting from './component/Academy-Courses/ApiPentesting';
-
+import ReportBlogs1 from './component/Blog-Descprition/Ukrainian-Blog';
 
 import RedTeam_Agreement from './component/Company/RedTeam_Agreement';
 
@@ -39,6 +39,7 @@ import BussinessProfile from './component/Dashboard/BusinessProfile';
 import ScopeSetting from './component/Dashboard/ScopeSetting';
 import RewardUpdate from './component/Dashboard/RewardUpdate';
 import BugReport from './component/Dashboard/BugReport';
+import ReportInfoUpdate from './component/Dashboard/ReportInfoUpdate';
 import Retesting from './component/Dashboard/Retesting';
 import BountyPayment from './component/Dashboard/BountyPayment';
 import PreviousFinding from './component/Dashboard/PreviousFinding';
@@ -235,6 +236,13 @@ function App() {
               <Footer />
             </>
           } />
+          <Route path='/academyBlogs-Blog1' element={
+            <>
+              <Navbar />
+              <ReportBlogs1 />
+              <Footer />
+            </>
+          } />
           <Route path='/academyDiscord' element={
             <>
               <Navbar />
@@ -276,6 +284,13 @@ function App() {
             <>
               <NoNavbar />
               <BugReport />
+              <NoFooter />
+            </>
+          } />
+          <Route path='/reportInfoUpdate' element={
+            <>
+              <NoNavbar />
+              <ReportInfoUpdate />
               <NoFooter />
             </>
           } />
