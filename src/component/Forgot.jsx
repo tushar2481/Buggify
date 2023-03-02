@@ -14,6 +14,9 @@ const ForgotPasswordForm = () => {
                 method: 'GET'
             })
             const jwt = await response.json()
+            if(jwt.status == "done"){
+                window.location.href = '/OTP';
+            }
         } else {
             alert('Please Enter Username or Email Id');
         }

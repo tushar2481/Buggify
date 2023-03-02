@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cookies from "js-cookie";
 import "./ForgotPassword.css";
 
 const ConfirmOTP = () => {
@@ -6,14 +7,30 @@ const ConfirmOTP = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        if (username != '') {
-            const url = `http://127.0.0.1:5173/forgetPass/${username}`;
-            const data = { username: username }
+        if (otp != '') {
+            const url = 'localhost:3000/conf_otp';
+            const data = { otp: otp }
             const response = await fetch(url, {
-                method: 'GET'
+                method: 'POST',
+                headers:{
+                    'Content-type':'application/json'
+                },
+                body: JSON.stringify(data)
             })
-            const jwt = await response.json()
+            const resdata = await response.json()
+            if(resdata.buss_id != ''){
+                Cookies.set('buss_id', `${resdata.buss_id}`, { expires: 1, path: '/' });
+                Cookies.set('token', `${resdata.token}`, { expires: 1, path: '/' });
+                window.location.href = '/SetNewPassword';
+            }else{
+                if (resdata.rsrc_id != '') {
+                    Cookies.set('rsrc_id', `${resdata.buss_id}`, { expires: 1, path: '/' });
+                    Cookies.set('token', `${resdata.token}`, { expires: 1, path: '/' });
+                    window.location.href = '/SetNewPassword';
+                } else {
+                    alert(resdata.note);
+                }
+            }
         } else {
             alert('Please Enter Username or Email Id');
         }

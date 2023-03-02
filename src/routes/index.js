@@ -5,9 +5,11 @@ require('dotenv').config();
 const cors = require('cors');
 const app = express();
 const hasher = require('./generator');
+const sendotp = require('./mailer');
 require('../db/conn')
 const Buss = require('../models/businessaccs')
 const Rsrc = require('../models/researcheraccs')
+const Otpstore = require('../models/otp')
 
 const corsOptions = {
   origin: '*',
@@ -16,9 +18,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
-
-
-
 
 
 // using async
@@ -141,27 +140,126 @@ app.post('/userfetch', async (req, res) => {
 })
 
 app.get('/forgetPass/:username', async (req, res) => {
-  const name = req.params.username;
-  const getUser11 = await Buss.find({ "username": `${name}` });
-  if (getUser11[0] != null) {
-    console.log('printme at 1');
-  }
-  const getUser12 = await Buss.find({ "email": `${name}` });
-  if (getUser12[0] != null) {
-    console.log('printme at 2');
-  }
-  const getUser21 = await Rsrc.find({ "username": `${name}` });
-  if (getUser21[0] != null) {
-    console.log('printme at 3');
-  }
-  const getUser22 = await Rsrc.find({ "email": `${name}` });
-  if (getUser22[0] != null) {
-    console.log('printme at 4');
+        const name = req.params.username;
+        let otp = '';
+        let mail;
+        let data = {"otp":'', "email": ''};
+        const getUser11 = await Buss.find({"username" : `${name}`});
+        if(getUser11[0] != null){
+          mail = getUser11[0].email;
+          console.log(mail);
+          for (let i = 0; i < 6; i++) {
+            otp += Math.floor(Math.random() * 10);
+          }
+          console.log(otp);
+          sendotp(otp, mail);
+          data["otp"] = otp;
+          data["email"] = mail;
+          try {
+            const user = new Otpstore(data);
+            const createUser = await user.save();
+            res.status(201).send({"status":"done"});
+        } catch(e){ res.status(400).send('data entry fail'); }
+        }
+        const getUser12 = await Buss.find({"email" : `${name}`});
+        if(getUser12[0] != null){
+          mail = getUser12[0].email;
+          console.log(mail);
+          for (let i = 0; i < 6; i++) {
+            otp += Math.floor(Math.random() * 10);
+          }
+          console.log(otp);
+          sendotp(otp, mail);
+          data["otp"] = otp;
+          data["email"] = mail;
+          try {
+            const user = new Otpstore(data);
+            const createUser = await user.save();
+            res.status(201).send({"status":"done"});
+        } catch(e){ res.status(400).send('data entry fail'); }
+        }
+        const getUser21 = await Rsrc.find({"username" : `${name}`});
+        if(getUser21[0] != null){
+          mail = getUser21[0].email;
+          console.log(mail);
+          for (let i = 0; i < 6; i++) {
+            otp += Math.floor(Math.random() * 10);
+          }
+          console.log(otp);
+          sendotp(otp, mail);
+          data["otp"] = otp;
+          data["email"] = mail;
+          try {
+            const user = new Otpstore(data);
+            const createUser = await user.save();
+            res.status(201).send({"status":"done"});
+        } catch(e){ res.status(400).send('data entry fail'); }
+        }
+        const getUser22 = await Rsrc.find({"email" : `${name}`});
+        if(getUser22[0] != null){
+          mail = getUser22[0].email;
+          console.log(mail);
+          for (let i = 0; i < 6; i++) {
+            otp += Math.floor(Math.random() * 10);
+          }
+          console.log(otp);
+          sendotp(otp, mail);
+          data["otp"] = otp;
+          data["email"] = mail;
+          try {
+            const user = new Otpstore(data);
+            const createUser = await user.save();
+            res.status(201).json({"status":"done"});
+        } catch(e){ res.status(400).send('data entry fail'); }
+        }
+})
+
+app.post('/conf_otp', async (req, res) => {
+  const otp = req.body.otp;
+  try{
+    const userdata = await Otpstore.find({'otp':`${otp}`})
+    const usermail = userdata[0].email
+    console.log(usermail)
+    if(usermail != ''){
+        const userdata2 = await Buss.find({'email':`${usermail}`});
+        if(userdata2[0].buss_id != undefined){
+          console.log(userdata2[0].buss_id);
+          res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+          res.status(200).json({'buss_id':`${userdata2[0].buss_id}`})
+        }else{
+          const userdata3 = await Rsrc.find({'email':`${usermail}`});
+        if(userdata3[0].rsrc_id != undefined){
+          console.log(userdata3[0].rsrc_id);
+          res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+          res.status(200).json({'rsrc_id':`${userdata3[0].rsrc_id}`})
+          }else{
+            res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+            res.status(400).json({'note':'Could not find user'})
+          }
+        }
+    }
+  }catch(e){
+    res.status(400).json({'note':'Invalid Otp'});
   }
 })
 
+app.post('/newpassupdate', async(req, res) => {
+  const cookieVal = req.body;
+    if(cookieVal.buss_id != undefined){
+      const buss_id = cookieVal.buss_id
+      const resultVal = await Buss.find({'buss_id':`${buss_id}`});
+      const value = JSON.stringify(resultVal[0].tokens)
+      const value1 = value._id
+      console.log(value1);
+    }else{
+    if(cookieVal.rsrc_id != undefined){
+      const rsrc_id = cookieVal.rsrc_id
+      console.log(rsrc_id);
+    }
+  }
+})
 
 // Start the server
-app.listen(5173, () => {
-  console.log(`Server started on port`);
+app.listen(process.env.PORT || 5173, () => {
+    console.log(`Server started on port 5173`);
 });

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cookies from "js-cookie";
 import "./ForgotPassword.css";
 
 const ConfirmOTP = () => {
@@ -7,17 +8,35 @@ const ConfirmOTP = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        if (username != '') {
-            const url = `http://127.0.0.1:5173/forgetPass/${username}`;
-            const data = { username: username }
-            const response = await fetch(url, {
-                method: 'GET'
-            })
-            const jwt = await response.json()
+    if (newPassword == confirmPassword) {
+            const url = `http://127.0.0.1:5173/newpassupdate`;
+            let final_cookie, data;
+            const cookie1 = Cookies.get('buss_id');
+            if(cookie1){
+                final_cookie = cookie1;
+                data = { password: newPassword, buss_id: final_cookie }
+            }else{
+                const cookie2 = Cookies.get('rsrc_id');
+                if(cookie2){
+                    final_cookie = cookie2
+                    data = { password: newPassword, rsrc_id: final_cookie }
+                }
+            }
+            if(final_cookie){
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                  })
+                  console.log(response);
         } else {
             alert('Please Enter Username or Email Id');
         }
+    } else {
+        alert('Something went wrong')
+    }
     }
 
     return (
