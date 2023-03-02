@@ -176,16 +176,16 @@ app.post('/profileStats', middleware, async (req, res) => {
   try {
     // define new schema bussstats and export here, add 1 sample business data
     const prof = await BussStats.find(id)
-    // console.log({stats: {monthly_report: `${prof[0].stats.monthly_report}`,monthly_paid: `${prof[0].stats.monthly_paid}`,avg_paid: `${prof[0].stats.avg_paid}`,mmm_reports: `${prof[0].stats.mmm_reports}`,mmm_paid: `${prof[0].stats.mmm_paid}`,mmm_avg: `${prof[0].stats.mmm_avg}`},report_counts: { open: `${prof[0].report_counts.open}`, resolved: `${prof[0].report_counts.resolved}` },report_cvss: { NA: `${prof[0].report_cvss.NA}`, dups: `${prof[0].report_cvss.dups}`, info: `${prof[0].report_cvss.info}`, medium: `${prof[0].report_cvss.medium}`, high: `${prof[0].report_cvss.high}`, critical: `${prof[0].report_cvss.critical}` },buss_id: `${id}`});
-    res.status(200).json({stats: {monthly_report: `${prof[0].stats.monthly_report}`,monthly_paid: `${prof[0].stats.monthly_paid}`,avg_paid: `${prof[0].stats.avg_paid}`,mmm_reports: `${prof[0].stats.mmm_reports}`,mmm_paid: `${prof[0].stats.mmm_paid}`,mmm_avg: `${prof[0].stats.mmm_avg}`},report_counts: { open: `${prof[0].report_counts.open}`, resolved: `${prof[0].report_counts.resolved}` },report_cvss: { NA: `${prof[0].report_cvss.NA}`, dups: `${prof[0].report_cvss.dups}`, info: `${prof[0].report_cvss.info}`, medium: `${prof[0].report_cvss.medium}`, high: `${prof[0].report_cvss.high}`, critical: `${prof[0].report_cvss.critical}` },buss_id: `${id}`})
+    const parsed = prof[0].stats.monthly_report
+    console.log(parsed);
+    res.status(200).json({stats: {monthly_report: `${prof[0].stats.monthly_report}`,monthly_paid: `${prof[0].stats.monthly_paid}`,avg_paid: `${prof[0].stats.avg_paid}`,mmm_reports: `${prof[0].stats.mmm_reports}`,mmm_paid: `${prof[0].stats.mmm_paid}`,mmm_avg: `${prof[0].stats.mmm_avg}`},report_counts: { open: `${prof[0].report_counts.open}`, resolved: `${prof[0].report_counts.resolved}` },report_cvss: { NA: `${prof[0].report_cvss.NA}`, dups: `${prof[0].report_cvss.dups}`, info: `${prof[0].report_cvss.info}`, medium: `${prof[0].report_cvss.medium}`, high: `${prof[0].report_cvss.high}`, critical: `${prof[0].report_cvss[0].critical}` },buss_id: `${id}`})
   } catch (error) {
     console.log(error)
   }
 })
 
-app.get('/insertStats', middleware, async(req, res) => {
-  const id = req.auth
-  const data = {buss_id: `${id}`, stats:{monthly_report: 0, monthly_paid: 0, avg_paid: 0, mmm_reports: 0, mmm_paid: 0, mmm_avg: 0}, report_counts:{open: 0, resolved: 0}, report_cvss:{NA:0, dups: 0, info: 0, medium: 0, high: 0, critical: 0}}
+app.get('/insertStats', async(req, res) => {
+  const data = {buss_id: '93295597154087419439', stats:{monthly_report: 0, monthly_paid: 0, avg_paid: 0, mmm_reports: 0, mmm_paid: 0, mmm_avg: 0}, report_counts:{open: 0, resolved: 0}, report_cvss:{NA:0, dups: 0, info: 0, medium: 0, high: 0, critical: 0}}
   // const jsondata = JSON.stringify(data);
   const user = new BussStats(data);
   const result = await user.save();
@@ -212,7 +212,6 @@ app.get('/insertStats', middleware, async(req, res) => {
 	}
 });
 })
-
 
 // app.get('/forgetPass/:username', async (req, res) => {
 //         const name = req.params.username;

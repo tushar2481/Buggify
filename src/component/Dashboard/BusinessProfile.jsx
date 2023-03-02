@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './BusinessProfile.css';
 import Cookies from "js-cookie";
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
@@ -23,24 +23,11 @@ async function DashboardNavbar (){
             'Content-Type':'application/json'
         },
         body: JSON.stringify(data)
+    }).then(response => { const abc = response.json();
+        console.log(abc)
     })
-    const respdata = await response.json()
-    if(respdata.buss_id == Cookies.get('buss_id')){
-        const monthly_report = respdata.stats.monthly_report
-        const monthly_paid = respdata.stats.monthly_paid
-        const avg_paid = respdata.stats.avg_paid
-        const mmm_reports = respdata.stats.mmm_reports
-        const mmm_paid = respdata.stats.mmm_paid
-        const mmm_avg = respdata.stats.mmm_avg
-        const open = respdata.report_counts.open
-        const resolved = respdata.report_counts.resolved
-        const NA = respdata.report_cvss.NA
-        const dups = respdata.report_cvss.dups
-        const info = respdata.report_cvss.info
-        const medium = respdata.report_cvss.medium
-        const high = respdata.report_cvss.high
-        const critical = respdata.report_cvss.critical
-    }
+    .then(data => setData(data))
+    .catch(error => console.error(error));
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -178,11 +165,11 @@ class BusinessProfile extends React.Component {
                                     <div className="bus-profile-stat-div">
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Monthly Received Reports:</label>
                                                 <span className="bus-profile-span">{monthlyReceivedReports}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Received Reports (Last 90 Days):</label>
                                                 <span className="bus-profile-span">{receivedReportsLast90Days}</span>
                                             </div>
@@ -190,11 +177,11 @@ class BusinessProfile extends React.Component {
 
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Monthly Bounties Paid:</label>
                                                 <span className="bus-profile-span">{monthlyBountiesPaid}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Bounties Paid (Last 90 Days):</label>
                                                 <span className="bus-profile-span">{bountiesPaidLast90Days}</span>
                                             </div>
@@ -202,11 +189,11 @@ class BusinessProfile extends React.Component {
 
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Average Bounty Paid (Monthly):</label>
                                                 <span className="bus-profile-span">{averageBountyPaidMonthly}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Average Bounties Paid (Last 90 Days):</label>
                                                 <span className="bus-profile-span">{averageBountiesPaidLast90Days}</span>
                                             </div>
@@ -219,11 +206,11 @@ class BusinessProfile extends React.Component {
                                     <div className="bus-profile-stat-div">
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Open Reports:</label>
                                                 <span className="bus-profile-span">{openReport}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Resoved Reports (Last 90 Days):</label>
                                                 <span className="bus-profile-span">{resolvedReport}</span>
                                             </div>
@@ -234,11 +221,11 @@ class BusinessProfile extends React.Component {
                                     <p className="bus-profie-stat-h">Report Counts (Based on CVSS)</p>
                                     <div className="bus-profile-stat-div">
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">N/A</label>
                                                 <span className="bus-profile-span">{na}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Medium:</label>
                                                 <span className="bus-profile-span">{medium}</span>
                                             </div>
@@ -246,11 +233,11 @@ class BusinessProfile extends React.Component {
 
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Duplicate:</label>
                                                 <span className="bus-profile-span">{duplicate}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">High:</label>
                                                 <span className="bus-profile-span">{high}</span>
                                             </div>
@@ -258,11 +245,11 @@ class BusinessProfile extends React.Component {
 
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Informative:</label>
                                                 <span className="bus-profile-span">{informative}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">critical:</label>
                                                 <span className="bus-profile-span">{critical}</span>
                                             </div>
