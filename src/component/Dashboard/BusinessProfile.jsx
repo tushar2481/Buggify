@@ -23,11 +23,24 @@ async function DashboardNavbar (){
             'Content-Type':'application/json'
         },
         body: JSON.stringify(data)
-    }).then(response => { const abc = response.json();
-        console.log(abc)
     })
-    .then(data => setData(data))
-    .catch(error => console.error(error));
+    const respdata = await response.json()
+    if(respdata.buss_id == Cookies.get('buss_id')){
+        const monthly_report = respdata.stats.monthly_report
+        const monthly_paid = respdata.stats.monthly_paid
+        const avg_paid = respdata.stats.avg_paid
+        const mmm_reports = respdata.stats.mmm_reports
+        const mmm_paid = respdata.stats.mmm_paid
+        const mmm_avg = respdata.stats.mmm_avg
+        const open = respdata.report_counts.open
+        const resolved = respdata.report_counts.resolved
+        const NA = respdata.report_cvss.NA
+        const dups = respdata.report_cvss.dups
+        const info = respdata.report_cvss.info
+        const medium = respdata.report_cvss.medium
+        const high = respdata.report_cvss.high
+        const critical = respdata.report_cvss.critical
+    }
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);

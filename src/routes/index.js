@@ -178,7 +178,7 @@ app.post('/profileStats', middleware, async (req, res) => {
     const prof = await BussStats.find(id)
     const parsed = prof[0].stats.monthly_report
     console.log(parsed);
-    res.status(200).json({stats: {monthly_report: `${prof[0].stats.monthly_report}`,monthly_paid: `${prof[0].stats.monthly_paid}`,avg_paid: `${prof[0].stats.avg_paid}`,mmm_reports: `${prof[0].stats.mmm_reports}`,mmm_paid: `${prof[0].stats.mmm_paid}`,mmm_avg: `${prof[0].stats.mmm_avg}`},report_counts: { open: `${prof[0].report_counts.open}`, resolved: `${prof[0].report_counts.resolved}` },report_cvss: { NA: `${prof[0].report_cvss.NA}`, dups: `${prof[0].report_cvss.dups}`, info: `${prof[0].report_cvss.info}`, medium: `${prof[0].report_cvss.medium}`, high: `${prof[0].report_cvss.high}`, critical: `${prof[0].report_cvss[0].critical}` },buss_id: `${id}`})
+    res.status(200).json({stats: {monthly_report: `${prof[0].stats.monthly_report}`,monthly_paid: `${prof[0].stats.monthly_paid}`,avg_paid: `${prof[0].stats.avg_paid}`,mmm_reports: `${prof[0].stats.mmm_reports}`,mmm_paid: `${prof[0].stats.mmm_paid}`,mmm_avg: `${prof[0].stats.mmm_avg}`},report_counts: { open: `${prof[0].report_counts.open}`, resolved: `${prof[0].report_counts.resolved}` },report_cvss: { NA: `${prof[0].report_cvss.NA}`, dups: `${prof[0].report_cvss.dups}`, info: `${prof[0].report_cvss.info}`, medium: `${prof[0].report_cvss.medium}`, high: `${prof[0].report_cvss.high}`, critical: `${prof[0].report_cvss.critical}` },buss_id: `${id}`})
   } catch (error) {
     console.log(error)
   }
@@ -211,6 +211,15 @@ app.get('/insertStats', async(req, res) => {
 		"critical" : 130
 	}
 });
+})
+
+app.post('/setScope', middleware , async (req, res) => {
+  const id = req.auth
+  const in_scope = req.body.in_scope
+  const out_scope = req.body.out_scope
+  console.log(id);
+  console.log(in_scope);
+  console.log(out_scope);
 })
 
 // app.get('/forgetPass/:username', async (req, res) => {
