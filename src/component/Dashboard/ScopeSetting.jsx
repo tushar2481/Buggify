@@ -182,14 +182,14 @@ const BusinessProfile = (props) => {
                                 <div className="bus-profile-stat-div">
 
                                     <form className="dashboard-form">
-                                        <div className="box column-div1">
+                                        <div className="column-div1">
                                             <label className="dashboard-form-label">Asset: </label>
                                             <input className="dashboard-input"
                                                 type="text"
                                                 value={assetName}
                                                 onChange={(event) => setAssetName(event.target.value)} />
                                         </div>
-                                        <div className="box column-div1">
+                                        <div className="column-div1">
                                             <label className="dashboard-form-label">Asset Type: </label>
                                             <select className="dashboard-input" id="assetType" value={selectedAssetType} onChange={handleAssetTypeChange}>
                                                 <option value="">Web</option>
@@ -198,7 +198,7 @@ const BusinessProfile = (props) => {
                                                 ))}
                                             </select>
                                         </div>
-                                        <div className="box column-div1">
+                                        <div className="column-div1">
                                             <label className="dashboard-form-label">Impact Level: </label>
                                             <select className="dashboard-input" id="assetType" value={selectedImpactLevel} onChange={handleImpactLevelChange}>
                                                 <option value="">Critical</option>
@@ -207,7 +207,7 @@ const BusinessProfile = (props) => {
                                                 ))}
                                             </select>
                                         </div>
-                                        <div className="box column-div1">
+                                        <div className="column-div1">
                                             <label className="dashboard-form-label">Eligible for Bounty? </label>
                                             <select className="dashboard-input input3" id="assetType" value={selectedEligible} onChange={handleEligibleChange}>
                                                 <option value="">Yes</option>
@@ -227,14 +227,14 @@ const BusinessProfile = (props) => {
                                 <p className="bus-profie-stat-h">Out-Scope</p>
                                 <div className="bus-profile-stat-div">
                                     <form className="dashboard-form">
-                                        <div className="box column-div1">
+                                        <div className="column-div1">
                                             <label className="dashboard-form-label">Asset: </label>
                                             <input className="dashboard-input"
                                                 type="text"
                                                 value={assetName}
                                                 onChange={(event) => setAssetName(event.target.value)} />
                                         </div>
-                                        <div className="box column-div1">
+                                        <div className="column-div1">
                                             <label className="dashboard-form-label">Asset Type: </label>
                                             <select className="dashboard-input" id="assetType" value={selectedAssetType} onChange={handleAssetTypeChange}>
                                                 <option value="">Web</option>

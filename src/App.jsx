@@ -84,6 +84,7 @@ function App() {
 
 
         <Routes>
+
           <Route path='/' element={
             <>
               <Navbar />

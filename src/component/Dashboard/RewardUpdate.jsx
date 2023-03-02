@@ -141,21 +141,21 @@ const BusinessProfile = (props) => {
                             <div className="bus-profile-stat-div">
 
                                 <form className="dashboard-form">
-                                    <div className="box column-div1">
+                                    <div className="column-div1">
                                         <label className="dashboard-form-label label">Asset Severity: </label>
                                         <input className="dashboard-input input"
                                             type="text"
                                             value={assetSeverity}
                                             onChange={(event) => setAssetSeverity(event.target.value)} />
                                     </div>
-                                    <div className="box column-div1">
+                                    <div className="column-div1">
                                         <label className="dashboard-form-label">Curent Payout: </label>
                                         <input className="dashboard-input input"
                                             type="text"
                                             value={currentPayout}
                                             onChange={(event) => setCurrentPayout(event.target.value)} />
                                     </div>
-                                    <div className="box column-div1">
+                                    <div className="column-div1">
                                         <label className="dashboard-form-label ">New Payout: </label>
                                         <input className="dashboard-input input"
                                             type="text"

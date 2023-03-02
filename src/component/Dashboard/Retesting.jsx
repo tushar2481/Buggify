@@ -146,7 +146,7 @@ const BusinessProfile = (props) => {
                             <p className="bus-profie-stat-h">Search Report by Report Unique Identification Number fot Retesting</p>
 
                             <form className="dashboard-form">
-                                <div className="box column-div1">
+                                <div className="column-div1">
 
                                     <input className="dashboard-reward-update-input"
                                         type="text"
