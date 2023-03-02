@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './BusinessProfile.css';
 import Cookies from "js-cookie";
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
@@ -178,11 +178,11 @@ class BusinessProfile extends React.Component {
                                     <div className="bus-profile-stat-div">
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Monthly Received Reports:</label>
                                                 <span className="bus-profile-span">{monthlyReceivedReports}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Received Reports (Last 90 Days):</label>
                                                 <span className="bus-profile-span">{receivedReportsLast90Days}</span>
                                             </div>
@@ -190,11 +190,11 @@ class BusinessProfile extends React.Component {
 
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Monthly Bounties Paid:</label>
                                                 <span className="bus-profile-span">{monthlyBountiesPaid}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Bounties Paid (Last 90 Days):</label>
                                                 <span className="bus-profile-span">{bountiesPaidLast90Days}</span>
                                             </div>
@@ -202,11 +202,11 @@ class BusinessProfile extends React.Component {
 
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Average Bounty Paid (Monthly):</label>
                                                 <span className="bus-profile-span">{averageBountyPaidMonthly}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Average Bounties Paid (Last 90 Days):</label>
                                                 <span className="bus-profile-span">{averageBountiesPaidLast90Days}</span>
                                             </div>
@@ -219,11 +219,11 @@ class BusinessProfile extends React.Component {
                                     <div className="bus-profile-stat-div">
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Open Reports:</label>
                                                 <span className="bus-profile-span">{openReport}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Resoved Reports (Last 90 Days):</label>
                                                 <span className="bus-profile-span">{resolvedReport}</span>
                                             </div>
@@ -234,11 +234,11 @@ class BusinessProfile extends React.Component {
                                     <p className="bus-profie-stat-h">Report Counts (Based on CVSS)</p>
                                     <div className="bus-profile-stat-div">
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">N/A</label>
                                                 <span className="bus-profile-span">{na}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">Medium:</label>
                                                 <span className="bus-profile-span">{medium}</span>
                                             </div>
@@ -246,11 +246,11 @@ class BusinessProfile extends React.Component {
 
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Duplicate:</label>
                                                 <span className="bus-profile-span">{duplicate}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">High:</label>
                                                 <span className="bus-profile-span">{high}</span>
                                             </div>
@@ -258,11 +258,11 @@ class BusinessProfile extends React.Component {
 
 
                                         <div class="column">
-                                            <div className="column-div1">
+                                            <div className="box column-div1">
                                                 <label className="bus-profile-label">Informative:</label>
                                                 <span className="bus-profile-span">{informative}</span>
                                             </div>
-                                            <div className="column-div2">
+                                            <div className="box column-div2">
                                                 <label className="bus-profile-label">critical:</label>
                                                 <span className="bus-profile-span">{critical}</span>
                                             </div>
