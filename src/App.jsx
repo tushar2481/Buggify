@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-import User from './component/user';
+
 import Navbar from './component/Navbar';
 import Home from './component/Home/Home';
 import Company from './component/Company/Company';
@@ -84,13 +84,7 @@ function App() {
 
 
         <Routes>
-          <Route path='/user' element={
-            <>
-              <Navbar />
-              <User />
-              <Footer />
-            </>
-          } />
+
           <Route path='/' element={
             <>
               <Navbar />

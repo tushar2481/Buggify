@@ -136,7 +136,7 @@ function Company() {
 				<div className="section-1">
 					<div className="part-1">
 						<h1 className="section-1-part-1-h">
-							<span style={{ color: "#04FF69" }}>Penetration Testing</span> for an{" "}
+							<span style={{ color: "#04FF69" }}>Penetration  Testing</span> for an{" "}
 
 							Organization.
 						</h1>
