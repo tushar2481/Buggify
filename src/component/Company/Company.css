@@ -303,6 +303,86 @@
     justify-content: end;
 }
 
+/* Section-5 */
+
+.section5-container {
+    margin-top: 25rem;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+.section-5-slider {
+    display: flex;
+    /* width: 100%; */
+    /* display: flex; Display the slides in a row */
+    animation: slider-animation 15s linear infinite;
+
+}
+
+@keyframes slider-animation {
+    0% {
+        transform: translateX(0%);
+        /* Start from the first image */
+    }
+
+    100% {
+        transform: translateX(-140%);
+        /* Loop back to the first image */
+    }
+}
+
+.section5-slide {
+    flex: 0 0 20%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    height: 100px;
+    width: 20rem;
+    border: 1px solid #04FF69;
+}
+
+.section5-content {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-5-content-img {
+    width: auto;
+}
+
+.section-5-slider2 {
+    margin-left: 8rem;
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    /* display: flex; Display the slides in a row */
+    animation: slider-animation 15s linear infinite;
+}
+
+.section5-slide2 {
+    flex: 0 0 20%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    height: 100px;
+    width: 20rem;
+    border: 1px solid #04FF69;
+}
+
+.section-5-slider3 {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    /* display: flex; Display the slides in a row */
+    animation: slider-animation 15s linear infinite;
+}
+
+/* Section-6 */
 
 .section-6 {
     padding-top: 5rem;

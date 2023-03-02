@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useRef } from "react";
+import React, { useState, useLayoutEffect, useRef, useEffect } from "react";
 import "./Company.css";
 import { useNavigate } from "react-router-dom";
 import CompanyImg1 from "../image/Company-section-1.png";
@@ -18,7 +18,23 @@ import CompanyProduct6 from '../image/CompanyProduct6.png'
 import CompanyProduct7 from '../image/CompanyProduct7.png'
 import CompanyProduct8 from '../image/CompanyProduct8.png'
 
-
+import Amazon from '../image/companyLogo/amazon.png';
+import Intel from '../image/companyLogo/intel.png';
+import Alienware from '../image/companyLogo/alienware.png';
+import Twitch from '../image/companyLogo/twitch.png';
+import Google from '../image/companyLogo/google.png';
+import Instagram from '../image/companyLogo/instagram.png';
+import Dell from '../image/companyLogo/dell.png';
+import Asus from '../image/companyLogo/asus.png';
+import Lenovo from '../image/companyLogo/lenovo.png';
+import Facebook from '../image/companyLogo/facebook.png';
+import Bentley from '../image/companyLogo/bentley.png';
+import Apollo from '../image/companyLogo/apollo.png';
+import BMW from '../image/companyLogo/bmw.png';
+import HP from '../image/companyLogo/hp.png';
+import LandRover from '../image/companyLogo/landRover.png';
+import Mercedes from '../image/companyLogo/mercedes.png';
+import Microsoft from '../image/companyLogo/microsoft.png';
 
 
 // const [allImages, setAllImages] = useState([CompanyProduct1, CompanyProduct2, CompanyProduct3, CompanyProduct4, CompanyProduct5, CompanyProduct6, CompanyProduct7, CompanyProduct8])
@@ -47,10 +63,74 @@ function Company() {
 		const newIndex = firstIndex + 2;
 		setFirstIndex(newIndex > maxIndex ? newIndex % (maxIndex + 2) : newIndex);
 	};
+	// change for section 5
 
-
+	const slides = [
+		{ src: Amazon },
+		{ src: Intel },
+		{ src: LandRover },
+		{ src: Alienware },
+		{ src: Microsoft },
+		{ src: Apollo },
+		{ src: Twitch },
+		{ src: BMW },
+		{ src: Google },
+		{ src: Mercedes },
+		{ src: Instagram },
+		{ src: Lenovo },
+		{ src: Asus },
+		{ src: Facebook },
+		{ src: Dell },
+		{ src: Bentley },
+		{ src: HP },
+		// { src: Amazon },
+	];
+	const slides2 = [
+		{ src: Mercedes },
+		{ src: Google },
+		{ src: Asus },
+		{ src: Instagram },
+		{ src: BMW },
+		{ src: Dell },
+		{ src: Lenovo },
+		{ src: HP },
+		{ src: Intel },
+		{ src: LandRover },
+		{ src: Twitch },
+		{ src: Alienware },
+		{ src: Apollo },
+		{ src: Facebook },
+		{ src: HP },
+		{ src: Bentley },
+		{ src: Amazon },
+		{ src: Microsoft },
+	];
+	const slides3 = [
+		{ src: HP },
+		{ src: Bentley },
+		{ src: Google },
+		{ src: LandRover },
+		{ src: HP },
+		{ src: Facebook },
+		{ src: Apollo },
+		{ src: BMW },
+		{ src: Amazon },
+		{ src: Dell },
+		{ src: Intel },
+		{ src: Alienware },
+		{ src: Microsoft },
+		{ src: Asus },
+		{ src: Instagram },
+		{ src: Twitch },
+		{ src: Lenovo },
+		{ src: Mercedes },
+	];
 
 	return (
+
+
+
+
 		<>
 			<div className="company">
 				<div className="section-1">
@@ -224,6 +304,41 @@ function Company() {
 				</div>
 
 				{/* Section-5 */}
+				<div className="section-5">
+
+					<div className="section5-container">
+						<div className="section-5-slider" >
+							{slides.map((slide, index) => (
+								<div className="section5-slide" key={index}>
+									<div className="section5-content">
+										<img src={slide.src} className="section-5-content-img" />
+									</div>
+								</div>
+							))}
+						</div>
+
+
+						<div className="section-5-slider2" >
+							{slides2.map((slide2, index) => (
+								<div className="section5-slide2" key={index}>
+									<div className="section5-content">
+										<img src={slide2.src} className="section-5-content-img" />
+									</div>
+								</div>
+							))}
+						</div>
+						<div className="section-5-slider3" >
+							{slides3.map((slide3, index) => (
+								<div className="section5-slide" key={index}>
+									<div className="section5-content">
+										<img src={slide3.src} className="section-5-content-img" />
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+
 
 				<div className="section-6">
 					<div className="section-6-div1">
@@ -250,6 +365,7 @@ function Company() {
 					</div>
 				</div>
 			</div>
+
 		</>
 	);
 }

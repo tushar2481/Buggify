@@ -13,6 +13,10 @@ import { useNavigate } from "react-router-dom";
 
 
 function DashboardNavbar() {
+
+
+
+
     const [isMenuOpen, setIsMenuOpen] = useState(true);
 
     const handleMenuToggle = () => {
@@ -144,21 +148,21 @@ const BusinessProfile = (props) => {
 
 
                                     <form className="dashboard-form">
-                                        <div className="box column-div1">
+                                        <div className="column-div1">
                                             <label className="dashboard-form-label">Payment Id: </label>
                                             <input className="dashboard-input"
                                                 type="text"
                                                 value={paymentId}
                                                 onChange={(event) => setAssetName(event.target.value)} />
                                         </div>
-                                        <div className="box column-div1">
+                                        <div className="column-div1">
                                             <label className="dashboard-form-label">Paid to (Researcher Name): </label>
                                             <input className="dashboard-input"
                                                 type="text"
                                                 value={paidTo}
                                                 onChange={(event) => setAssetName(event.target.value)} />
                                         </div>
-                                        <div className="box column-div1">
+                                        <div className="column-div1">
                                             <label className="dashboard-form-label">Payment Amount: </label>
                                             <input className="dashboard-input"
                                                 type="text"
