@@ -134,8 +134,7 @@ const AcademyCourses = () => {
     const paths = ['/PentestingWithPython', '/BashWithBeginner', '/WebApplicationPentesting', '/OffensiveRedTeaming', '/MalwareAnalysis', '/ActiveDirectoryExploitation', '/MobileAppPentesting', '/ApiPentesting'];
     const goto = (redirectLink) => {
         navigate(redirectLink);
-    }
-
+    };
     const gotoGetStarted = () => {
         navigate('/AcademyGetStarted');
     };
@@ -343,7 +342,7 @@ const AcademyCourses = () => {
                                         className="form-check-input"
                                         name="Exploitation"
                                         id="Exploitation"
-                                        checked={categoryFilters.Exlpoitation}
+                                        checked={categoryFilters.Exploitation}
                                         onChange={handleCategoryFilterChange}
                                     />
                                     <label className="form-check-label" for="Exploitation">Exlpoitation</label>
@@ -386,7 +385,9 @@ const AcademyCourses = () => {
                                             <div className="card-body-div3">
                                                 <center>
                                                     <p className="card-body-div3-price">Course Price:{'$' + course.price}</p>
+
                                                     <div className="button_ani card-div3-button1" onClick={() => goto(course.link)} >
+
                                                         <button className="button2"> View More</button>
                                                     </div>
                                                     <div className="button_ani card-div3-button2">
@@ -404,7 +405,7 @@ const AcademyCourses = () => {
                     </div>
 
                 </div>
-            </div>
+            </div >
         </>
     )
 }
