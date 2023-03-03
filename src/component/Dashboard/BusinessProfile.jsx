@@ -13,34 +13,34 @@ import { SiBigbluebutton, SiReactrouter } from 'react-icons/si';
 import { useNavigate } from "react-router-dom";
 
 
-async function DashboardNavbar (){
+const DashboardNavbar = async () => {
     const [isMenuOpen, setIsMenuOpen] = useState(true);
-    const data = { myCookie:`${Cookies.get('myCookie')}`}
-    const url = 'http://127.0.0.1:5173/profileStats'
-    const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type':'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    const respdata = await response.json()
-    if(respdata.buss_id == Cookies.get('buss_id')){
-        const monthly_report = respdata.stats.monthly_report
-        const monthly_paid = respdata.stats.monthly_paid
-        const avg_paid = respdata.stats.avg_paid
-        const mmm_reports = respdata.stats.mmm_reports
-        const mmm_paid = respdata.stats.mmm_paid
-        const mmm_avg = respdata.stats.mmm_avg
-        const open = respdata.report_counts.open
-        const resolved = respdata.report_counts.resolved
-        const NA = respdata.report_cvss.NA
-        const dups = respdata.report_cvss.dups
-        const info = respdata.report_cvss.info
-        const medium = respdata.report_cvss.medium
-        const high = respdata.report_cvss.high
-        const critical = respdata.report_cvss.critical
-    }
+    // const data = { myCookie:`${Cookies.get('myCookie')}`}
+    // const url = 'http://127.0.0.1:5173/profileStats'
+    // const response = await fetch(url, {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type':'application/json'
+    //     },
+    //     body: JSON.stringify(data)
+    // })
+    // const respdata = await response.json()
+    // if(respdata.buss_id == Cookies.get('buss_id')){
+    //     const monthly_report = respdata.stats.monthly_report
+    //     const monthly_paid = respdata.stats.monthly_paid
+    //     const avg_paid = respdata.stats.avg_paid
+    //     const mmm_reports = respdata.stats.mmm_reports
+    //     const mmm_paid = respdata.stats.mmm_paid
+    //     const mmm_avg = respdata.stats.mmm_avg
+    //     const open = respdata.report_counts.open
+    //     const resolved = respdata.report_counts.resolved
+    //     const NA = respdata.report_cvss.NA
+    //     const dups = respdata.report_cvss.dups
+    //     const info = respdata.report_cvss.info
+    //     const medium = respdata.report_cvss.medium
+    //     const high = respdata.report_cvss.high
+    //     const critical = respdata.report_cvss.critical
+    // }
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);

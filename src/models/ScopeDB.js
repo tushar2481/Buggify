@@ -4,76 +4,163 @@ const mongoose = require('mongoose')
 const scopeSchema = new mongoose.Schema({
           buss_id:{
                     type: String,
-                    required:true
+                    required:true,
+                    unique: true
           },
-          in_scope:[
-                    {
-                              one:{
+          in_scope:{
+                              one:{ asset:{
                                         type: String,
+                                },asset_type:{
+                                    type: String,
+                                },impact:{
+                                    type: String
+                                },elb:{
+                                    type: String
+                                }
+                            },
+                              two:{ asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String,
+                        },impact:{
+                            type: String
+                        },elb:{
+                            type: String
+                        }
+                    },
+                              three:{ asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String,
+                        },impact:{
+                            type: String
+                        },elb:{
+                            type: String
+                        }
+                    },
+                              four:{ asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String,
+                        },impact:{
+                            type: String
+                        },elb:{
+                            type: String
+                        }
+                    },
+                              five:{ asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String,
+                        },impact:{
+                            type: String
+                        },elb:{
+                            type: String
+                        }
+                    },
+                              six:{ asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String,
+                        },impact:{
+                            type: String
+                        },elb:{
+                            type: String
+                        }
+                    },
+                              seven:{ asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String,
+                        },impact:{
+                            type: String
+                        },elb:{
+                            type: String
+                        }
+                    },
+                              eight:{ asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String,
+                        },impact:{
+                            type: String
+                        },elb:{
+                            type: String
+                        }
+                    },
+                              nine:{ asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String,
+                        },impact:{
+                            type: String
+                        },elb:{
+                            type: String
+                        }
+                    },
+                              ten:{ asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String,
+                        },impact:{
+                            type: String
+                        },elb:{
+                            type: String
+                        }
+                    }
+                    },
+          out_scope:{
+                              one:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               },
-                              two:{
-                                        type: String,
+                              two:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               },
-                              three:{
-                                        type: String,
+                              three:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               },
-                              four:{
-                                        type: String,
+                              four:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               },
-                              five:{
-                                        type: String,
+                              five:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               },
-                              six:{
-                                        type: String,
+                              six:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               },
-                              seven:{
-                                        type: String,
+                              seven:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               },
-                              eight:{
-                                        type: String,
+                              eight:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               },
-                              nine:{
-                                        type: String,
+                              nine:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               },
-                              ten:{
-                                        type: String,
+                              ten:{asset:{
+                                type: String,
+                        },asset_type:{
+                            type: String}
                               }
                     }
-          ],
-          out_scope:[
-                    {
-                              one:{
-                                        type: String,
-                              },
-                              two:{
-                                        type: String,
-                              },
-                              three:{
-                                        type: String,
-                              },
-                              four:{
-                                        type: String,
-                              },
-                              five:{
-                                        type: String,
-                              },
-                              six:{
-                                        type: String,
-                              },
-                              seven:{
-                                        type: String,
-                              },
-                              eight:{
-                                        type: String,
-                              },
-                              nine:{
-                                        type: String,
-                              },
-                              ten:{
-                                        type: String,
-                              }
-                    }
-          ]
 })
 
 
