@@ -38,8 +38,6 @@ const AcademyBlogs = () => {
     ];
 
 
-
-
     const goto = (redirectLink) => {
         Navigate(redirectLink);
     }
