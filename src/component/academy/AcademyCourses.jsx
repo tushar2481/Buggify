@@ -132,9 +132,9 @@ const AcademyCourses = () => {
     /* navigation  */
     const navigate = useNavigate();
     const paths = ['/PentestingWithPython', '/BashWithBeginner', '/WebApplicationPentesting', '/OffensiveRedTeaming', '/MalwareAnalysis', '/ActiveDirectoryExploitation', '/MobileAppPentesting', '/ApiPentesting'];
-    const goto = (index) => {
-        navigate(paths[index]);
-    };
+    const goto = (redirectLink) => {
+        navigate(redirectLink);
+    }
 
     const gotoGetStarted = () => {
         navigate('/AcademyGetStarted');
@@ -343,7 +343,7 @@ const AcademyCourses = () => {
                                         className="form-check-input"
                                         name="Exploitation"
                                         id="Exploitation"
-                                        checked={categoryFilters.Exploitation}
+                                        checked={categoryFilters.Exlpoitation}
                                         onChange={handleCategoryFilterChange}
                                     />
                                     <label className="form-check-label" for="Exploitation">Exlpoitation</label>
@@ -365,7 +365,7 @@ const AcademyCourses = () => {
                         <div className="courses-card-div">
                             <h3 className="h">Courses</h3>
                             <div className="row course-cards">
-                                {filteredCourses.map((course, index) => (
+                                {filteredCourses.map((course) => (
                                     <div className="course-cards" key={course.id}>
                                         <div className="course-card">
                                             <div className="card-body-div1">
@@ -386,7 +386,7 @@ const AcademyCourses = () => {
                                             <div className="card-body-div3">
                                                 <center>
                                                     <p className="card-body-div3-price">Course Price:{'$' + course.price}</p>
-                                                    <div className="button_ani card-div3-button1" onClick={() => goto(index)}>
+                                                    <div className="button_ani card-div3-button1" onClick={() => goto(course.link)} >
                                                         <button className="button2"> View More</button>
                                                     </div>
                                                     <div className="button_ani card-div3-button2">
