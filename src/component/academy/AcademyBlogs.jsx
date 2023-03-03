@@ -6,46 +6,41 @@ import HomeBlogRecon from '../image/HomeBlogRecon.png';
 import HomeBlogFire from '../image/HomeBlogFire.png';
 
 
-
 import { useNavigate } from "react-router-dom";
 
 const AcademyBlogs = () => {
     const blog = [
         {
             id: 1,
-            imgSrc: HomeBlogTwitter,
-            title: "Twitter,s 400M Users Data on Sale in Darknet",
-            description: "Learn about the",
-            link: "/blog/the-importance-of-sleep"
+            imgSrc: HomeBlogUkrainian,
+            title: "Ukraine Hit with New Golang-based 'SwiftSlicer' Wiper Malware in Latest Cyber Attack",
+            link: "/AcademyBlogs-Blog1"
         },
         {
             id: 2,
-            imgSrc: HomeBlogUkrainian,
-            title: "Ukrainian Govt. Infrastructure Targeted by Chinese Hackers",
-            description: "Discover five tips to help you increase your ",
-            link: "/blog/5-ways-to-boost-productivity"
+            imgSrc: HomeBlogTwitter,
+            title: "New High-Severity Vulnerabilities Discovered in Cisco IOx and F5 BIG-IP Products",
+            link: "/AcademyBlogs-Blog2"
         },
         {
             id: 3,
             imgSrc: HomeBlogRecon,
-            title: "ReconJET - Reconnaisance Tool Released by Buggify",
-            description: "Discover five tips to help you increase  ",
-            link: "/blog/5-ways-to-boost-productivity"
+            title: "Atlassian's Jira Service Management Found Vulnerable to Critical Vulnerability",
+            link: "/AcademyBlogs-Blog3"
         },
         {
             id: 4,
             imgSrc: HomeBlogFire,
-            title: "Fire Rescue Victoria Confirms Cyber Attack",
-            description: "Discover five tips to help you increase your",
-            link: "/blog/5-ways-to-boost-productivity"
+            title: "Experts Warn of 'Ice Breaker' Cyberattacks Targeting Gaming and Gambling Industry",
+            link: "/AcademyBlogs-Blog4"
         },
         // ... other blog data objects
     ];
 
 
-
-
-
+    const goto = (redirectLink) => {
+        Navigate(redirectLink);
+    }
 
 
 
@@ -116,10 +111,9 @@ const AcademyBlogs = () => {
                                     </div>
                                     <div className="academy-blog-card-text">
                                         <h3 className="academy-card-h">{blog.title}</h3>
-                                        <p className="academy-card-p">{blog.description}</p>
-                                    </div>
-                                    <div className="button_ani blog-card-button">
-                                        <a href={blog.link} className="btn academy-card-button">Read More</a>
+                                        <p className="academy-card-p">{blog.description}</p>                                    </div>
+                                    <div className="button_ani blog-card-button" onClick={() => goto(blog.link)} >
+                                        <button className="btn">Read More</button>
                                     </div>
                                 </div>
                             </div>

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import './Blog.css';
 import { useNavigate } from 'react-router-dom';
 import { BsArrowLeft } from 'react-icons/bs';
 
 const Report = () => {
+
+
+    const scrollRef = useRef(null);
+    useLayoutEffect(() => {
+        if (scrollRef.current) {
+            window.scrollTo(0, 0);
+        }
+    }, []);
+
+
     const navigate = useNavigate()
     const gotoBlogs = () => {
         navigate('/academyBlogs');
@@ -22,7 +32,7 @@ const Report = () => {
     }
     return (
         <>
-            <div className="blog-div">
+            <div className="blog-div" ref={scrollRef}>
                 <div className="blog-heading">
                     <h2 className="blog-h mint">Experts Warn of 'Ice Breaker' Cyberattacks Targeting Gaming and Gambling Industry</h2>
 
@@ -73,7 +83,7 @@ const Report = () => {
                     <section className="cards-wrapper">
                         <div className="card-grid-space">
                             <div className="num">01</div>
-                            <a className="card box" href="">
+                            <a className="card box" onClick={gotoCiscoVulernability}>
                                 <div>
                                     <h1>New High-Severity Vulnerabilities Discovered in Cisco IOx and F5 BIG-IP Products</h1>
 
@@ -85,7 +95,7 @@ const Report = () => {
                         </div>
                         <div className="card-grid-space">
                             <div className="num">02</div>
-                            <a className="card box" href="">
+                            <a className="card box" onClick={gotoAtlassianBlog}>
                                 <div>
                                     <h1>Atlassian's Jira Service Management Found Vulnerable to Critical Vulnerability</h1>
 
@@ -99,7 +109,7 @@ const Report = () => {
                         </div>
                         <div className="card-grid-space">
                             <div className="num">03</div>
-                            <a className=" card box" href="">
+                            <a className=" card box" onClick={gotoUkrainianBlog}>
                                 <div>
                                     <h1>Ukraine Hit with New Golang-based 'SwiftSlicer' Wiper Malware in Latest Cyber Attack</h1>
 
